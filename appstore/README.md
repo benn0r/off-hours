@@ -15,7 +15,7 @@ reviewed and reused. App Store Connect has the live version.
 | Copyright | `copyright.txt` |
 | App Review notes | `review-notes.txt` |
 | Category | Productivity, secondary Utilities |
-| iPhone 6.9" screenshots | `../screenshots/appstore/` (`npm run screenshots`) |
+| iPhone screenshots (1206×2622, "iPhone with Dynamic Island") | `../screenshots/appstore/` (`npm run screenshots`) |
 | Header (3840×1646) | `marketing/header-3840x1646.png` |
 | Search results (1920×1280) | `marketing/search-results-1920x1280.png` |
 

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Takes the README and App Store screenshots with fictional data (`-demo`) in the iOS simulator.
-#   scripts/screenshots.sh                      → screenshots/appstore/ (iPhone 17 Pro Max, 1320×2868)
+#   scripts/screenshots.sh                      → screenshots/appstore/ (iPhone 17 Pro, 1206×2622: App Store Connect's "iPhone with Dynamic Island" size)
 #   SIMULATOR="iPhone 17 Pro" OUT=screenshots WIDTH=603 PREFIX=ios- scripts/screenshots.sh  → README images
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-simulator="${SIMULATOR:-iPhone 17 Pro Max}"
+simulator="${SIMULATOR:-iPhone 17 Pro}"
 out="${OUT:-screenshots/appstore}"
 width="${WIDTH:-}"
 prefix="${PREFIX:-}"
