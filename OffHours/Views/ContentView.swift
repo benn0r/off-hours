@@ -1,14 +1,29 @@
 import FamilyControls
 import SwiftUI
 
+enum Screen: String, Hashable {
+  case workHours = "work-hours"
+  case onCall = "on-call"
+  case daysOff = "days-off"
+  case calendars
+}
+
 struct ContentView: View {
   @Environment(AppModel.self) private var model
   @State private var showingPicker = false
+  @State private var path: [Screen] = ContentView.initialPath
+
+  private static var initialPath: [Screen] {
+    #if DEBUG
+      if let screen = DemoData.initialScreen { return [screen] }
+    #endif
+    return []
+  }
 
   var body: some View {
     @Bindable var model = model
 
-    NavigationStack {
+    NavigationStack(path: $path) {
       List {
         Section {
           StatusCard()
@@ -46,24 +61,16 @@ struct ContentView: View {
         }
 
         Section("Schedule") {
-          NavigationLink {
-            WorkHoursView()
-          } label: {
+          NavigationLink(value: Screen.workHours) {
             LabeledContent("Work hours", value: weekSummary)
           }
-          NavigationLink {
-            OnCallView()
-          } label: {
+          NavigationLink(value: Screen.onCall) {
             LabeledContent("On call", value: onCallSummary)
           }
-          NavigationLink {
-            DaysOffView()
-          } label: {
+          NavigationLink(value: Screen.daysOff) {
             LabeledContent("Days off & holidays", value: daysOffSummary)
           }
-          NavigationLink {
-            CalendarsView()
-          } label: {
+          NavigationLink(value: Screen.calendars) {
             LabeledContent("Calendars", value: calendarsSummary)
           }
           Toggle("Scheduling on", isOn: $model.config.isEnabled)
@@ -85,6 +92,14 @@ struct ContentView: View {
       }
       .navigationTitle("Off-hours")
       .familyActivityPicker(isPresented: $showingPicker, selection: $model.selection)
+      .navigationDestination(for: Screen.self) { screen in
+        switch screen {
+        case .workHours: WorkHoursView()
+        case .onCall: OnCallView()
+        case .daysOff: DaysOffView()
+        case .calendars: CalendarsView()
+        }
+      }
     }
   }
 

@@ -9,6 +9,15 @@
 
     static var isRequested: Bool { ProcessInfo.processInfo.arguments.contains("-demo") }
 
+    /// `-demo-screen work-hours|on-call|days-off|calendars` opens that screen at launch (for screenshots).
+    static var initialScreen: Screen? {
+      let arguments = ProcessInfo.processInfo.arguments
+      guard let index = arguments.firstIndex(of: "-demo-screen"), index + 1 < arguments.count else {
+        return nil
+      }
+      return Screen(rawValue: arguments[index + 1])
+    }
+
     static func calendarName(for id: String) -> String? {
       switch id {
       case workCalendarID: "Work"

@@ -12,6 +12,7 @@
     "deploy": "bash scripts/deploy-ios.sh",
     "lint": "find OffHours OffHoursMonitor Shared OffHoursTests -name '*.swift' -print0 | xargs -0 swiftc -parse",
     "format:check": "xcrun swift-format lint --recursive --strict OffHours OffHoursMonitor Shared OffHoursTests",
-    "format": "xcrun swift-format format --recursive --in-place OffHours OffHoursMonitor Shared OffHoursTests"
+    "format": "xcrun swift-format format --recursive --in-place OffHours OffHoursMonitor Shared OffHoursTests",
+    "screenshots": "bash scripts/screenshots.sh && SIMULATOR='iPhone 17 Pro' OUT=screenshots WIDTH=603 PREFIX=ios- bash scripts/screenshots.sh"
   }
 }
