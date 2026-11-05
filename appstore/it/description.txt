@@ -1,0 +1,24 @@
+Off-hours tiene il lavoro al suo posto. Usa Tempo di utilizzo per bloccare le app di lavoro che scegli, come la chat del team, la posta di lavoro o qualsiasi altra app, categoria o sito web, fuori dal tuo orario: la sera, nel weekend, in vacanza e nei giorni festivi. Quando sei reperibile o hai una riunione serale, si riaprono da sole.
+
+IL TUO ORARIO DI LAVORO
+Scegli i giorni lavorativi e l'orario di ogni giorno. La sera, la mattina presto e nei giorni in cui non lavori, le app di lavoro sono bloccate.
+
+REPERIBILITÀ
+Aggiungi turni di reperibilità, da una sola notte a un'intera settimana. Durante la reperibilità le app di lavoro restano disponibili, anche di notte, nel weekend e nei giorni liberi.
+
+GIORNI LIBERI E FESTIVI
+Aggiungi singoli giorni liberi o intere vacanze: le app di lavoro restano bloccate tutto il giorno. Seleziona un calendario delle festività e ogni festivo conta automaticamente come giorno libero.
+
+IL TUO CALENDARIO DI LAVORO
+Seleziona il calendario di lavoro e Off-hours trova turni di reperibilità e vacanze tramite parole chiave come «reperibilità», «Pikett», «ferie» o «OOO». Puoi modificare le parole chiave. Facoltativamente, le riunioni fuori orario aprono le app di lavoro qualche minuto prima dell'inizio, fino alla fine.
+
+SEMPRE CHIARO
+La schermata principale mostra se le app di lavoro sono bloccate, perché e quando cambia. Ti serve un'app di lavoro per un momento? Consentile per un'ora, o bloccale prima, con un tocco.
+
+FUNZIONA IN BACKGROUND
+Off-hours cambia da solo al momento giusto, anche quando l'app è chiusa.
+
+PRIVACY INTEGRATA
+Tutto avviene sul tuo iPhone. Off-hours non ha account, server, pubblicità né tracciamento, e non effettua richieste di rete. Grazie al framework Tempo di utilizzo di Apple, l'app non vede nemmeno quali app hai scelto. I calendari vengono letti solo sul dispositivo.
+
+Richiede l'accesso a Tempo di utilizzo. L'accesso ai calendari è facoltativo.

@@ -1,0 +1,24 @@
+Off-hours garde le travail à sa place. L'app utilise Temps d'écran pour bloquer les apps professionnelles que vous choisissez, comme la messagerie d'équipe, la messagerie pro ou toute autre app, catégorie ou site web, en dehors de vos horaires : le soir, le week-end, pendant les vacances et les jours fériés. Quand vous êtes d'astreinte ou avez une réunion le soir, elles se rouvrent d'elles-mêmes.
+
+VOS HORAIRES DE TRAVAIL
+Choisissez vos jours ouvrés et les horaires de chaque jour. Le soir, tôt le matin et les jours non travaillés, vos apps professionnelles sont bloquées.
+
+ASTREINTE
+Ajoutez des astreintes, d'une seule nuit à une semaine entière. Pendant l'astreinte, vos apps professionnelles restent disponibles, même la nuit, le week-end et les jours de congé.
+
+CONGÉS ET JOURS FÉRIÉS
+Ajoutez des jours de congé ou des vacances entières : les apps professionnelles restent bloquées toute la journée. Sélectionnez un calendrier des jours fériés et chaque jour férié compte automatiquement comme congé.
+
+VOTRE CALENDRIER PROFESSIONNEL
+Sélectionnez votre calendrier professionnel et Off-hours y trouve les astreintes et les vacances grâce à des mots-clés comme « astreinte », « Pikett », « vacances » ou « OOO ». Vous pouvez modifier les mots-clés. En option, les réunions en dehors de vos horaires ouvrent vos apps professionnelles quelques minutes avant leur début, jusqu'à leur fin.
+
+TOUJOURS CLAIR
+L'écran principal indique si vos apps professionnelles sont bloquées, pourquoi, et quand cela change. Besoin d'une app pro un instant ? Autorisez-les pour une heure, ou bloquez-les plus tôt, d'un seul geste.
+
+FONCTIONNE EN ARRIÈRE-PLAN
+Off-hours bascule tout seul au bon moment, même quand l'app est fermée.
+
+CONFIDENTIEL PAR NATURE
+Tout se passe sur votre iPhone. Off-hours n'a ni compte, ni serveur, ni publicité, ni suivi, et n'effectue aucune requête réseau. Grâce au cadre Temps d'écran d'Apple, l'app ne voit même pas quelles apps vous avez choisies. Les calendriers sont lus uniquement sur l'appareil.
+
+Nécessite l'accès à Temps d'écran. L'accès aux calendriers est facultatif.
