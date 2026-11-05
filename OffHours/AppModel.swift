@@ -14,7 +14,9 @@ final class AppModel {
             if config.holidayCalendarIDs != oldValue.holidayCalendarIDs
                 || config.workCalendarIDs != oldValue.workCalendarIDs
                 || config.onCallKeywords != oldValue.onCallKeywords
-                || config.dayOffKeywords != oldValue.dayOffKeywords {
+                || config.dayOffKeywords != oldValue.dayOffKeywords
+                || config.meetingsExtendHours != oldValue.meetingsExtendHours
+                || config.meetingBufferMinutes != oldValue.meetingBufferMinutes {
                 syncCalendars()
             }
         }

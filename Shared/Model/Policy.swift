@@ -7,14 +7,16 @@ import Foundation
 /// 2. Manual override        → whatever the override says
 /// 3. On-call shift          → available
 /// 4. Day off / holiday      → blocked all day
-/// 5. Not a workday          → blocked all day
-/// 6. Weekly work hours      → available inside, blocked outside (evenings, mornings)
+/// 5. Work-calendar meeting  → available (from the buffer before it until it ends; also on weekends)
+/// 6. Not a workday          → blocked all day
+/// 7. Weekly work hours      → available inside, blocked outside (evenings, mornings)
 struct Policy {
     enum Reason: Equatable {
         case disabled
         case override(until: Date)
         case onCall(until: Date)
         case dayOff(name: String)
+        case meeting(title: String, until: Date)
         case notWorkday
         case outsideHours
         case workHours
@@ -42,6 +44,12 @@ struct Policy {
         let day = DayStamp(date, calendar: calendar)
         if let off = config.allDaysOff.first(where: { $0.contains(day) }) {
             return Status(blocked: true, reason: .dayOff(name: off.name))
+        }
+
+        if let meeting = config.importedMeetings
+            .filter({ $0.start.addingTimeInterval(-config.meetingBuffer) <= date && date < $0.end })
+            .max(by: { $0.end < $1.end }) {
+            return Status(blocked: false, reason: .meeting(title: meeting.note, until: meeting.end))
         }
 
         let workDay = config.workDay(for: date, calendar: calendar)
@@ -75,6 +83,10 @@ struct Policy {
         for shift in config.allOnCall {
             candidates.insert(shift.start)
             candidates.insert(shift.end)
+        }
+        for meeting in config.importedMeetings {
+            candidates.insert(meeting.start.addingTimeInterval(-config.meetingBuffer))
+            candidates.insert(meeting.end)
         }
         if let override = config.override { candidates.insert(override.until) }
 

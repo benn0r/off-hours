@@ -7,6 +7,10 @@ struct CalendarEntry: Hashable {
     var start: Date
     var end: Date
     var isAllDay: Bool
+    /// Shown as "free" rather than "busy".
+    var isFree: Bool = false
+    /// The current user declined the invitation.
+    var isDeclined: Bool = false
 }
 
 /// Turns calendar events into on-call shifts and days off.
@@ -15,11 +19,19 @@ struct CalendarEntry: Hashable {
 /// - An event in a *work* calendar whose title contains an on-call keyword becomes an on-call shift.
 /// - An event in a *work* calendar whose title contains a day-off keyword marks its days as days off.
 ///   (On-call keywords win if a title matches both.)
+/// - If enabled, any other timed, busy, non-declined event in a *work* calendar that reaches outside
+///   work hours becomes a meeting window, during which work apps are available.
 enum CalendarImport {
+    struct Result: Equatable {
+        var onCall: [OnCallShift] = []
+        var daysOff: [DayOff] = []
+        var meetings: [OnCallShift] = []
+    }
+
     static let defaultOnCallKeywords = ["on call", "on-call", "oncall", "pikett", "bereitschaft"]
     static let defaultDayOffKeywords = ["vacation", "holiday", "out of office", "ooo", "pto", "ferien", "urlaub", "frei"]
 
-    static func classify(_ entries: [CalendarEntry], config: Config, calendar: Calendar) -> (onCall: [OnCallShift], daysOff: [DayOff]) {
+    static func classify(_ entries: [CalendarEntry], config: Config, calendar: Calendar) -> Result {
         let holidayIDs = Set(config.holidayCalendarIDs)
         let workIDs = Set(config.workCalendarIDs)
         let onCallKeywords = normalized(config.onCallKeywords)
@@ -27,6 +39,7 @@ enum CalendarImport {
 
         var onCall: [OnCallShift] = []
         var daysOff: [DayOff] = []
+        var meetings: [OnCallShift] = []
 
         for entry in entries where entry.end > entry.start {
             let title = entry.title.lowercased()
@@ -46,10 +59,30 @@ enum CalendarImport {
                                       name: entry.title,
                                       firstDay: DayStamp(entry.start, calendar: calendar),
                                       lastDay: DayStamp(lastMoment, calendar: calendar)))
+                continue
+            }
+
+            if config.meetingsExtendHours, workIDs.contains(entry.calendarID),
+               !entry.isAllDay, !entry.isFree, !entry.isDeclined,
+               !isInsideWorkHours(entry, config: config, calendar: calendar) {
+                meetings.append(OnCallShift(id: stableUUID(key), start: entry.start, end: entry.end, note: entry.title))
             }
         }
 
-        return (onCall.sorted { $0.start < $1.start }, daysOff.sorted { $0.firstDay < $1.firstDay })
+        return Result(onCall: onCall.sorted { $0.start < $1.start },
+                      daysOff: daysOff.sorted { $0.firstDay < $1.firstDay },
+                      meetings: meetings.sorted { $0.start < $1.start })
+    }
+
+    /// Meetings fully inside a workday's hours (buffer included) change nothing, so they aren't imported.
+    private static func isInsideWorkHours(_ entry: CalendarEntry, config: Config, calendar: Calendar) -> Bool {
+        let start = entry.start.addingTimeInterval(-config.meetingBuffer)
+        guard calendar.isDate(start, inSameDayAs: entry.end) else { return false }
+        let workDay = config.workDay(for: start, calendar: calendar)
+        guard workDay.isWorkday, workDay.hasValidHours,
+              let workStart = workDay.start.date(on: start, calendar: calendar),
+              let workEnd = workDay.end.date(on: start, calendar: calendar) else { return false }
+        return start >= workStart && entry.end <= workEnd
     }
 
     static func normalized(_ keywords: [String]) -> [String] {

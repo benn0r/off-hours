@@ -17,6 +17,7 @@ enum CalendarSync {
         guard config.usesCalendars else {
             config.importedOnCall = []
             config.importedDaysOff = []
+            config.importedMeetings = []
             return config
         }
         guard isAuthorized else { return config }
@@ -29,6 +30,7 @@ enum CalendarSync {
         else {
             config.importedOnCall = []
             config.importedDaysOff = []
+            config.importedMeetings = []
             return config
         }
 
@@ -38,12 +40,15 @@ enum CalendarSync {
                           title: $0.title ?? "",
                           start: $0.startDate,
                           end: $0.endDate,
-                          isAllDay: $0.isAllDay)
+                          isAllDay: $0.isAllDay,
+                          isFree: $0.availability == .free,
+                          isDeclined: $0.attendees?.first(where: \.isCurrentUser)?.participantStatus == .declined)
         }
 
         let result = CalendarImport.classify(entries, config: config, calendar: calendar)
         config.importedOnCall = result.onCall
         config.importedDaysOff = result.daysOff
+        config.importedMeetings = result.meetings
         return config
     }
 }

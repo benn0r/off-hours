@@ -37,6 +37,19 @@ struct CalendarsView: View {
 
             if !model.config.workCalendarIDs.isEmpty {
                 Section {
+                    Toggle("Meetings extend work hours", isOn: $model.config.meetingsExtendHours)
+                    if model.config.meetingsExtendHours {
+                        Stepper(value: $model.config.meetingBufferMinutes, in: 0...30, step: 5) {
+                            LabeledContent("Open before meeting", value: "\(model.config.meetingBufferMinutes) min")
+                        }
+                    }
+                } header: {
+                    Text("Meetings")
+                } footer: {
+                    Text("Work apps open for meetings outside work hours, including weekends, but not on days off or holidays. All-day, free and declined events are ignored.")
+                }
+
+                Section {
                     KeywordField(title: "On call", keywords: $model.config.onCallKeywords)
                     KeywordField(title: "Day off", keywords: $model.config.dayOffKeywords)
                     Button("Reset keywords") {
@@ -52,12 +65,17 @@ struct CalendarsView: View {
 
             if model.config.usesCalendars && model.hasCalendarAccess {
                 Section("Imported") {
-                    if model.config.importedOnCall.isEmpty && model.config.importedDaysOff.isEmpty {
+                    if model.config.importedOnCall.isEmpty && model.config.importedDaysOff.isEmpty
+                        && model.config.importedMeetings.isEmpty {
                         Text("Nothing in the next \(CalendarSync.lookaheadDays) days").foregroundStyle(.secondary)
                     }
                     ForEach(model.config.importedOnCall.prefix(10)) { shift in
                         ImportedRow(icon: "phone.fill", tint: .orange, title: shift.note,
                                     detail: "\(shift.start.formatted(date: .abbreviated, time: .shortened)) – \(shift.end.formatted(date: .abbreviated, time: .shortened))")
+                    }
+                    ForEach(model.config.importedMeetings.prefix(10)) { meeting in
+                        ImportedRow(icon: "person.2.fill", tint: .teal, title: meeting.note,
+                                    detail: "\(meeting.start.formatted(date: .abbreviated, time: .shortened)) – \(meeting.end.formatted(date: .omitted, time: .shortened))")
                     }
                     ForEach(model.config.importedDaysOff.prefix(10)) { dayOff in
                         ImportedRow(icon: "sun.max.fill", tint: .indigo, title: dayOff.name, detail: dayOff.rangeText)

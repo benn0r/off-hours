@@ -75,6 +75,58 @@ final class CalendarImportTests: XCTestCase {
         XCTAssertEqual(p.status(at: date(9, 21)).blocked, false)  // Wednesday evening, imported on-call
     }
 
+    // MARK: Meetings (2026-12-07 is a Monday, 2026-12-12 a Saturday)
+
+    private func meetingConfig() -> Config {
+        var c = config(work: "work")
+        c.meetingsExtendHours = true
+        return c
+    }
+
+    private func meeting(_ title: String, _ start: Date, _ end: Date,
+                         allDay: Bool = false, free: Bool = false, declined: Bool = false) -> CalendarEntry {
+        CalendarEntry(calendarID: "work", title: title, start: start, end: end,
+                      isAllDay: allDay, isFree: free, isDeclined: declined)
+    }
+
+    func testMeetingsOnlyImportedWhenEnabledAndOutsideHours() {
+        let entries = [
+            meeting("Evening sync", date(7, 19), date(7, 20)),
+            meeting("Standup", date(7, 9), date(7, 9, 15)),          // inside hours: irrelevant
+            meeting("Early call", date(7, 7, 30), date(7, 8, 30)),   // straddles 08:00
+            meeting("Saturday release", date(12, 10), date(12, 11)),
+            meeting("Optional", date(7, 21), date(7, 22), free: true),
+            meeting("Declined", date(8, 21), date(8, 22), declined: true),
+            meeting("Offsite", date(9, 0), date(9, 23, 59), allDay: true),
+        ]
+        XCTAssertTrue(CalendarImport.classify(entries, config: config(work: "work"), calendar: calendar).meetings.isEmpty)
+
+        let result = CalendarImport.classify(entries, config: meetingConfig(), calendar: calendar)
+        XCTAssertEqual(result.meetings.map(\.note), ["Early call", "Evening sync", "Saturday release"])
+    }
+
+    func testMeetingOpensWorkAppsWithBuffer() {
+        var c = meetingConfig()
+        c.importedMeetings = [OnCallShift(start: date(7, 19), end: date(7, 20), note: "Evening sync")]
+        let p = Policy(config: c, calendar: calendar)
+
+        XCTAssertEqual(p.status(at: date(7, 18, 49)).blocked, true)
+        XCTAssertEqual(p.status(at: date(7, 18, 50)), .init(blocked: false, reason: .meeting(title: "Evening sync", until: date(7, 20))))
+        XCTAssertEqual(p.status(at: date(7, 20)).blocked, true)
+        XCTAssertEqual(p.transitions(after: date(7, 10), limit: 3), [date(7, 18), date(7, 18, 50), date(7, 20)])
+    }
+
+    func testMeetingsCountOnWeekendsButNotOnDaysOff() {
+        var c = meetingConfig()
+        c.importedMeetings = [OnCallShift(start: date(12, 10), end: date(12, 11)),
+                              OnCallShift(start: date(8, 19), end: date(8, 20))]
+        c.daysOff = [DayOff(name: "Vacation", firstDay: DayStamp(year: 2026, month: 12, day: 8),
+                            lastDay: DayStamp(year: 2026, month: 12, day: 8))]
+        let p = Policy(config: c, calendar: calendar)
+        XCTAssertEqual(p.status(at: date(12, 10, 30)).blocked, false) // Saturday meeting
+        XCTAssertEqual(p.status(at: date(8, 19, 30)).blocked, true)   // meeting during vacation
+    }
+
     func testOldSavedConfigStillDecodes() throws {
         let old = #"{"isEnabled":true,"week":[],"onCall":[],"daysOff":[]}"#
         let decoded = try JSONDecoder().decode(Config.self, from: Data(old.utf8))

@@ -37,6 +37,8 @@ struct StatusCard: View {
         case .disabled: "Scheduling is turned off"
         case .override(let until): "Override until \(until.formatted(date: .omitted, time: .shortened))"
         case .onCall(let until): "On call until \(until.formatted(.dateTime.weekday().hour().minute()))"
+        case .meeting(let title, let until):
+            "\(title.isEmpty ? "Meeting" : title) until \(until.formatted(date: .omitted, time: .shortened))"
         case .dayOff(let name): name.isEmpty ? "Day off" : "Day off: \(name)"
         case .notWorkday: "Not a workday"
         case .outsideHours: "Outside work hours"

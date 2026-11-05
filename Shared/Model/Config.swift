@@ -93,6 +93,13 @@ struct Config: Codable, Equatable {
     /// Replaced on every calendar sync; never edited by hand.
     var importedOnCall: [OnCallShift] = []
     var importedDaysOff: [DayOff] = []
+    /// Work-calendar meetings outside work hours keep work apps available.
+    var meetingsExtendHours: Bool = false
+    /// Work apps open this many minutes before a meeting starts.
+    var meetingBufferMinutes: Int = 10
+    var importedMeetings: [OnCallShift] = []
+
+    var meetingBuffer: TimeInterval { TimeInterval(max(0, meetingBufferMinutes) * 60) }
 
     var allOnCall: [OnCallShift] { onCall + importedOnCall }
     var allDaysOff: [DayOff] { daysOff + importedDaysOff }
@@ -117,6 +124,9 @@ struct Config: Codable, Equatable {
         dayOffKeywords = try c.decodeIfPresent([String].self, forKey: .dayOffKeywords) ?? CalendarImport.defaultDayOffKeywords
         importedOnCall = try c.decodeIfPresent([OnCallShift].self, forKey: .importedOnCall) ?? []
         importedDaysOff = try c.decodeIfPresent([DayOff].self, forKey: .importedDaysOff) ?? []
+        meetingsExtendHours = try c.decodeIfPresent(Bool.self, forKey: .meetingsExtendHours) ?? false
+        meetingBufferMinutes = try c.decodeIfPresent(Int.self, forKey: .meetingBufferMinutes) ?? 10
+        importedMeetings = try c.decodeIfPresent([OnCallShift].self, forKey: .importedMeetings) ?? []
     }
 
     static let `default`: Config = {
