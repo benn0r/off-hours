@@ -1,4 +1,4 @@
-Off-hours garde le travail à sa place. L'app utilise Temps d'écran pour bloquer les apps professionnelles que vous choisissez, comme la messagerie d'équipe, la messagerie pro ou toute autre app, catégorie ou site web, en dehors de vos horaires : le soir, le week-end, pendant les vacances et les jours fériés. Quand vous êtes d'astreinte ou avez une réunion le soir, elles se rouvrent d'elles-mêmes.
+Off-hours garde le travail à sa place. L'app utilise Temps d'écran pour bloquer les apps professionnelles que vous choisissez, comme la messagerie d'équipe, la messagerie pro ou toute autre app, catégorie ou site web, en dehors de vos horaires : le soir, le week-end, pendant les vacances et les jours fériés. Quand vous êtes d'astreinte ou avez une réunion le soir, elles se rouvrent d'elles-mêmes. Gratuit, sans aucun suivi, sans publicité ni achats intégrés.
 
 VOS HORAIRES DE TRAVAIL
 Choisissez vos jours ouvrés et les horaires de chaque jour. Le soir, tôt le matin et les jours non travaillés, vos apps professionnelles sont bloquées.
@@ -18,7 +18,10 @@ L'écran principal indique si vos apps professionnelles sont bloquées, pourquoi
 FONCTIONNE EN ARRIÈRE-PLAN
 Off-hours bascule tout seul au bon moment, même quand l'app est fermée.
 
-CONFIDENTIEL PAR NATURE
-Tout se passe sur votre iPhone. Off-hours n'a ni compte, ni serveur, ni publicité, ni suivi, et n'effectue aucune requête réseau. Grâce au cadre Temps d'écran d'Apple, l'app ne voit même pas quelles apps vous avez choisies. Les calendriers sont lus uniquement sur l'appareil.
+GRATUIT, SANS CONDITIONS
+Off-hours est gratuit. Pas d'achats intégrés, pas d'abonnement, pas de publicité, pas de compte, pas d'inscription.
+
+ZÉRO SUIVI
+Tout se passe sur votre iPhone. Off-hours ne collecte aucune donnée : pas d'analyse, pas de suivi, pas de serveur, et aucune requête réseau. Grâce au cadre Temps d'écran d'Apple, l'app ne voit même pas quelles apps vous avez choisies. Les calendriers sont lus uniquement sur l'appareil.
 
 Nécessite l'accès à Temps d'écran. L'accès aux calendriers est facultatif.

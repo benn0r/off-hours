@@ -1,4 +1,4 @@
-Off-hours keeps work where it belongs. It uses Screen Time to block the work apps you choose, such as your team chat, work mail or any other app, category or website, outside your work hours: in the evening, at weekends, on vacation and on public holidays. When you are on call, or have a meeting in the evening, they open again on their own.
+Off-hours keeps work where it belongs. It uses Screen Time to block the work apps you choose, such as your team chat, work mail or any other app, category or website, outside your work hours: in the evening, at weekends, on vacation and on public holidays. When you are on call, or have a meeting in the evening, they open again on their own. Free, with zero tracking, no ads and no in-app purchases.
 
 SET YOUR WORK HOURS
 Choose your workdays and the hours for each weekday. In the evening, early in the morning and on days you don't work, your work apps are blocked.
@@ -18,7 +18,10 @@ The main screen shows whether your work apps are blocked right now, why, and whe
 WORKS IN THE BACKGROUND
 Off-hours switches at the right moments on its own, even when the app is closed.
 
-PRIVATE BY DESIGN
-Everything happens on your iPhone. Off-hours has no account, no server, no ads and no tracking, and it makes no network requests. Thanks to Apple's Screen Time framework, the app cannot even see which apps you selected. Calendars are read on the device only.
+FREE, WITH NO STRINGS ATTACHED
+Off-hours is free. No in-app purchases, no subscriptions, no ads, no account, no sign-up.
+
+ZERO TRACKING
+Everything happens on your iPhone. Off-hours collects no data at all: no analytics, no tracking, no server, and it makes no network requests. Thanks to Apple's Screen Time framework, the app cannot even see which apps you selected. Calendars are read on the device only.
 
 Requires Screen Time access. Calendar access is optional.

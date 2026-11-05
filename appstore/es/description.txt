@@ -1,4 +1,4 @@
-Off-hours mantiene el trabajo en su sitio. Usa Tiempo de uso para bloquear las apps de trabajo que elijas, como el chat del equipo, el correo del trabajo o cualquier otra app, categoría o sitio web, fuera de tu horario: por la noche, el fin de semana, en vacaciones y en festivos. Cuando estás de guardia o tienes una reunión por la tarde, se vuelven a abrir solas.
+Off-hours mantiene el trabajo en su sitio. Usa Tiempo de uso para bloquear las apps de trabajo que elijas, como el chat del equipo, el correo del trabajo o cualquier otra app, categoría o sitio web, fuera de tu horario: por la noche, el fin de semana, en vacaciones y en festivos. Cuando estás de guardia o tienes una reunión por la tarde, se vuelven a abrir solas. Gratis, sin rastreo, sin anuncios ni compras dentro de la app.
 
 TU HORARIO LABORAL
 Elige tus días laborables y el horario de cada día. Por la noche, a primera hora de la mañana y los días que no trabajas, tus apps de trabajo están bloqueadas.
@@ -18,7 +18,10 @@ La pantalla principal muestra si tus apps de trabajo están bloqueadas, por qué
 FUNCIONA EN SEGUNDO PLANO
 Off-hours cambia solo en el momento adecuado, incluso con la app cerrada.
 
-PRIVACIDAD DE SERIE
-Todo ocurre en tu iPhone. Off-hours no tiene cuenta, servidor, anuncios ni rastreo, y no hace ninguna petición de red. Gracias al marco Tiempo de uso de Apple, la app ni siquiera ve qué apps has elegido. Los calendarios solo se leen en el dispositivo.
+GRATIS Y SIN LETRA PEQUEÑA
+Off-hours es gratis. Sin compras dentro de la app, sin suscripciones, sin anuncios, sin cuenta y sin registro.
+
+CERO RASTREO
+Todo ocurre en tu iPhone. Off-hours no recopila ningún dato: ni analíticas, ni rastreo, ni servidor, y no hace ninguna petición de red. Gracias al marco Tiempo de uso de Apple, la app ni siquiera ve qué apps has elegido. Los calendarios solo se leen en el dispositivo.
 
 Requiere acceso a Tiempo de uso. El acceso a los calendarios es opcional.

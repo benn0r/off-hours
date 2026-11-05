@@ -1,4 +1,4 @@
-Off-hours houdt werk op zijn plek. De app gebruikt Schermtijd om de werk-apps die je kiest te blokkeren, zoals je teamchat, werkmail of elke andere app, categorie of website, buiten je werktijd: 's avonds, in het weekend, op vakantie en op feestdagen. Heb je piket of een vergadering in de avond, dan gaan ze vanzelf weer open.
+Off-hours houdt werk op zijn plek. De app gebruikt Schermtijd om de werk-apps die je kiest te blokkeren, zoals je teamchat, werkmail of elke andere app, categorie of website, buiten je werktijd: 's avonds, in het weekend, op vakantie en op feestdagen. Heb je piket of een vergadering in de avond, dan gaan ze vanzelf weer open. Gratis, zonder tracking, advertenties of in-app-aankopen.
 
 STEL JE WERKTIJDEN IN
 Kies je werkdagen en de uren voor elke dag. 's Avonds, vroeg in de ochtend en op dagen dat je niet werkt, zijn je werk-apps geblokkeerd.
@@ -18,7 +18,10 @@ Het hoofdscherm toont of je werk-apps nu geblokkeerd zijn, waarom, en wanneer da
 WERKT OP DE ACHTERGROND
 Off-hours schakelt vanzelf op het juiste moment, ook als de app gesloten is.
 
-PRIVACY VOOROP
-Alles gebeurt op je iPhone. Off-hours heeft geen account, geen server, geen advertenties en geen tracking, en doet geen netwerkverzoeken. Dankzij het Schermtijd-framework van Apple kan de app niet eens zien welke apps je hebt gekozen. Agenda's worden alleen op het apparaat gelezen.
+GRATIS, ZONDER ADDERTJES
+Off-hours is gratis. Geen in-app-aankopen, geen abonnement, geen advertenties, geen account en geen registratie.
+
+NUL TRACKING
+Alles gebeurt op je iPhone. Off-hours verzamelt geen enkele gegevens: geen analytics, geen tracking, geen server, en de app doet geen netwerkverzoeken. Dankzij het Schermtijd-framework van Apple kan de app niet eens zien welke apps je hebt gekozen. Agenda's worden alleen op het apparaat gelezen.
 
 Vereist toegang tot Schermtijd. Toegang tot agenda's is optioneel.
