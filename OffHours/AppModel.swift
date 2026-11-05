@@ -8,7 +8,7 @@ import Observation
 final class AppModel {
   var config: Config {
     didSet {
-      guard config != oldValue else { return }
+      guard config != oldValue, !isDemo else { return }
       SharedStore.save(config)
       scheduleEnforce()
       if config.holidayCalendarIDs != oldValue.holidayCalendarIDs
@@ -25,7 +25,7 @@ final class AppModel {
 
   var selection: FamilyActivitySelection {
     didSet {
-      guard selection != oldValue else { return }
+      guard selection != oldValue, !isDemo else { return }
       SharedStore.save(selection)
       scheduleEnforce()
     }
@@ -45,8 +45,17 @@ final class AppModel {
     label: "offhours.enforcement", qos: .userInitiated)
   @ObservationIgnored private var pendingEnforcement: DispatchWorkItem?
 
+  /// Debug builds launched with `-demo` show fictional data (see `DemoData`) and change nothing.
+  @ObservationIgnored let isDemo: Bool
+
   init() {
-    config = SharedStore.loadConfig()
+    #if DEBUG
+      isDemo = DemoData.isRequested
+      config = isDemo ? DemoData.config() : SharedStore.loadConfig()
+    #else
+      isDemo = false
+      config = SharedStore.loadConfig()
+    #endif
     selection = SharedStore.loadSelection()
     authorizationStatus = AuthorizationCenter.shared.authorizationStatus
     calendarAccess = EKEventStore.authorizationStatus(for: .event)
@@ -58,7 +67,7 @@ final class AppModel {
     syncCalendars()
   }
 
-  var hasCalendarAccess: Bool { calendarAccess == .fullAccess }
+  var hasCalendarAccess: Bool { isDemo || calendarAccess == .fullAccess }
 
   func requestCalendarAccess() async {
     _ = try? await eventStore.requestFullAccessToEvents()
@@ -75,6 +84,7 @@ final class AppModel {
 
   /// Reloads the calendar list and re-imports holidays / on-call shifts / meetings, off the main thread.
   func syncCalendars(debounce: Bool = false) {
+    guard !isDemo else { return }
     syncTask?.cancel()
     syncTask = Task { [weak self] in
       if debounce { try? await Task.sleep(for: .milliseconds(400)) }
@@ -110,12 +120,15 @@ final class AppModel {
   }
 
   func calendarName(for id: String) -> String {
-    calendars.first { $0.calendarIdentifier == id }?.title ?? "Unavailable calendar"
+    #if DEBUG
+      if let name = DemoData.calendarName(for: id) { return name }
+    #endif
+    return calendars.first { $0.calendarIdentifier == id }?.title ?? "Unavailable calendar"
   }
 
   var policy: Policy { Policy(config: config) }
 
-  var isAuthorized: Bool { authorizationStatus == .approved }
+  var isAuthorized: Bool { isDemo || authorizationStatus == .approved }
 
   var selectionCount: Int {
     selection.applicationTokens.count + selection.categoryTokens.count
@@ -136,6 +149,7 @@ final class AppModel {
   /// Re-reads shared state (the extension may have cleared an expired override) and re-applies.
   func reload() {
     authorizationStatus = AuthorizationCenter.shared.authorizationStatus
+    guard !isDemo else { return }
     config = SharedStore.loadConfig()
     scheduleEnforce()
     syncCalendars()

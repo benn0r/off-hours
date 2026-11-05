@@ -85,6 +85,7 @@ struct OnCallView: View {
         .foregroundStyle(.secondary)
       }
     }
+    .tint(.primary)
   }
 
   private func delete(_ list: [OnCallShift], at offsets: IndexSet) {

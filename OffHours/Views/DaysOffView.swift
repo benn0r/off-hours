@@ -80,6 +80,7 @@ struct DaysOffView: View {
         Text(dayOff.rangeText).font(.footnote).foregroundStyle(.secondary)
       }
     }
+    .tint(.primary)
   }
 
   private func delete(_ list: [DayOff], at offsets: IndexSet) {
