@@ -28,6 +28,19 @@ struct DaysOffView: View {
                 Text("Work apps are blocked all day on vacation days and holidays, unless you're on call.")
             }
 
+            let imported = model.config.importedDaysOff.filter { $0.lastDay >= today }
+            if !imported.isEmpty {
+                Section {
+                    ForEach(imported) { dayOff in
+                        ImportedRow(icon: "calendar", tint: .indigo, title: dayOff.name, detail: dayOff.rangeText)
+                    }
+                } header: {
+                    Text("From calendars")
+                } footer: {
+                    Text("Edit these in your calendar.")
+                }
+            }
+
             if !past.isEmpty {
                 Section("Past") {
                     ForEach(past) { row($0) }
@@ -63,17 +76,9 @@ struct DaysOffView: View {
         } label: {
             VStack(alignment: .leading, spacing: 2) {
                 Text(dayOff.name.isEmpty ? "Day off" : dayOff.name).foregroundStyle(.primary)
-                Text(rangeText(dayOff)).font(.footnote).foregroundStyle(.secondary)
+                Text(dayOff.rangeText).font(.footnote).foregroundStyle(.secondary)
             }
         }
-    }
-
-    private func rangeText(_ dayOff: DayOff) -> String {
-        let calendar = Calendar.current
-        let first = dayOff.firstDay.startDate(calendar: calendar).formatted(date: .abbreviated, time: .omitted)
-        guard dayOff.lastDay != dayOff.firstDay else { return first }
-        let last = dayOff.lastDay.startDate(calendar: calendar).formatted(date: .abbreviated, time: .omitted)
-        return "\(first) – \(last)"
     }
 
     private func delete(_ list: [DayOff], at offsets: IndexSet) {

@@ -28,6 +28,20 @@ struct OnCallView: View {
                 Text("While on call, work apps stay available, even in the evening, on weekends and on days off.")
             }
 
+            let imported = model.config.importedOnCall.filter { $0.end > .now }
+            if !imported.isEmpty {
+                Section {
+                    ForEach(imported) { shift in
+                        ImportedRow(icon: "calendar", tint: .orange, title: shift.note,
+                                    detail: "\(shift.start.formatted(date: .abbreviated, time: .shortened)) – \(shift.end.formatted(date: .abbreviated, time: .shortened))")
+                    }
+                } header: {
+                    Text("From work calendar")
+                } footer: {
+                    Text("Edit these in your calendar.")
+                }
+            }
+
             if !past.isEmpty {
                 Section("Past") {
                     ForEach(past) { row($0) }

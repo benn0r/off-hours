@@ -35,12 +35,12 @@ struct Policy {
             return Status(blocked: override.blocked, reason: .override(until: override.until))
         }
 
-        if let shift = config.onCall.filter({ $0.contains(date) }).max(by: { $0.end < $1.end }) {
+        if let shift = config.allOnCall.filter({ $0.contains(date) }).max(by: { $0.end < $1.end }) {
             return Status(blocked: false, reason: .onCall(until: shift.end))
         }
 
         let day = DayStamp(date, calendar: calendar)
-        if let off = config.daysOff.first(where: { $0.contains(day) }) {
+        if let off = config.allDaysOff.first(where: { $0.contains(day) }) {
             return Status(blocked: true, reason: .dayOff(name: off.name))
         }
 
@@ -72,7 +72,7 @@ struct Policy {
                 workDay.end.date(on: day, calendar: calendar).map { candidates.insert($0) }
             }
         }
-        for shift in config.onCall {
+        for shift in config.allOnCall {
             candidates.insert(shift.start)
             candidates.insert(shift.end)
         }

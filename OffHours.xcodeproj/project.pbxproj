@@ -10,25 +10,32 @@
 		0B860F6CD4257F45E93B7682 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8F5BEBAA016999492D295 /* AppModel.swift */; };
 		10AE57A13017907E90FCE8F7 /* PolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4FBF25803C8359F36E926 /* PolicyTests.swift */; };
 		13096647B65FFFD992E2AA89 /* Enforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0611DD281CD8E8A6660F40 /* Enforcer.swift */; };
+		2073AFBB22AE53C9DFB21982 /* CalendarImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80F39DF41E0192A8B9FFC /* CalendarImport.swift */; };
 		27D143F9C5DBBC7171A53CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F578FA096D01B175CA43B361 /* Assets.xcassets */; };
 		31EF26B9955987CB65040FDA /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D85818B8C724B319A91A9D /* ManagedSettings.framework */; };
 		38AF66B3B40A034BECFE06A6 /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6F986039833E17FB5A8FE /* Policy.swift */; };
+		3FA282163FA76A71E0762520 /* CalendarImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80F39DF41E0192A8B9FFC /* CalendarImport.swift */; };
 		40CC40419CE2CFD693E123CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6854E151FB175E8E38D3DD8 /* ContentView.swift */; };
 		41282222CA9EF88115FF88C2 /* MonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CAF1BEE7148D7CAC69003D /* MonitorExtension.swift */; };
+		435B82A608B26ACE9A0BC77E /* CalendarImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E41AC9F1E2DA562B382512 /* CalendarImportTests.swift */; };
 		4574462BC2592E691A415BA0 /* DaysOffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9BCDC2BC6B148662E79FD2 /* DaysOffView.swift */; };
 		59FA649B0FC9EC1CA064AD44 /* OffHoursMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB308D7F9129DF9A6B532C73 /* OffHoursMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B17B65B1B49482E28B730E1 /* StatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD72EC9DD1AD836CC6B074 /* StatusCard.swift */; };
 		6A7C978B9D169B3CF96E1346 /* WorkHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE11D01320DF6E14C48BAE /* WorkHoursView.swift */; };
+		7E9F1A01EB25C936FB3663CF /* CalendarImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD80F39DF41E0192A8B9FFC /* CalendarImport.swift */; };
 		8008343543AAAB024A4E4FA1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23256A7E5F982D94025BEF0E /* Config.swift */; };
 		87DD6BE14085D568C0AAC47D /* OnCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F97B78F7760FFEFDBB30F /* OnCallView.swift */; };
 		8B395B5FD4770C5BA6CA2D3F /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F90D0B6965ED1059A00A58 /* DeviceActivity.framework */; };
 		92CE275FAA804BAE97A187AE /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6F986039833E17FB5A8FE /* Policy.swift */; };
+		B4B3BCBBA9BC205751B0B077 /* CalendarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C0D88BC04CD4544040784 /* CalendarsView.swift */; };
 		B7E8A3101B931398D2F4B4F9 /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6F986039833E17FB5A8FE /* Policy.swift */; };
 		BA12FFC6965E8DD55AED73F5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23256A7E5F982D94025BEF0E /* Config.swift */; };
 		BABE8B4DB4979D3CF39E7B3B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23256A7E5F982D94025BEF0E /* Config.swift */; };
 		BE45F8842D5C2946A2A2A93A /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F90D0B6965ED1059A00A58 /* DeviceActivity.framework */; };
 		CDD0A2615B9C8CDA46D631CC /* Enforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0611DD281CD8E8A6660F40 /* Enforcer.swift */; };
+		CE35C1ECDD698BC7E6DD0C1A /* CalendarSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD7E400C8F4100E1D1D52B /* CalendarSync.swift */; };
 		D7C27B465179F40E05205B37 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200D62E40E9EC8DAC97B176 /* FamilyControls.framework */; };
+		D7C350D0E8CD781949761A46 /* CalendarSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CD7E400C8F4100E1D1D52B /* CalendarSync.swift */; };
 		D8905435C46B2A0327152F97 /* OffHoursApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421A4FF8835B7EEFF89182D /* OffHoursApp.swift */; };
 		DC4EF9FBD7A030309800C5D5 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D85818B8C724B319A91A9D /* ManagedSettings.framework */; };
 		F8F8C8541A34E41DA760D043 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1200D62E40E9EC8DAC97B176 /* FamilyControls.framework */; };
@@ -66,6 +73,7 @@
 		3DC6F986039833E17FB5A8FE /* Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Policy.swift; sourceTree = "<group>"; };
 		42D85818B8C724B319A91A9D /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
 		4AF2F50C9465CDE9959B5EC1 /* OffHours.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OffHours.entitlements; sourceTree = "<group>"; };
+		54E41AC9F1E2DA562B382512 /* CalendarImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarImportTests.swift; sourceTree = "<group>"; };
 		56F90D0B6965ED1059A00A58 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		60CAF1BEE7148D7CAC69003D /* MonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorExtension.swift; sourceTree = "<group>"; };
 		7B0611DD281CD8E8A6660F40 /* Enforcer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enforcer.swift; sourceTree = "<group>"; };
@@ -79,8 +87,11 @@
 		BB9BCDC2BC6B148662E79FD2 /* DaysOffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOffView.swift; sourceTree = "<group>"; };
 		BBDE11D01320DF6E14C48BAE /* WorkHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHoursView.swift; sourceTree = "<group>"; };
 		CDCCDD5B0FA663455EA5F159 /* OffHours.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = OffHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD80F39DF41E0192A8B9FFC /* CalendarImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarImport.swift; sourceTree = "<group>"; };
+		D88C0D88BC04CD4544040784 /* CalendarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarsView.swift; sourceTree = "<group>"; };
 		E8798948132E1BD1638AFBF5 /* OffHoursMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OffHoursMonitor.entitlements; sourceTree = "<group>"; };
 		F578FA096D01B175CA43B361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7CD7E400C8F4100E1D1D52B /* CalendarSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSync.swift; sourceTree = "<group>"; };
 		FB308D7F9129DF9A6B532C73 /* OffHoursMonitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = OffHoursMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +154,7 @@
 		30DD8722C6317C75B857CE6F /* Enforcement */ = {
 			isa = PBXGroup;
 			children = (
+				F7CD7E400C8F4100E1D1D52B /* CalendarSync.swift */,
 				7B0611DD281CD8E8A6660F40 /* Enforcer.swift */,
 			);
 			path = Enforcement;
@@ -151,6 +163,7 @@
 		3400EA193D65C2DA93EAC3A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D88C0D88BC04CD4544040784 /* CalendarsView.swift */,
 				B6854E151FB175E8E38D3DD8 /* ContentView.swift */,
 				BB9BCDC2BC6B148662E79FD2 /* DaysOffView.swift */,
 				BA7F97B78F7760FFEFDBB30F /* OnCallView.swift */,
@@ -173,6 +186,7 @@
 		5FF41B75D1CE6831032BC7E5 /* OffHoursTests */ = {
 			isa = PBXGroup;
 			children = (
+				54E41AC9F1E2DA562B382512 /* CalendarImportTests.swift */,
 				9DC4FBF25803C8359F36E926 /* PolicyTests.swift */,
 			);
 			path = OffHoursTests;
@@ -203,6 +217,7 @@
 		DB8F26F4E1F383E625965029 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFD80F39DF41E0192A8B9FFC /* CalendarImport.swift */,
 				23256A7E5F982D94025BEF0E /* Config.swift */,
 				3DC6F986039833E17FB5A8FE /* Policy.swift */,
 			);
@@ -328,6 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9F1A01EB25C936FB3663CF /* CalendarImport.swift in Sources */,
+				D7C350D0E8CD781949761A46 /* CalendarSync.swift in Sources */,
 				BABE8B4DB4979D3CF39E7B3B /* Config.swift in Sources */,
 				CDD0A2615B9C8CDA46D631CC /* Enforcer.swift in Sources */,
 				41282222CA9EF88115FF88C2 /* MonitorExtension.swift in Sources */,
@@ -339,6 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2073AFBB22AE53C9DFB21982 /* CalendarImport.swift in Sources */,
+				435B82A608B26ACE9A0BC77E /* CalendarImportTests.swift in Sources */,
 				BA12FFC6965E8DD55AED73F5 /* Config.swift in Sources */,
 				38AF66B3B40A034BECFE06A6 /* Policy.swift in Sources */,
 				10AE57A13017907E90FCE8F7 /* PolicyTests.swift in Sources */,
@@ -350,6 +369,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B860F6CD4257F45E93B7682 /* AppModel.swift in Sources */,
+				3FA282163FA76A71E0762520 /* CalendarImport.swift in Sources */,
+				CE35C1ECDD698BC7E6DD0C1A /* CalendarSync.swift in Sources */,
+				B4B3BCBBA9BC205751B0B077 /* CalendarsView.swift in Sources */,
 				8008343543AAAB024A4E4FA1 /* Config.swift in Sources */,
 				40CC40419CE2CFD693E123CE /* ContentView.swift in Sources */,
 				4574462BC2592E691A415BA0 /* DaysOffView.swift in Sources */,

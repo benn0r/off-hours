@@ -1,4 +1,5 @@
 import DeviceActivity
+import EventKit
 import FamilyControls
 import Foundation
 import ManagedSettings
@@ -74,9 +75,24 @@ enum Enforcer {
             SharedStore.save(config)
         }
 
+        enforce(config, at: evaluationDate)
+
+        // Once a day the extension also re-reads the calendars, so imported holidays and
+        // on-call shifts stay current without opening the app. This runs *after* enforcing,
+        // so if the extension hits its memory limit, the existing schedule is still in place.
+        if activity == .heartbeat, config.usesCalendars {
+            let synced = CalendarSync.syncing(config, store: EKEventStore(), now: evaluationDate)
+            if synced != config {
+                SharedStore.save(synced)
+                enforce(synced, at: evaluationDate)
+            }
+        }
+    }
+
+    private static func enforce(_ config: Config, at date: Date) {
         let policy = Policy(config: config)
-        apply(blocked: policy.status(at: evaluationDate).blocked, selection: SharedStore.loadSelection())
-        schedule(policy.transitions(after: evaluationDate, limit: maxScheduledTransitions))
+        apply(blocked: policy.status(at: date).blocked, selection: SharedStore.loadSelection())
+        schedule(policy.transitions(after: date, limit: maxScheduledTransitions))
     }
 
     static func apply(blocked: Bool, selection: FamilyActivitySelection) {

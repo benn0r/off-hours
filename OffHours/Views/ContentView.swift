@@ -59,6 +59,11 @@ struct ContentView: View {
                     } label: {
                         LabeledContent("Days off & holidays", value: daysOffSummary)
                     }
+                    NavigationLink {
+                        CalendarsView()
+                    } label: {
+                        LabeledContent("Calendars", value: calendarsSummary)
+                    }
                     Toggle("Scheduling on", isOn: $model.config.isEnabled)
                 }
 
@@ -89,13 +94,18 @@ struct ContentView: View {
     }
 
     private var onCallSummary: String {
-        let upcoming = model.config.onCall.filter { $0.end > .now }.count
+        let upcoming = model.config.allOnCall.filter { $0.end > .now }.count
         return upcoming == 0 ? "None" : "\(upcoming) upcoming"
+    }
+
+    private var calendarsSummary: String {
+        let count = model.config.holidayCalendarIDs.count + model.config.workCalendarIDs.count
+        return count == 0 ? "None" : "\(count) selected"
     }
 
     private var daysOffSummary: String {
         let today = DayStamp(.now, calendar: .current)
-        let upcoming = model.config.daysOff.filter { $0.lastDay >= today }.count
+        let upcoming = model.config.allDaysOff.filter { $0.lastDay >= today }.count
         return upcoming == 0 ? "None" : "\(upcoming) upcoming"
     }
 }

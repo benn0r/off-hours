@@ -22,6 +22,7 @@ targets:
       path: OffHours/Info.plist
       properties:
         CFBundleDisplayName: OffHours
+        NSCalendarsFullAccessUsageDescription: OffHours reads your holiday and work calendars to know your days off and on-call shifts.
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
     entitlements:
@@ -49,6 +50,7 @@ targets:
       path: OffHoursMonitor/Info.plist
       properties:
         CFBundleDisplayName: OffHours Monitor
+        NSCalendarsFullAccessUsageDescription: OffHours reads your holiday and work calendars to know your days off and on-call shifts.
         NSExtension:
           NSExtensionPointIdentifier: com.apple.deviceactivity.monitor-extension
           NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).MonitorExtension

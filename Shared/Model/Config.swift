@@ -85,6 +85,40 @@ struct Config: Codable, Equatable {
     var daysOff: [DayOff] = []
     var override: Override?
 
+    // Calendar import
+    var holidayCalendarIDs: [String] = []
+    var workCalendarIDs: [String] = []
+    var onCallKeywords: [String] = CalendarImport.defaultOnCallKeywords
+    var dayOffKeywords: [String] = CalendarImport.defaultDayOffKeywords
+    /// Replaced on every calendar sync; never edited by hand.
+    var importedOnCall: [OnCallShift] = []
+    var importedDaysOff: [DayOff] = []
+
+    var allOnCall: [OnCallShift] { onCall + importedOnCall }
+    var allDaysOff: [DayOff] { daysOff + importedDaysOff }
+
+    var usesCalendars: Bool { !holidayCalendarIDs.isEmpty || !workCalendarIDs.isEmpty }
+
+    init(week: [WorkDay]) {
+        self.week = week
+    }
+
+    init(from decoder: Decoder) throws {
+        // Every field is optional so older saved configs keep loading after new settings are added.
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        week = try c.decodeIfPresent([WorkDay].self, forKey: .week) ?? Config.default.week
+        isEnabled = try c.decodeIfPresent(Bool.self, forKey: .isEnabled) ?? true
+        onCall = try c.decodeIfPresent([OnCallShift].self, forKey: .onCall) ?? []
+        daysOff = try c.decodeIfPresent([DayOff].self, forKey: .daysOff) ?? []
+        override = try c.decodeIfPresent(Override.self, forKey: .override)
+        holidayCalendarIDs = try c.decodeIfPresent([String].self, forKey: .holidayCalendarIDs) ?? []
+        workCalendarIDs = try c.decodeIfPresent([String].self, forKey: .workCalendarIDs) ?? []
+        onCallKeywords = try c.decodeIfPresent([String].self, forKey: .onCallKeywords) ?? CalendarImport.defaultOnCallKeywords
+        dayOffKeywords = try c.decodeIfPresent([String].self, forKey: .dayOffKeywords) ?? CalendarImport.defaultDayOffKeywords
+        importedOnCall = try c.decodeIfPresent([OnCallShift].self, forKey: .importedOnCall) ?? []
+        importedDaysOff = try c.decodeIfPresent([DayOff].self, forKey: .importedDaysOff) ?? []
+    }
+
     static let `default`: Config = {
         let office = WorkDay(isWorkday: true,
                              start: TimeOfDay(hour: 8, minute: 0),
