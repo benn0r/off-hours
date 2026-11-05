@@ -23,7 +23,7 @@ struct ContentView: View {
               Text(error).font(.footnote).foregroundStyle(.red)
             }
           } footer: {
-            Text("OffHours uses Screen Time to block your work apps. Nothing leaves your device.")
+            Text("Off-hours uses Screen Time to block your work apps. Nothing leaves your device.")
           }
         }
 
@@ -83,7 +83,7 @@ struct ContentView: View {
           Text("Overrides beat every schedule, including on-call and days off.")
         }
       }
-      .navigationTitle("OffHours")
+      .navigationTitle("Off-hours")
       .familyActivityPicker(isPresented: $showingPicker, selection: $model.selection)
     }
   }

@@ -133,7 +133,7 @@ enum Enforcer {
         try center.startMonitoring(name, during: schedule)
         scheduled[name.rawValue] = date
       } catch {
-        print("OffHours: could not schedule \(name.rawValue) at \(date): \(error)")
+        print("Off-hours: could not schedule \(name.rawValue) at \(date): \(error)")
       }
     }
 
