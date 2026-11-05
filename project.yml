@@ -25,6 +25,8 @@ targets:
       path: OffHours/Info.plist
       properties:
         CFBundleDisplayName: Off-hours
+        # No encryption beyond what iOS provides; skips the export compliance question on upload.
+        ITSAppUsesNonExemptEncryption: false
         NSCalendarsFullAccessUsageDescription: Off-hours reads your holiday and work calendars to know your days off and on-call shifts.
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
