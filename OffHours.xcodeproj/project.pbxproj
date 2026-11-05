@@ -10,6 +10,7 @@
 		0B860F6CD4257F45E93B7682 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC8F5BEBAA016999492D295 /* AppModel.swift */; };
 		10AE57A13017907E90FCE8F7 /* PolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4FBF25803C8359F36E926 /* PolicyTests.swift */; };
 		13096647B65FFFD992E2AA89 /* Enforcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0611DD281CD8E8A6660F40 /* Enforcer.swift */; };
+		27D143F9C5DBBC7171A53CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F578FA096D01B175CA43B361 /* Assets.xcassets */; };
 		31EF26B9955987CB65040FDA /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D85818B8C724B319A91A9D /* ManagedSettings.framework */; };
 		38AF66B3B40A034BECFE06A6 /* Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6F986039833E17FB5A8FE /* Policy.swift */; };
 		40CC40419CE2CFD693E123CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6854E151FB175E8E38D3DD8 /* ContentView.swift */; };
@@ -79,6 +80,7 @@
 		BBDE11D01320DF6E14C48BAE /* WorkHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHoursView.swift; sourceTree = "<group>"; };
 		CDCCDD5B0FA663455EA5F159 /* OffHours.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = OffHours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8798948132E1BD1638AFBF5 /* OffHoursMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OffHoursMonitor.entitlements; sourceTree = "<group>"; };
+		F578FA096D01B175CA43B361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB308D7F9129DF9A6B532C73 /* OffHoursMonitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = OffHoursMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				7FC8F5BEBAA016999492D295 /* AppModel.swift */,
+				F578FA096D01B175CA43B361 /* Assets.xcassets */,
 				979B45D99EC8002675E70CD8 /* Info.plist */,
 				4AF2F50C9465CDE9959B5EC1 /* OffHours.entitlements */,
 				A421A4FF8835B7EEFF89182D /* OffHoursApp.swift */,
@@ -231,6 +234,7 @@
 			buildConfigurationList = 432EFBC1D6E335AC080BCCFA /* Build configuration list for PBXNativeTarget "OffHours" */;
 			buildPhases = (
 				C2FC0A357DFEF2AA7CC076A8 /* Sources */,
+				00D5AB06AC31D58BB98DC8F8 /* Resources */,
 				B165FA6F70B46CFD80AA12AA /* Frameworks */,
 				50E92EB19D2A636B01A2450A /* Embed Foundation Extensions */,
 			);
@@ -307,6 +311,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00D5AB06AC31D58BB98DC8F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D143F9C5DBBC7171A53CB5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6415AC0D60DDCCD99ABF12B0 /* Sources */ = {
