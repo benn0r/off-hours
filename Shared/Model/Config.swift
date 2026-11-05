@@ -2,145 +2,150 @@ import Foundation
 
 /// A wall-clock time (hour + minute), independent of any date.
 struct TimeOfDay: Codable, Hashable, Comparable {
-    var hour: Int
-    var minute: Int
+  var hour: Int
+  var minute: Int
 
-    var minutes: Int { hour * 60 + minute }
+  var minutes: Int { hour * 60 + minute }
 
-    static func < (lhs: TimeOfDay, rhs: TimeOfDay) -> Bool { lhs.minutes < rhs.minutes }
+  static func < (lhs: TimeOfDay, rhs: TimeOfDay) -> Bool { lhs.minutes < rhs.minutes }
 
-    func date(on day: Date, calendar: Calendar) -> Date? {
-        calendar.date(bySettingHour: hour, minute: minute, second: 0, of: day)
-    }
+  func date(on day: Date, calendar: Calendar) -> Date? {
+    calendar.date(bySettingHour: hour, minute: minute, second: 0, of: day)
+  }
 
-    var formatted: String { String(format: "%02d:%02d", hour, minute) }
+  var formatted: String { String(format: "%02d:%02d", hour, minute) }
 }
 
 /// A calendar day (no time, no time zone), used for days off and holidays.
 struct DayStamp: Codable, Hashable, Comparable {
-    var year: Int
-    var month: Int
-    var day: Int
+  var year: Int
+  var month: Int
+  var day: Int
 
-    init(year: Int, month: Int, day: Int) {
-        self.year = year
-        self.month = month
-        self.day = day
-    }
+  init(year: Int, month: Int, day: Int) {
+    self.year = year
+    self.month = month
+    self.day = day
+  }
 
-    init(_ date: Date, calendar: Calendar) {
-        let c = calendar.dateComponents([.year, .month, .day], from: date)
-        self.init(year: c.year ?? 0, month: c.month ?? 1, day: c.day ?? 1)
-    }
+  init(_ date: Date, calendar: Calendar) {
+    let c = calendar.dateComponents([.year, .month, .day], from: date)
+    self.init(year: c.year ?? 0, month: c.month ?? 1, day: c.day ?? 1)
+  }
 
-    func startDate(calendar: Calendar) -> Date {
-        calendar.date(from: DateComponents(year: year, month: month, day: day)) ?? .distantPast
-    }
+  func startDate(calendar: Calendar) -> Date {
+    calendar.date(from: DateComponents(year: year, month: month, day: day)) ?? .distantPast
+  }
 
-    static func < (lhs: DayStamp, rhs: DayStamp) -> Bool {
-        (lhs.year, lhs.month, lhs.day) < (rhs.year, rhs.month, rhs.day)
-    }
+  static func < (lhs: DayStamp, rhs: DayStamp) -> Bool {
+    (lhs.year, lhs.month, lhs.day) < (rhs.year, rhs.month, rhs.day)
+  }
 }
 
 /// One weekday in the regular weekly schedule.
 struct WorkDay: Codable, Hashable {
-    var isWorkday: Bool
-    var start: TimeOfDay
-    var end: TimeOfDay
+  var isWorkday: Bool
+  var start: TimeOfDay
+  var end: TimeOfDay
 
-    var hasValidHours: Bool { start < end }
+  var hasValidHours: Bool { start < end }
 }
 
 /// A period during which work apps stay available regardless of the weekly schedule.
 struct OnCallShift: Codable, Hashable, Identifiable {
-    var id = UUID()
-    var start: Date
-    var end: Date
-    var note: String = ""
+  var id = UUID()
+  var start: Date
+  var end: Date
+  var note: String = ""
 
-    func contains(_ date: Date) -> Bool { start <= date && date < end }
+  func contains(_ date: Date) -> Bool { start <= date && date < end }
 }
 
 /// One day or a range of days (inclusive) on which work apps are blocked all day.
 struct DayOff: Codable, Hashable, Identifiable {
-    var id = UUID()
-    var name: String
-    var firstDay: DayStamp
-    var lastDay: DayStamp
+  var id = UUID()
+  var name: String
+  var firstDay: DayStamp
+  var lastDay: DayStamp
 
-    func contains(_ day: DayStamp) -> Bool { firstDay <= day && day <= lastDay }
+  func contains(_ day: DayStamp) -> Bool { firstDay <= day && day <= lastDay }
 }
 
 /// A temporary manual decision that beats every schedule until it expires.
 struct Override: Codable, Hashable {
-    var blocked: Bool
-    var until: Date
+  var blocked: Bool
+  var until: Date
 }
 
 struct Config: Codable, Equatable {
-    var isEnabled: Bool = true
-    /// Indexed by `Calendar.weekday - 1` (0 = Sunday … 6 = Saturday).
-    var week: [WorkDay]
-    var onCall: [OnCallShift] = []
-    var daysOff: [DayOff] = []
-    var override: Override?
+  var isEnabled: Bool = true
+  /// Indexed by `Calendar.weekday - 1` (0 = Sunday … 6 = Saturday).
+  var week: [WorkDay]
+  var onCall: [OnCallShift] = []
+  var daysOff: [DayOff] = []
+  var override: Override?
 
-    // Calendar import
-    var holidayCalendarIDs: [String] = []
-    var workCalendarIDs: [String] = []
-    var onCallKeywords: [String] = CalendarImport.defaultOnCallKeywords
-    var dayOffKeywords: [String] = CalendarImport.defaultDayOffKeywords
-    /// Replaced on every calendar sync; never edited by hand.
-    var importedOnCall: [OnCallShift] = []
-    var importedDaysOff: [DayOff] = []
-    /// Work-calendar meetings outside work hours keep work apps available.
-    var meetingsExtendHours: Bool = false
-    /// Work apps open this many minutes before a meeting starts.
-    var meetingBufferMinutes: Int = 10
-    var importedMeetings: [OnCallShift] = []
+  // Calendar import
+  var holidayCalendarIDs: [String] = []
+  var workCalendarIDs: [String] = []
+  var onCallKeywords: [String] = CalendarImport.defaultOnCallKeywords
+  var dayOffKeywords: [String] = CalendarImport.defaultDayOffKeywords
+  /// Replaced on every calendar sync; never edited by hand.
+  var importedOnCall: [OnCallShift] = []
+  var importedDaysOff: [DayOff] = []
+  /// Work-calendar meetings outside work hours keep work apps available.
+  var meetingsExtendHours: Bool = false
+  /// Work apps open this many minutes before a meeting starts.
+  var meetingBufferMinutes: Int = 10
+  var importedMeetings: [OnCallShift] = []
 
-    var meetingBuffer: TimeInterval { TimeInterval(max(0, meetingBufferMinutes) * 60) }
+  var meetingBuffer: TimeInterval { TimeInterval(max(0, meetingBufferMinutes) * 60) }
 
-    var allOnCall: [OnCallShift] { onCall + importedOnCall }
-    var allDaysOff: [DayOff] { daysOff + importedDaysOff }
+  var allOnCall: [OnCallShift] { onCall + importedOnCall }
+  var allDaysOff: [DayOff] { daysOff + importedDaysOff }
 
-    var usesCalendars: Bool { !holidayCalendarIDs.isEmpty || !workCalendarIDs.isEmpty }
+  var usesCalendars: Bool { !holidayCalendarIDs.isEmpty || !workCalendarIDs.isEmpty }
 
-    init(week: [WorkDay]) {
-        self.week = week
-    }
+  init(week: [WorkDay]) {
+    self.week = week
+  }
 
-    init(from decoder: Decoder) throws {
-        // Every field is optional so older saved configs keep loading after new settings are added.
-        let c = try decoder.container(keyedBy: CodingKeys.self)
-        week = try c.decodeIfPresent([WorkDay].self, forKey: .week) ?? Config.default.week
-        isEnabled = try c.decodeIfPresent(Bool.self, forKey: .isEnabled) ?? true
-        onCall = try c.decodeIfPresent([OnCallShift].self, forKey: .onCall) ?? []
-        daysOff = try c.decodeIfPresent([DayOff].self, forKey: .daysOff) ?? []
-        override = try c.decodeIfPresent(Override.self, forKey: .override)
-        holidayCalendarIDs = try c.decodeIfPresent([String].self, forKey: .holidayCalendarIDs) ?? []
-        workCalendarIDs = try c.decodeIfPresent([String].self, forKey: .workCalendarIDs) ?? []
-        onCallKeywords = try c.decodeIfPresent([String].self, forKey: .onCallKeywords) ?? CalendarImport.defaultOnCallKeywords
-        dayOffKeywords = try c.decodeIfPresent([String].self, forKey: .dayOffKeywords) ?? CalendarImport.defaultDayOffKeywords
-        importedOnCall = try c.decodeIfPresent([OnCallShift].self, forKey: .importedOnCall) ?? []
-        importedDaysOff = try c.decodeIfPresent([DayOff].self, forKey: .importedDaysOff) ?? []
-        meetingsExtendHours = try c.decodeIfPresent(Bool.self, forKey: .meetingsExtendHours) ?? false
-        meetingBufferMinutes = try c.decodeIfPresent(Int.self, forKey: .meetingBufferMinutes) ?? 10
-        importedMeetings = try c.decodeIfPresent([OnCallShift].self, forKey: .importedMeetings) ?? []
-    }
+  init(from decoder: Decoder) throws {
+    // Every field is optional so older saved configs keep loading after new settings are added.
+    let c = try decoder.container(keyedBy: CodingKeys.self)
+    week = try c.decodeIfPresent([WorkDay].self, forKey: .week) ?? Config.default.week
+    isEnabled = try c.decodeIfPresent(Bool.self, forKey: .isEnabled) ?? true
+    onCall = try c.decodeIfPresent([OnCallShift].self, forKey: .onCall) ?? []
+    daysOff = try c.decodeIfPresent([DayOff].self, forKey: .daysOff) ?? []
+    override = try c.decodeIfPresent(Override.self, forKey: .override)
+    holidayCalendarIDs = try c.decodeIfPresent([String].self, forKey: .holidayCalendarIDs) ?? []
+    workCalendarIDs = try c.decodeIfPresent([String].self, forKey: .workCalendarIDs) ?? []
+    onCallKeywords =
+      try c.decodeIfPresent([String].self, forKey: .onCallKeywords)
+      ?? CalendarImport.defaultOnCallKeywords
+    dayOffKeywords =
+      try c.decodeIfPresent([String].self, forKey: .dayOffKeywords)
+      ?? CalendarImport.defaultDayOffKeywords
+    importedOnCall = try c.decodeIfPresent([OnCallShift].self, forKey: .importedOnCall) ?? []
+    importedDaysOff = try c.decodeIfPresent([DayOff].self, forKey: .importedDaysOff) ?? []
+    meetingsExtendHours = try c.decodeIfPresent(Bool.self, forKey: .meetingsExtendHours) ?? false
+    meetingBufferMinutes = try c.decodeIfPresent(Int.self, forKey: .meetingBufferMinutes) ?? 10
+    importedMeetings = try c.decodeIfPresent([OnCallShift].self, forKey: .importedMeetings) ?? []
+  }
 
-    static let `default`: Config = {
-        let office = WorkDay(isWorkday: true,
-                             start: TimeOfDay(hour: 8, minute: 0),
-                             end: TimeOfDay(hour: 18, minute: 0))
-        var weekend = office
-        weekend.isWorkday = false
-        // Sun, Mon, Tue, Wed, Thu, Fri, Sat
-        return Config(week: [weekend, office, office, office, office, office, weekend])
-    }()
+  static let `default`: Config = {
+    let office = WorkDay(
+      isWorkday: true,
+      start: TimeOfDay(hour: 8, minute: 0),
+      end: TimeOfDay(hour: 18, minute: 0))
+    var weekend = office
+    weekend.isWorkday = false
+    // Sun, Mon, Tue, Wed, Thu, Fri, Sat
+    return Config(week: [weekend, office, office, office, office, office, weekend])
+  }()
 
-    func workDay(for date: Date, calendar: Calendar) -> WorkDay {
-        let index = calendar.component(.weekday, from: date) - 1
-        return week.indices.contains(index) ? week[index] : Config.default.week[index]
-    }
+  func workDay(for date: Date, calendar: Calendar) -> WorkDay {
+    let index = calendar.component(.weekday, from: date) - 1
+    return week.indices.contains(index) ? week[index] : Config.default.week[index]
+  }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "off-hours",
+  "private": true,
+  "description": "iOS app that blocks work apps with Screen Time outside work hours, with on-call shifts, days off and calendar import.",
+  "scripts": {
+    "project:generate": "bash scripts/generate-project.sh",
+    "ios": "npm run project:generate && open OffHours.xcodeproj",
+    "test": "npm run project:generate && xcodebuild test -project OffHours.xcodeproj -scheme OffHours -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -derivedDataPath .build/DerivedData -enableCodeCoverage YES",
+    "test:unit": "npm run project:generate && xcodebuild test -project OffHours.xcodeproj -scheme OffHours -destination 'platform=iOS Simulator,name=iPhone 17 Pro' -derivedDataPath .build/DerivedData -only-testing:OffHoursTests",
+    "build": "npm run project:generate && xcodebuild -project OffHours.xcodeproj -scheme OffHours -configuration Release -destination 'generic/platform=iOS' -derivedDataPath .build/DerivedData CODE_SIGNING_ALLOWED=NO build",
+    "ios:release": "npm run project:generate && xcodebuild -project OffHours.xcodeproj -scheme OffHours -configuration Release -destination 'generic/platform=iOS' -derivedDataPath .build/DerivedData -allowProvisioningUpdates build",
+    "deploy": "bash scripts/deploy-ios.sh",
+    "lint": "find OffHours OffHoursMonitor Shared OffHoursTests -name '*.swift' -print0 | xargs -0 swiftc -parse",
+    "format:check": "xcrun swift-format lint --recursive --strict OffHours OffHoursMonitor Shared OffHoursTests",
+    "format": "xcrun swift-format format --recursive --in-place OffHours OffHoursMonitor Shared OffHoursTests"
+  }
+}
