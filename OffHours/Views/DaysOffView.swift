@@ -76,7 +76,8 @@ struct DaysOffView: View {
       editing = dayOff
     } label: {
       VStack(alignment: .leading, spacing: 2) {
-        Text(dayOff.name.isEmpty ? "Day off" : dayOff.name).foregroundStyle(.primary)
+        Text(dayOff.name.isEmpty ? String(localized: "Day off") : dayOff.name).foregroundStyle(
+          .primary)
         Text(dayOff.rangeText).font(.footnote).foregroundStyle(.secondary)
       }
     }

@@ -28,9 +28,16 @@ enum CalendarImport {
     var meetings: [OnCallShift] = []
   }
 
-  static let defaultOnCallKeywords = ["on call", "on-call", "oncall", "pikett", "bereitschaft"]
+  /// English, German, French, Italian, Spanish and Dutch; matched as whole words, case-insensitive.
+  static let defaultOnCallKeywords = [
+    "on call", "on-call", "oncall", "pikett", "bereitschaft", "astreinte", "de garde",
+    "reperibilità",
+    "reperibile", "picchetto", "de guardia", "guardia", "piket", "piketdienst", "consignatie",
+  ]
   static let defaultDayOffKeywords = [
-    "vacation", "holiday", "out of office", "ooo", "pto", "ferien", "urlaub", "frei",
+    "vacation", "holiday", "out of office", "ooo", "pto", "ferien", "urlaub", "frei", "vacances",
+    "congé", "férié", "ferie", "vacanza", "festivo", "vacaciones", "vakantie", "verlof",
+    "feestdag",
   ]
 
   static func classify(_ entries: [CalendarEntry], config: Config, calendar: Calendar) -> Result {
@@ -48,7 +55,8 @@ enum CalendarImport {
       let key =
         "\(entry.calendarID)|\(entry.title)|\(entry.start.timeIntervalSince1970)|\(entry.end.timeIntervalSince1970)"
 
-      if workIDs.contains(entry.calendarID), onCallKeywords.contains(where: title.contains) {
+      if workIDs.contains(entry.calendarID), onCallKeywords.contains(where: { matches(title, $0) })
+      {
         onCall.append(
           OnCallShift(id: stableUUID(key), start: entry.start, end: entry.end, note: entry.title))
         continue
@@ -56,7 +64,7 @@ enum CalendarImport {
 
       let isHoliday = holidayIDs.contains(entry.calendarID)
       let isWorkDayOff =
-        workIDs.contains(entry.calendarID) && dayOffKeywords.contains(where: title.contains)
+        workIDs.contains(entry.calendarID) && dayOffKeywords.contains(where: { matches(title, $0) })
       if isHoliday || isWorkDayOff {
         // All-day events end at 23:59:59 (or next midnight); timed events may end exactly at midnight.
         let lastMoment = max(entry.start, entry.end.addingTimeInterval(-1))
@@ -96,6 +104,14 @@ enum CalendarImport {
       let workEnd = workDay.end.date(on: start, calendar: calendar)
     else { return false }
     return start >= workStart && entry.end <= workEnd
+  }
+
+  /// Whole-word match, so "pto" doesn't match "Laptop" and "frei" doesn't match "Freitag".
+  static func matches(_ title: String, _ keyword: String) -> Bool {
+    let pattern =
+      "(?<![\\p{L}\\p{N}])" + NSRegularExpression.escapedPattern(for: keyword)
+      + "(?![\\p{L}\\p{N}])"
+    return title.range(of: pattern, options: [.regularExpression, .caseInsensitive]) != nil
   }
 
   static func normalized(_ keywords: [String]) -> [String] {

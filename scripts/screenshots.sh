@@ -2,11 +2,16 @@
 # Takes the README and App Store screenshots with fictional data (`-demo`) in the iOS simulator.
 #   scripts/screenshots.sh                      → screenshots/appstore/ (iPhone 17 Pro, 1206×2622: App Store Connect's "iPhone with Dynamic Island" size)
 #   SIMULATOR="iPhone 17 Pro" OUT=screenshots WIDTH=603 PREFIX=ios- scripts/screenshots.sh  → README images
+#   LANGUAGE=fr LOCALE=fr_FR scripts/screenshots.sh   → screenshots/appstore/fr/
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 simulator="${SIMULATOR:-iPhone 17 Pro}"
-out="${OUT:-screenshots/appstore}"
+language="${LANGUAGE:-}"
+locale="${LOCALE:-}"
+out="${OUT:-screenshots/appstore${language:+/$language}}"
+language_args=()
+if [[ -n "$language" ]]; then language_args=(-AppleLanguages "($language)" -AppleLocale "${locale:-$language}"); fi
 width="${WIDTH:-}"
 prefix="${PREFIX:-}"
 bundle_id=ch.benn0r.off-hours
@@ -37,7 +42,7 @@ mkdir -p "$out"
 shoot() { # file, extra launch arguments…
   local file=$1
   shift
-  xcrun simctl launch --terminate-running-process "$udid" "$bundle_id" -demo "$@" >/dev/null
+  xcrun simctl launch --terminate-running-process "$udid" "$bundle_id" -demo ${language_args[@]+"${language_args[@]}"} "$@" >/dev/null
   sleep 4
   xcrun simctl io "$udid" screenshot "$out/$prefix$file.png" >/dev/null 2>&1
   if [[ -n "$width" ]]; then sips --resampleWidth "$width" "$out/$prefix$file.png" >/dev/null; fi

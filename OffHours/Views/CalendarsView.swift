@@ -47,7 +47,8 @@ struct CalendarsView: View {
           if model.config.meetingsExtendHours {
             Stepper(value: $model.config.meetingBufferMinutes, in: 0...30, step: 5) {
               LabeledContent(
-                "Open before meeting", value: "\(model.config.meetingBufferMinutes) min")
+                "Open before meeting",
+                value: String(localized: "\(model.config.meetingBufferMinutes) min"))
             }
           }
         } header: {
@@ -110,14 +111,15 @@ struct CalendarsView: View {
 /// Picks zero or one calendar. Stored as an array so more could be supported later.
 private struct CalendarPicker: View {
   @Environment(AppModel.self) private var model
-  let title: String
+  let title: LocalizedStringKey
   @Binding var selection: [String]
 
   var body: some View {
     NavigationLink {
       CalendarChoiceList(title: title, selection: $selection)
     } label: {
-      LabeledContent(title, value: selection.first.map(model.calendarName(for:)) ?? "None")
+      LabeledContent(
+        title, value: selection.first.map(model.calendarName(for:)) ?? String(localized: "None"))
     }
     .disabled(!model.hasCalendarAccess)
   }
@@ -128,13 +130,13 @@ private struct CalendarPicker: View {
 private struct CalendarChoiceList: View {
   @Environment(AppModel.self) private var model
   @Environment(\.dismiss) private var dismiss
-  let title: String
+  let title: LocalizedStringKey
   @Binding var selection: [String]
 
   var body: some View {
     List {
       Section {
-        row(id: nil, name: "None", color: nil)
+        row(id: nil, name: String(localized: "None"), color: nil)
       }
       ForEach(sources, id: \.self) { source in
         Section(source) {
@@ -177,20 +179,23 @@ private struct CalendarChoiceList: View {
 }
 
 private struct KeywordField: View {
-  let title: String
+  let title: LocalizedStringKey
   @Binding var keywords: [String]
 
   var body: some View {
     VStack(alignment: .leading, spacing: 4) {
       Text(title).font(.footnote).foregroundStyle(.secondary)
-      // Joined/split without trimming so typing spaces and commas round-trips exactly;
-      // CalendarImport trims and lowercases when matching.
+      // Shown as "a, b, c". Splitting drops exactly one space after each comma (and nothing else),
+      // so typing round-trips; CalendarImport trims and lowercases when matching.
       TextField(
         title,
         text: Binding(
-          get: { keywords.joined(separator: ",") },
+          get: { keywords.joined(separator: ", ") },
           set: {
-            keywords = $0.split(separator: ",", omittingEmptySubsequences: false).map(String.init)
+            keywords = $0.split(separator: ",", omittingEmptySubsequences: false).enumerated().map {
+              index, part in
+              index > 0 && part.hasPrefix(" ") ? String(part.dropFirst()) : String(part)
+            }
           }
         ), axis: .vertical
       )
@@ -210,7 +215,7 @@ struct ImportedRow: View {
     HStack(spacing: 12) {
       Image(systemName: icon).foregroundStyle(tint).frame(width: 24)
       VStack(alignment: .leading, spacing: 2) {
-        Text(title.isEmpty ? "Untitled" : title)
+        Text(title.isEmpty ? String(localized: "Untitled") : title)
         Text(detail).font(.footnote).foregroundStyle(.secondary)
       }
     }

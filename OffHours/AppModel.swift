@@ -123,7 +123,8 @@ final class AppModel {
     #if DEBUG
       if let name = DemoData.calendarName(for: id) { return name }
     #endif
-    return calendars.first { $0.calendarIdentifier == id }?.title ?? "Unavailable calendar"
+    return calendars.first { $0.calendarIdentifier == id }?.title
+      ?? String(localized: "Unavailable calendar")
   }
 
   var policy: Policy { Policy(config: config) }

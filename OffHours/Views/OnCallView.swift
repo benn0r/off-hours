@@ -77,7 +77,8 @@ struct OnCallView: View {
       editing = shift
     } label: {
       VStack(alignment: .leading, spacing: 2) {
-        Text(shift.note.isEmpty ? "On call" : shift.note).foregroundStyle(.primary)
+        Text(shift.note.isEmpty ? String(localized: "On call") : shift.note).foregroundStyle(
+          .primary)
         Text(
           "\(shift.start.formatted(date: .abbreviated, time: .shortened)) – \(shift.end.formatted(date: .abbreviated, time: .shortened))"
         )
@@ -110,6 +111,10 @@ private struct OnCallEditor: View {
   @State var shift: OnCallShift
   let onSave: (OnCallShift) -> Void
 
+  private let quickLengths: [(LocalizedStringKey, Int)] = [
+    ("Tonight", 0), ("1 day", 1), ("Weekend", 3), ("1 week", 7),
+  ]
+
   var body: some View {
     NavigationStack {
       Form {
@@ -118,7 +123,7 @@ private struct OnCallEditor: View {
         DatePicker("Ends", selection: $shift.end, in: shift.start...)
         Section("Quick length") {
           HStack {
-            ForEach([("Tonight", 0), ("1 day", 1), ("Weekend", 3), ("1 week", 7)], id: \.0) {
+            ForEach(quickLengths, id: \.1) {
               label, days in
               Button(label) { setLength(days: days) }
                 .buttonStyle(.bordered)

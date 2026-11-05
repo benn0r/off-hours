@@ -20,8 +20,8 @@
 
     static func calendarName(for id: String) -> String? {
       switch id {
-      case workCalendarID: "Work"
-      case holidayCalendarID: "Holidays (CH)"
+      case workCalendarID: String(localized: "Work", comment: "Demo calendar name")
+      case holidayCalendarID: String(localized: "Holidays (CH)", comment: "Demo calendar name")
       default: nil
       }
     }
@@ -40,30 +40,44 @@
           ? DayStamp(year: year + 1, month: month, day: day) : candidate
       }
 
+      let platformOnCall = String(localized: "Platform on-call", comment: "Demo on-call shift")
       var config = Config.default
       config.onCall = [
-        OnCallShift(start: at(-12, 17), end: at(-5, 8), note: "Platform on-call"),
-        OnCallShift(start: at(8, 17), end: at(15, 8), note: "Platform on-call"),
+        OnCallShift(start: at(-12, 17), end: at(-5, 8), note: platformOnCall),
+        OnCallShift(start: at(8, 17), end: at(15, 8), note: platformOnCall),
       ]
       config.daysOff = [
-        DayOff(name: "Dentist", firstDay: stamp(12), lastDay: stamp(12)),
-        DayOff(name: "Ski week", firstDay: stamp(30), lastDay: stamp(34)),
+        DayOff(
+          name: String(localized: "Dentist", comment: "Demo day off"), firstDay: stamp(12),
+          lastDay: stamp(12)),
+        DayOff(
+          name: String(localized: "Ski week", comment: "Demo day off"), firstDay: stamp(30),
+          lastDay: stamp(34)),
       ]
       config.holidayCalendarIDs = [holidayCalendarID]
       config.workCalendarIDs = [workCalendarID]
       config.meetingsExtendHours = true
       config.importedOnCall = [
-        OnCallShift(start: at(22, 17), end: at(29, 8), note: "Pikett – Payments")
+        OnCallShift(
+          start: at(22, 17), end: at(29, 8),
+          note: String(localized: "On call – Payments", comment: "Demo on-call event"))
       ]
       config.importedMeetings = [
-        OnCallShift(start: at(1, 19), end: at(1, 20), note: "Release sync with US team"),
-        OnCallShift(start: at(6, 7, 30), end: at(6, 8, 30), note: "Incident review"),
+        OnCallShift(
+          start: at(1, 19), end: at(1, 20),
+          note: String(localized: "Release sync with US team", comment: "Demo meeting")),
+        OnCallShift(
+          start: at(6, 7, 30), end: at(6, 8, 30),
+          note: String(localized: "Incident review", comment: "Demo meeting")),
       ]
       config.importedDaysOff = [
-        ("Weihnachten", nextDate(month: 12, day: 25)),
-        ("Stephanstag", nextDate(month: 12, day: 26)),
-        ("Neujahr", nextDate(month: 1, day: 1)),
-        ("Berchtoldstag", nextDate(month: 1, day: 2)),
+        (String(localized: "Christmas Day", comment: "Demo holiday"), nextDate(month: 12, day: 25)),
+        (
+          String(localized: "St. Stephen's Day", comment: "Demo holiday"),
+          nextDate(month: 12, day: 26)
+        ),
+        (String(localized: "New Year's Day", comment: "Demo holiday"), nextDate(month: 1, day: 1)),
+        (String(localized: "Berchtold's Day", comment: "Demo holiday"), nextDate(month: 1, day: 2)),
       ].map { DayOff(name: $0.0, firstDay: $0.1, lastDay: $0.1) }
         .sorted { $0.firstDay < $1.firstDay }
       return config

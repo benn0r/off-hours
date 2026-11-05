@@ -47,7 +47,10 @@ struct ContentView: View {
             showingPicker = true
           } label: {
             LabeledContent("Work apps") {
-              Text(model.selectionCount == 0 ? "None selected" : "\(model.selectionCount) selected")
+              Text(
+                model.selectionCount == 0
+                  ? String(localized: "None selected")
+                  : String(localized: "\(model.selectionCount) selected"))
             }
           }
           .disabled(!model.isAuthorized)
@@ -105,26 +108,27 @@ struct ContentView: View {
 
   private var weekSummary: String {
     let days = model.config.week.filter(\.isWorkday)
-    guard let first = days.first else { return "No workdays" }
+    guard let first = days.first else { return String(localized: "No workdays") }
     let sameHours = days.allSatisfy { $0.start == first.start && $0.end == first.end }
     return sameHours
-      ? "\(days.count) days, \(first.start.formatted)–\(first.end.formatted)" : "\(days.count) days"
+      ? String(localized: "\(days.count) days, \(first.start.formatted)–\(first.end.formatted)")
+      : String(localized: "\(days.count) days")
   }
 
   private var onCallSummary: String {
     let upcoming = model.config.allOnCall.filter { $0.end > .now }.count
-    return upcoming == 0 ? "None" : "\(upcoming) upcoming"
+    return upcoming == 0 ? String(localized: "None") : String(localized: "\(upcoming) upcoming")
   }
 
   private var calendarsSummary: String {
     let count = model.config.holidayCalendarIDs.count + model.config.workCalendarIDs.count
-    return count == 0 ? "None" : "\(count) selected"
+    return count == 0 ? String(localized: "None") : String(localized: "\(count) selected")
   }
 
   private var daysOffSummary: String {
     let today = DayStamp(.now, calendar: .current)
     let upcoming = model.config.allDaysOff.filter { $0.lastDay >= today }.count
-    return upcoming == 0 ? "None" : "\(upcoming) upcoming"
+    return upcoming == 0 ? String(localized: "None") : String(localized: "\(upcoming) upcoming")
   }
 }
 

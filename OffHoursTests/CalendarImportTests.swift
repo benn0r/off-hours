@@ -169,6 +169,36 @@ final class CalendarImportTests: XCTestCase {
     XCTAssertEqual(p.status(at: date(8, 19, 30)).blocked, true)  // meeting during vacation
   }
 
+  func testKeywordsMatchWholeWordsOnly() {
+    XCTAssertTrue(CalendarImport.matches("OOO – dentist", "ooo"))
+    XCTAssertTrue(CalendarImport.matches("Pikett Team A", "pikett"))
+    XCTAssertTrue(CalendarImport.matches("Frei", "frei"))
+    XCTAssertTrue(CalendarImport.matches("Congé maladie", "congé"))
+    XCTAssertTrue(CalendarImport.matches("On-call handover", "on-call"))
+    XCTAssertFalse(CalendarImport.matches("New laptop setup", "pto"))
+    XCTAssertFalse(CalendarImport.matches("Freitagsbier", "frei"))
+    XCTAssertFalse(CalendarImport.matches("Holidays planning", "holiday"))
+  }
+
+  func testTranslatedDefaultKeywords() {
+    let entries = [
+      CalendarEntry(
+        calendarID: "work", title: "Astreinte réseau", start: date(7, 17), end: date(8, 8),
+        isAllDay: false),
+      CalendarEntry(
+        calendarID: "work", title: "Reperibilità", start: date(8, 17), end: date(9, 8),
+        isAllDay: false),
+      CalendarEntry(
+        calendarID: "work", title: "Vacaciones", start: date(21, 0), end: date(22, 0),
+        isAllDay: true),
+      CalendarEntry(
+        calendarID: "work", title: "Vakantie", start: date(23, 0), end: date(24, 0), isAllDay: true),
+    ]
+    let result = CalendarImport.classify(entries, config: config(work: "work"), calendar: calendar)
+    XCTAssertEqual(result.onCall.count, 2)
+    XCTAssertEqual(result.daysOff.count, 2)
+  }
+
   func testOldSavedConfigStillDecodes() throws {
     let old = #"{"isEnabled":true,"week":[],"onCall":[],"daysOff":[]}"#
     let decoded = try JSONDecoder().decode(Config.self, from: Data(old.utf8))
