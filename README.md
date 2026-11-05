@@ -91,6 +91,7 @@ npm run test:unit     # unit tests only
 npm run build         # unsigned Release build
 npm run ios:release   # signed Release build (registers IDs and capabilities)
 npm run deploy        # signed Release build installed and launched on IOS_DEVICE_ID
+npm run upload        # archive and upload to App Store Connect (needs the Family Controls distribution entitlement)
 npm run lint && npm run format:check
 npm run format        # swift-format in place
 ```
