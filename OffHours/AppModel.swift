@@ -10,14 +10,14 @@ final class AppModel {
         didSet {
             guard config != oldValue else { return }
             SharedStore.save(config)
-            Enforcer.refresh()
+            scheduleEnforce()
             if config.holidayCalendarIDs != oldValue.holidayCalendarIDs
                 || config.workCalendarIDs != oldValue.workCalendarIDs
                 || config.onCallKeywords != oldValue.onCallKeywords
                 || config.dayOffKeywords != oldValue.dayOffKeywords
                 || config.meetingsExtendHours != oldValue.meetingsExtendHours
                 || config.meetingBufferMinutes != oldValue.meetingBufferMinutes {
-                syncCalendars()
+                syncCalendars(debounce: true)
             }
         }
     }
@@ -26,7 +26,7 @@ final class AppModel {
         didSet {
             guard selection != oldValue else { return }
             SharedStore.save(selection)
-            Enforcer.refresh()
+            scheduleEnforce()
         }
     }
 
@@ -37,6 +37,11 @@ final class AppModel {
     private(set) var calendarAccess: EKAuthorizationStatus
     private(set) var calendars: [EKCalendar] = []
     @ObservationIgnored private var eventStoreObserver: NSObjectProtocol?
+    @ObservationIgnored private var syncTask: Task<Void, Never>?
+
+    /// Screen Time and DeviceActivity calls are slow; keep them off the main thread and coalesce bursts.
+    @ObservationIgnored private let enforcementQueue = DispatchQueue(label: "offhours.enforcement", qos: .userInitiated)
+    @ObservationIgnored private var pendingEnforcement: DispatchWorkItem?
 
     init() {
         config = SharedStore.loadConfig()
@@ -58,21 +63,46 @@ final class AppModel {
         syncCalendars()
     }
 
-    /// Reloads the calendar list and re-imports holidays / on-call shifts from the selected calendars.
-    func syncCalendars() {
-        calendarAccess = EKEventStore.authorizationStatus(for: .event)
-        let current = hasCalendarAccess
-            ? eventStore.calendars(for: .event).sorted {
-                ($0.source.title, $0.title) < ($1.source.title, $1.title)
+    /// Applies the current config/selection (saved to the shared store) in the background.
+    private func scheduleEnforce() {
+        pendingEnforcement?.cancel()
+        let work = DispatchWorkItem { Enforcer.refresh() }
+        pendingEnforcement = work
+        enforcementQueue.asyncAfter(deadline: .now() + 0.3, execute: work)
+    }
+
+    /// Reloads the calendar list and re-imports holidays / on-call shifts / meetings, off the main thread.
+    func syncCalendars(debounce: Bool = false) {
+        syncTask?.cancel()
+        syncTask = Task { [weak self] in
+            if debounce { try? await Task.sleep(for: .milliseconds(400)) }
+            guard let self, !Task.isCancelled else { return }
+
+            let snapshot = self.config
+            let store = self.eventStore
+            let (current, synced) = await Task.detached(priority: .userInitiated) {
+                let calendars = CalendarSync.isAuthorized
+                    ? store.calendars(for: .event).sorted {
+                        ($0.source.title, $0.title) < ($1.source.title, $1.title)
+                    }
+                    : []
+                return (calendars, CalendarSync.syncing(snapshot, store: store))
+            }.value
+            guard !Task.isCancelled else { return }
+
+            self.calendarAccess = EKEventStore.authorizationStatus(for: .event)
+            // Only publish a new list when it actually changed, to avoid needless view rebuilds.
+            if current.map(\.calendarIdentifier) != self.calendars.map(\.calendarIdentifier)
+                || current.map(\.title) != self.calendars.map(\.title) {
+                self.calendars = current
             }
-            : []
-        // Only publish a new list when it actually changed, to avoid needless view rebuilds.
-        if current.map(\.calendarIdentifier) != calendars.map(\.calendarIdentifier)
-            || current.map(\.title) != calendars.map(\.title) {
-            calendars = current
+            // Merge only the imported entries, so edits made while syncing aren't overwritten.
+            var updated = self.config
+            updated.importedOnCall = synced.importedOnCall
+            updated.importedDaysOff = synced.importedDaysOff
+            updated.importedMeetings = synced.importedMeetings
+            if updated != self.config { self.config = updated }
         }
-        let synced = CalendarSync.syncing(config, store: eventStore)
-        if synced != config { config = synced }
     }
 
     func calendarName(for id: String) -> String {
@@ -95,14 +125,14 @@ final class AppModel {
             authorizationError = error.localizedDescription
         }
         authorizationStatus = AuthorizationCenter.shared.authorizationStatus
-        Enforcer.refresh()
+        scheduleEnforce()
     }
 
     /// Re-reads shared state (the extension may have cleared an expired override) and re-applies.
     func reload() {
         authorizationStatus = AuthorizationCenter.shared.authorizationStatus
-        Enforcer.refresh()
         config = SharedStore.loadConfig()
+        scheduleEnforce()
         syncCalendars()
     }
 
