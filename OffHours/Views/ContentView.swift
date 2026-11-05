@@ -115,12 +115,16 @@ private struct SelectionPreview: View {
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 14) {
+            HStack(spacing: 10) {
                 ForEach(Array(selection.applicationTokens), id: \.self) { token in
-                    Label(token).labelStyle(.iconOnly).font(.system(size: 40))
+                    Label(token).labelStyle(.iconOnly)
+                        .scaleEffect(1.7)
+                        .frame(width: 52, height: 52)
                 }
                 ForEach(Array(selection.categoryTokens), id: \.self) { token in
-                    Label(token).labelStyle(.iconOnly).font(.system(size: 40))
+                    Label(token).labelStyle(.iconOnly)
+                        .scaleEffect(1.7)
+                        .frame(width: 52, height: 52)
                 }
             }
             .padding(.vertical, 4)
