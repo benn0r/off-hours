@@ -293,15 +293,15 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					14B253DDF0E428F243447F78 = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = 6Y9Y97KCW2;
 						ProvisioningStyle = Automatic;
 					};
 					8DD66CC238F09BF6E0B7B6BE = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = 6Y9Y97KCW2;
 						ProvisioningStyle = Automatic;
 					};
 					929CF1BCA1D179C366E1590F = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = 6Y9Y97KCW2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -405,7 +405,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.qni.OffHoursTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.benn0r.off-hours.tests";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,7 +421,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.qni.OffHours.Monitor;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.benn0r.off-hours.monitor";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -464,7 +464,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6Y9Y97KCW2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -504,7 +504,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.qni.OffHours.Monitor;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.benn0r.off-hours.monitor";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -547,7 +547,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6Y9Y97KCW2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -580,7 +580,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.qni.OffHoursTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.benn0r.off-hours.tests";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -597,7 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.qni.OffHours;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.benn0r.off-hours";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -614,7 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ch.qni.OffHours;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.benn0r.off-hours";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.ch.qni.OffHours</string>
+		<string>group.ch.benn0r.off-hours</string>
 	</array>
 </dict>
 </plist>

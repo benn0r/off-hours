@@ -6,7 +6,7 @@ import ManagedSettings
 
 /// Storage shared between the app and the DeviceActivity monitor extension.
 enum SharedStore {
-    static let appGroup = "group.ch.qni.OffHours"
+    static let appGroup = "group.ch.benn0r.off-hours"
 
     private static let configKey = "config"
     private static let selectionKey = "selection"
