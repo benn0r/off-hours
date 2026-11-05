@@ -1,0 +1,15 @@
+Hello App Review,
+
+Off-hours blocks the "work apps" the user selects with Screen Time (FamilyControls with .individual authorization, ManagedSettings and a DeviceActivity monitor extension) outside the work hours the user sets. There is no account or sign-in, no server, and the app makes no network requests.
+
+How to test on a device (Screen Time does not work in the simulator):
+1. Tap "Allow Screen Time access" and confirm with the device passcode.
+2. Tap "Work apps" and select one or more apps, e.g. Safari or Notes.
+3. Tap "Work hours" and switch off today, or set hours that end before the current time. The main screen now shows "Work apps blocked" and opening a selected app shows the Screen Time shield.
+4. Tap "Allow work apps for 1 hour" on the main screen: the selected apps open again immediately. "End override" restores the schedule.
+5. Optional: "On call" adds a shift during which work apps stay available; "Days off & holidays" blocks them all day.
+6. Optional: "Calendars" asks for calendar access and reads only the selected calendars, on the device, to import public holidays, on-call shifts and meetings. Calendar access is not required to use the app.
+
+The DeviceActivity extension applies the schedule in the background at each change, so blocking also switches while the app is closed.
+
+Thank you!

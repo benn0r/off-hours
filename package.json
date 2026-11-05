@@ -13,6 +13,7 @@
     "lint": "find OffHours OffHoursMonitor Shared OffHoursTests -name '*.swift' -print0 | xargs -0 swiftc -parse",
     "format:check": "xcrun swift-format lint --recursive --strict OffHours OffHoursMonitor Shared OffHoursTests",
     "format": "xcrun swift-format format --recursive --in-place OffHours OffHoursMonitor Shared OffHoursTests",
-    "screenshots": "bash scripts/screenshots.sh && SIMULATOR='iPhone 17 Pro' OUT=screenshots WIDTH=603 PREFIX=ios- bash scripts/screenshots.sh"
+    "screenshots": "bash scripts/screenshots.sh && SIMULATOR='iPhone 17 Pro' OUT=screenshots WIDTH=603 PREFIX=ios- bash scripts/screenshots.sh",
+    "appstore:upload-folder": "rm -rf appstore/upload && mkdir -p appstore/upload && n=1 && for s in home work-hours on-call days-off calendars; do cp screenshots/appstore/$s.png appstore/upload/$n-$s.png; n=$((n+1)); done && cp appstore/marketing/*-*x*.png appstore/upload/ && open appstore/upload"
   }
 }
