@@ -49,6 +49,12 @@ LOCALES = {
     "ja": "ja",
     "pl": "pl",
 }
+# Folder → language prefix of the support and privacy pages on benn0r.ch.
+SITE_LOCALES = {"pt-PT": "pt-pt", "pt-BR": "pt-br", "nb": "no"}
+
+
+def site_url(folder: str, page: str) -> str:
+    return f"https://www.benn0r.ch/{SITE_LOCALES.get(folder, folder)}/off-hours/{page}"
 
 
 def token() -> str:
@@ -292,8 +298,7 @@ def listing(folders: list[str]) -> None:
         locale = LOCALES[folder]
         source = ROOT / "appstore" / ("" if folder == "en" else folder)
         read = lambda name: (source / f"{name}.txt").read_text().strip()  # noqa: E731
-        shared = lambda name: (ROOT / "appstore" / f"{name}.txt").read_text().strip()  # noqa: E731
-        info = {"name": "Off-hours", "subtitle": read("subtitle"), "privacyPolicyUrl": shared("privacy-policy-url")}
+        info = {"name": "Off-hours", "subtitle": read("subtitle"), "privacyPolicyUrl": site_url(folder, "privacy-policy")}
         if locale in info_locs:
             call(
                 "PATCH",
@@ -316,7 +321,7 @@ def listing(folders: list[str]) -> None:
             "description": read("description"),
             "keywords": read("keywords"),
             "promotionalText": read("promotional-text"),
-            "supportUrl": shared("support-url"),
+            "supportUrl": site_url(folder, "support"),
         }
         # Creating the app info localization usually creates the version localization too.
         locs = localizations(version["id"])
