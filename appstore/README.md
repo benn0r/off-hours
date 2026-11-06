@@ -10,8 +10,8 @@ reviewed and reused. App Store Connect has the live version.
 | Promotional text | `promotional-text.txt` |
 | Description | `description.txt` |
 | Keywords | `keywords.txt` |
-| Support URL | `support-url.txt` (page in the benn0r.ch website repo) |
-| Privacy policy URL | `privacy-policy-url.txt` (page in the benn0r.ch website repo) |
+| Support URL | `support-url.txt` (page on off-hours.tueftli.com, one per language) |
+| Privacy policy URL | `privacy-policy-url.txt` (page on off-hours.tueftli.com, one per language) |
 | Copyright | `copyright.txt` |
 | App Review notes | `review-notes.txt` |
 | Category | Productivity, secondary Utilities |

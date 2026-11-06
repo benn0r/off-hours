@@ -49,12 +49,12 @@ LOCALES = {
     "ja": "ja",
     "pl": "pl",
 }
-# Folder → language prefix of the support and privacy pages on benn0r.ch.
-SITE_LOCALES = {"pt-PT": "pt-pt", "pt-BR": "pt-br", "nb": "no"}
+# Folder → language prefix of the support and privacy pages on off-hours.tueftli.com.
+SITE_LOCALES = {"pt-PT": "pt-pt", "pt-BR": "pt-br"}
 
 
 def site_url(folder: str, page: str) -> str:
-    return f"https://www.benn0r.ch/{SITE_LOCALES.get(folder, folder)}/off-hours/{page}"
+    return f"https://off-hours.tueftli.com/{SITE_LOCALES.get(folder, folder)}/{page}/"
 
 
 def token() -> str:
