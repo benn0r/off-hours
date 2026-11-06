@@ -8,6 +8,8 @@ in the evening, early in the morning, at weekends, on vacation and on public hol
 or have a meeting outside work hours, the work apps open again on their own. It is written in Swift and
 SwiftUI, has no server and no account, and nothing leaves the device.
 
+Website, support and privacy policy: [off-hours.tueftli.com](https://off-hours.tueftli.com)
+
 ## Screenshots
 
 | Status | Work hours | On call |
