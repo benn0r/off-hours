@@ -25,6 +25,8 @@ targets:
       path: OffHours/Info.plist
       properties:
         CFBundleDisplayName: Off-hours
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         # No encryption beyond what iOS provides; skips the export compliance question on upload.
         ITSAppUsesNonExemptEncryption: false
         NSCalendarsFullAccessUsageDescription: Off-hours reads your holiday and work calendars to know your days off and on-call shifts.
@@ -55,6 +57,8 @@ targets:
       path: OffHoursMonitor/Info.plist
       properties:
         CFBundleDisplayName: Off-hours Monitor
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         NSCalendarsFullAccessUsageDescription: Off-hours reads your holiday and work calendars to know your days off and on-call shifts.
         NSExtension:
           NSExtensionPointIdentifier: com.apple.deviceactivity.monitor-extension
