@@ -95,9 +95,16 @@ npm run build         # unsigned Release build
 npm run ios:release   # signed Release build (registers IDs and capabilities)
 npm run deploy        # signed Release build installed and launched on IOS_DEVICE_ID
 npm run upload        # archive and upload to App Store Connect (needs the Family Controls distribution entitlement)
+npm run appstore -- status                  # App Store Connect: screenshots and images per language
+npm run appstore -- screenshots de pt-PT    # upload screenshots (add --replace to overwrite)
+npm run appstore -- assets de pt-PT         # upload header and search-result images
 npm run lint && npm run format:check
 npm run format        # swift-format in place
 ```
+
+`npm run appstore` uses an App Store Connect API key (App Manager role) saved as
+`~/.appstoreconnect/private_keys/AuthKey_<ASC_KEY_ID>.p8`, the IDs in `.env`, and
+`pip install pyjwt cryptography`.
 
 `OffHours.xcodeproj` is generated from the tracked `project.yml`; change settings there and regenerate instead
 of editing the project.
