@@ -99,6 +99,8 @@ npm run upload        # archive and upload to App Store Connect (needs the Famil
 npm run appstore -- status                  # App Store Connect: screenshots and images per language
 npm run appstore -- screenshots de pt-PT    # upload screenshots (add --replace to overwrite)
 npm run appstore -- assets de pt-PT         # upload header and search-result images
+npm run appstore -- listing sv da           # create or update the localized listing text
+npm run appstore -- submit                  # submit the editable version for review
 npm run lint && npm run format:check
 npm run format        # swift-format in place
 ```

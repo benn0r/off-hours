@@ -10,6 +10,7 @@ The key is only read to sign requests; it is never printed.
     python3 scripts/appstore.py screenshots de --replace             # replace existing ones
     python3 scripts/appstore.py assets de pt-PT pt-BR               # header + search results images
     python3 scripts/appstore.py listing sv da                        # name, subtitle, description, keywords, …
+    python3 scripts/appstore.py submit                               # submit the editable version for review
 """
 
 from __future__ import annotations
@@ -231,7 +232,8 @@ def upload_library_image(file: Path) -> str:
         f"/appAssetLibraryImages/{image['id']}",
         {"data": {"type": "appAssetLibraryImages", "id": image["id"], "attributes": {"uploaded": True}}},
     )
-    for _ in range(60):
+    # Processing creative assets can take several minutes.
+    for _ in range(200):
         attributes = call("GET", f"/appAssetLibraryImages/{image['id']}")["data"]["attributes"]
         if attributes.get("specId"):
             return image["id"]
@@ -339,6 +341,57 @@ def listing(folders: list[str]) -> None:
         print(f"{folder} ({locale}): listing saved")
 
 
+def submit() -> None:
+    version = editable_version()
+    build = call("GET", f"/appStoreVersions/{version['id']}/build").get("data")
+    if not build:
+        raise SystemExit("No build attached to the version.")
+    open_states = {"READY_FOR_REVIEW", "WAITING_FOR_REVIEW", "IN_REVIEW", "UNRESOLVED_ISSUES"}
+    existing = [
+        s
+        for s in call("GET", f"/reviewSubmissions?filter[app]={APP_ID}&filter[platform]=IOS&limit=20")["data"]
+        if s["attributes"]["state"] in open_states
+    ]
+    if existing and existing[0]["attributes"]["state"] != "READY_FOR_REVIEW":
+        raise SystemExit(f"A submission is already {existing[0]['attributes']['state']}.")
+    if existing:
+        submission = existing[0]["id"]
+    else:
+        submission = call(
+            "POST",
+            "/reviewSubmissions",
+            {
+                "data": {
+                    "type": "reviewSubmissions",
+                    "attributes": {"platform": "IOS"},
+                    "relationships": {"app": {"data": {"type": "apps", "id": APP_ID}}},
+                }
+            },
+        )["data"]["id"]
+        call(
+            "POST",
+            "/reviewSubmissionItems",
+            {
+                "data": {
+                    "type": "reviewSubmissionItems",
+                    "relationships": {
+                        "reviewSubmission": {"data": {"type": "reviewSubmissions", "id": submission}},
+                        "appStoreVersion": {"data": {"type": "appStoreVersions", "id": version["id"]}},
+                    },
+                }
+            },
+        )
+    result = call(
+        "PATCH",
+        f"/reviewSubmissions/{submission}",
+        {"data": {"type": "reviewSubmissions", "id": submission, "attributes": {"submitted": True}}},
+    )["data"]["attributes"]
+    print(
+        f"Version {version['attributes']['versionString']} (build {build['attributes']['version']}) "
+        f"submitted for review: {result['state']}"
+    )
+
+
 def status() -> None:
     version = editable_version()
     print(f"Version {version['attributes']['versionString']}: {version['attributes']['appStoreState']}")
@@ -361,6 +414,8 @@ if __name__ == "__main__":
         status()
     elif command == "assets":
         assets([a for a in args if not a.startswith("--")], replace="--replace" in args)
+    elif command == "submit":
+        submit()
     elif command == "listing":
         listing(args)
     elif command == "screenshots":
