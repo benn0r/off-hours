@@ -1,0 +1,27 @@
+Off-hours hält die Arbeit dort, wo sie hingehört. Die App sperrt mit Bildschirmzeit die Arbeits-Apps, die du auswählst, etwa den Team-Chat, die Arbeits-Mail oder jede andere App, Kategorie oder Website, außerhalb deiner Arbeitszeit: abends, am Wochenende, in den Ferien und an Feiertagen. Hast du Bereitschaft oder abends ein Meeting, öffnen sie sich von selbst wieder. Kostenlos, ohne Tracking, ohne Werbung und ohne In-App-Käufe.
+
+DEINE ARBEITSZEITEN
+Wähle deine Arbeitstage und die Zeiten für jeden Wochentag. Abends, frühmorgens und an Tagen ohne Arbeit sind deine Arbeits-Apps gesperrt.
+
+BEREITSCHAFT
+Trage Bereitschaftsdienste ein, von einer Nacht bis zu einer ganzen Woche. Während der Bereitschaft bleiben deine Arbeits-Apps verfügbar, auch nachts, am Wochenende und an freien Tagen.
+
+FREIE TAGE UND FEIERTAGE
+Trage einzelne freie Tage oder ganze Ferien ein, und deine Arbeits-Apps bleiben den ganzen Tag gesperrt. Wähle einen Feiertagskalender, und jeder Feiertag zählt automatisch als freier Tag.
+
+DEIN ARBEITSKALENDER
+Wähle deinen Arbeitskalender, und Off-hours findet Bereitschaften und Ferien anhand von Stichwörtern wie „Pikett“, „Bereitschaft“, „Ferien“ oder „OOO“. Die Stichwörter kannst du anpassen. Optional öffnen Meetings außerhalb der Arbeitszeit deine Arbeits-Apps ein paar Minuten vor Beginn, bis sie vorbei sind.
+
+IMMER KLAR
+Der Startbildschirm zeigt, ob deine Arbeits-Apps gerade gesperrt sind, warum und wann sich das ändert. Brauchst du kurz eine Arbeits-App? Erlaube sie für eine Stunde oder sperre sie früher, mit einem Tippen.
+
+ARBEITET IM HINTERGRUND
+Off-hours schaltet im richtigen Moment von selbst um, auch wenn die App geschlossen ist.
+
+KOSTENLOS, OHNE HAKEN
+Off-hours ist kostenlos. Keine In-App-Käufe, kein Abo, keine Werbung, kein Konto, keine Registrierung.
+
+NULL TRACKING
+Alles passiert auf deinem iPhone. Off-hours sammelt keinerlei Daten: keine Analysen, kein Tracking, kein Server, und die App stellt keine Netzwerkanfragen. Dank Apples Bildschirmzeit-Framework sieht die App nicht einmal, welche Apps du ausgewählt hast. Kalender werden nur auf dem Gerät gelesen.
+
+Erfordert Zugriff auf Bildschirmzeit. Kalenderzugriff ist optional.

@@ -28,16 +28,17 @@ enum CalendarImport {
     var meetings: [OnCallShift] = []
   }
 
-  /// English, German, French, Italian, Spanish and Dutch; matched as whole words, case-insensitive.
+  /// English, German, French, Italian, Spanish, Dutch and Portuguese; matched as whole words, case-insensitive.
   static let defaultOnCallKeywords = [
     "on call", "on-call", "oncall", "pikett", "bereitschaft", "astreinte", "de garde",
     "reperibilità",
     "reperibile", "picchetto", "de guardia", "guardia", "piket", "piketdienst", "consignatie",
+    "plantão", "sobreaviso", "de prevenção",
   ]
   static let defaultDayOffKeywords = [
     "vacation", "holiday", "out of office", "ooo", "pto", "ferien", "urlaub", "frei", "vacances",
     "congé", "férié", "ferie", "vacanza", "festivo", "vacaciones", "vakantie", "verlof",
-    "feestdag",
+    "feestdag", "férias", "folga", "feriado", "abwesend",
   ]
 
   static func classify(_ entries: [CalendarEntry], config: Config, calendar: Calendar) -> Result {

@@ -41,6 +41,24 @@ TEXT = {
         "Apps de trabajo\napagadas al salir.",
         "Activas si estás de guardia.\nBloqueadas en días libres.",
     ),
+    "de": (
+        "Feierabend.\nWirklich.",
+        "Arbeits-Apps aus nach Feierabend, wieder an bei Bereitschaft.",
+        "Arbeits-Apps aus\nnach Feierabend.",
+        "Wieder an bei Bereitschaft.\nGesperrt an freien Tagen.",
+    ),
+    "pt-PT": (
+        "Fim do trabalho.\nA sério.",
+        "Apps de trabalho desligadas fora do horário, ativas quando está de prevenção.",
+        "Apps de trabalho\ndesligadas à noite.",
+        "Ativas quando está de prevenção.\nBloqueadas nas folgas.",
+    ),
+    "pt-BR": (
+        "Fim do expediente.\nDe verdade.",
+        "Apps de trabalho desligados fora do expediente, ativos no plantão.",
+        "Apps de trabalho\ndesligados à noite.",
+        "Ativos quando você está de plantão.\nBloqueados nas folgas.",
+    ),
     "nl": (
         "Klaar met werk.\nEcht.",
         "Werk-apps uit na werktijd, weer aan als je piket hebt.",

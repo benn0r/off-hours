@@ -1,0 +1,27 @@
+A Off-hours mantém o trabalho no seu lugar. Usa o Tempo de ecrã para bloquear as apps de trabalho que escolher, como o chat da equipa, o e-mail do trabalho ou qualquer outra app, categoria ou site, fora do seu horário: à noite, ao fim de semana, nas férias e nos feriados. Quando está de prevenção ou tem uma reunião ao fim do dia, voltam a abrir sozinhas. Gratuita, sem rastreio, sem anúncios e sem compras na app.
+
+O SEU HORÁRIO DE TRABALHO
+Escolha os seus dias úteis e o horário de cada dia. À noite, de manhã cedo e nos dias em que não trabalha, as suas apps de trabalho ficam bloqueadas.
+
+PREVENÇÃO
+Adicione turnos de prevenção, de uma só noite a uma semana inteira. Durante a prevenção, as suas apps de trabalho continuam disponíveis, mesmo à noite, ao fim de semana e nas folgas.
+
+FOLGAS E FERIADOS
+Adicione folgas soltas ou férias inteiras e as apps de trabalho ficam bloqueadas o dia todo. Escolha um calendário de feriados e cada feriado conta automaticamente como folga.
+
+O SEU CALENDÁRIO DE TRABALHO
+Escolha o seu calendário de trabalho e a Off-hours encontra turnos de prevenção e férias através de palavras-chave como «prevenção», «Pikett», «férias» ou «OOO». Pode editar as palavras-chave. Opcionalmente, as reuniões fora do horário abrem as apps de trabalho alguns minutos antes de começarem, até terminarem.
+
+SEMPRE CLARO
+O ecrã principal mostra se as apps de trabalho estão bloqueadas, porquê e quando isso muda. Precisa de uma app de trabalho por um momento? Permita-as durante uma hora ou bloqueie-as mais cedo, com um toque.
+
+FUNCIONA EM SEGUNDO PLANO
+A Off-hours muda sozinha no momento certo, mesmo com a app fechada.
+
+GRATUITA, SEM ARMADILHAS
+A Off-hours é gratuita. Sem compras na app, sem subscrições, sem anúncios, sem conta e sem registo.
+
+ZERO RASTREIO
+Tudo acontece no seu iPhone. A Off-hours não recolhe dados nenhuns: sem análises, sem rastreio, sem servidor, e não faz pedidos de rede. Graças à framework Tempo de ecrã da Apple, a app nem sequer vê que apps escolheu. Os calendários são lidos apenas no dispositivo.
+
+Requer acesso ao Tempo de ecrã. O acesso aos calendários é opcional.

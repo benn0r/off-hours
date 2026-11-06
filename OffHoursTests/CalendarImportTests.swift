@@ -193,10 +193,15 @@ final class CalendarImportTests: XCTestCase {
         isAllDay: true),
       CalendarEntry(
         calendarID: "work", title: "Vakantie", start: date(23, 0), end: date(24, 0), isAllDay: true),
+      CalendarEntry(
+        calendarID: "work", title: "Plantão – rede", start: date(10, 17), end: date(11, 8),
+        isAllDay: false),
+      CalendarEntry(
+        calendarID: "work", title: "Férias", start: date(26, 0), end: date(27, 0), isAllDay: true),
     ]
     let result = CalendarImport.classify(entries, config: config(work: "work"), calendar: calendar)
-    XCTAssertEqual(result.onCall.count, 2)
-    XCTAssertEqual(result.daysOff.count, 2)
+    XCTAssertEqual(result.onCall.count, 3)
+    XCTAssertEqual(result.daysOff.count, 3)
   }
 
   func testOldSavedConfigStillDecodes() throws {

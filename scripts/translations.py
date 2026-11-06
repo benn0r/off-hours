@@ -9,6 +9,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from translations_extra import X, X_DEMO, X_INFO, X_LANGS, X_PLURALS
+
 ROOT = Path(__file__).resolve().parent.parent
 LANGS = ["fr", "it", "es", "nl"]
 
@@ -385,15 +387,26 @@ def plural(one: str, other: str) -> dict:
     return {"variations": {"plural": {"one": unit(one), "other": unit(other)}}}
 
 
-def catalog(table: dict, manual: set[str] = frozenset(), plurals: dict | None = None) -> dict:
+def catalog(
+    table: dict,
+    extra: dict,
+    manual: set[str] = frozenset(),
+    plurals: dict | None = None,
+    extra_plurals: dict | None = None,
+) -> dict:
+    missing = sorted(set(table) ^ set(extra))
+    assert not missing, f"keys missing in one of the tables: {missing}"
     strings = {}
     for key, values in sorted(table.items()):
-        entry: dict = {"localizations": {lang: unit(v) for lang, v in zip(LANGS, values)}}
+        localizations = {lang: unit(v) for lang, v in zip(LANGS, values)}
+        localizations.update({lang: unit(v) for lang, v in zip(X_LANGS, extra[key])})
+        entry: dict = {"localizations": dict(sorted(localizations.items()))}
         if key in manual:
             entry["extractionState"] = "manual"
         strings[key] = entry
     for key, forms in (plurals or {}).items():
-        strings[key] = {"localizations": {lang: plural(*f) for lang, f in forms.items()}}
+        merged = {**forms, **(extra_plurals or {}).get(key, {})}
+        strings[key] = {"localizations": {lang: plural(*f) for lang, f in sorted(merged.items())}}
     return {"sourceLanguage": "en", "strings": dict(sorted(strings.items())), "version": "1.0"}
 
 
@@ -402,9 +415,13 @@ def write(path: Path, data: dict) -> None:
 
 
 if __name__ == "__main__":
-    for table in (T, DEMO, INFO):
-        bad = [k for k, v in table.items() if len(v) != len(LANGS)]
+    for table, width in ((T, LANGS), (DEMO, LANGS), (INFO, LANGS), (X, X_LANGS), (X_DEMO, X_LANGS), (X_INFO, X_LANGS)):
+        bad = [k for k, v in table.items() if len(v) != len(width)]
         assert not bad, bad
-    write(ROOT / "OffHours/Localizable.xcstrings", catalog({**T, **DEMO}, manual=set(DEMO), plurals=PLURALS))
-    write(ROOT / "OffHours/InfoPlist.xcstrings", catalog(INFO))
-    print(f"{len(T) + len(DEMO) + len(PLURALS)} strings, {len(INFO)} Info.plist keys")
+    write(
+        ROOT / "OffHours/Localizable.xcstrings",
+        catalog({**T, **DEMO}, {**X, **X_DEMO}, manual=set(DEMO), plurals=PLURALS, extra_plurals=X_PLURALS),
+    )
+    write(ROOT / "OffHours/InfoPlist.xcstrings", catalog(INFO, X_INFO))
+    languages = len(LANGS) + len(X_LANGS)
+    print(f"{len(T) + len(DEMO) + len(PLURALS)} strings, {len(INFO)} Info.plist keys, {languages} languages")

@@ -1,0 +1,27 @@
+O Off-hours mantém o trabalho no lugar dele. Ele usa o Tempo de Uso para bloquear os apps de trabalho que você escolher, como o chat da equipe, o e-mail do trabalho ou qualquer outro app, categoria ou site, fora do seu horário: à noite, nos fins de semana, nas férias e nos feriados. Quando você está de plantão ou tem uma reunião à noite, eles voltam a abrir sozinhos. Grátis, sem rastreamento, sem anúncios e sem compras no app.
+
+SEU EXPEDIENTE
+Escolha seus dias úteis e o horário de cada dia. À noite, de manhã cedo e nos dias em que você não trabalha, seus apps de trabalho ficam bloqueados.
+
+PLANTÃO
+Adicione plantões, de uma única noite a uma semana inteira. Durante o plantão, seus apps de trabalho continuam disponíveis, mesmo de madrugada, nos fins de semana e nas folgas.
+
+FOLGAS E FERIADOS
+Adicione folgas avulsas ou férias inteiras e os apps de trabalho ficam bloqueados o dia todo. Escolha um calendário de feriados e cada feriado conta automaticamente como folga.
+
+SEU CALENDÁRIO DE TRABALHO
+Escolha seu calendário de trabalho e o Off-hours encontra plantões e férias por palavras-chave como "plantão", "sobreaviso", "férias" ou "OOO". Você pode editar as palavras-chave. Opcionalmente, reuniões fora do expediente abrem seus apps de trabalho alguns minutos antes de começarem, até terminarem.
+
+SEMPRE CLARO
+A tela principal mostra se seus apps de trabalho estão bloqueados, por quê e quando isso muda. Precisa de um app de trabalho por um momento? Libere-os por uma hora ou bloqueie mais cedo, com um toque.
+
+FUNCIONA EM SEGUNDO PLANO
+O Off-hours muda sozinho na hora certa, mesmo com o app fechado.
+
+GRÁTIS, SEM PEGADINHAS
+O Off-hours é grátis. Sem compras no app, sem assinatura, sem anúncios, sem conta e sem cadastro.
+
+ZERO RASTREAMENTO
+Tudo acontece no seu iPhone. O Off-hours não coleta nenhum dado: sem análises, sem rastreamento, sem servidor, e não faz requisições de rede. Graças ao framework Tempo de Uso da Apple, o app nem consegue ver quais apps você escolheu. Os calendários são lidos apenas no aparelho.
+
+Requer acesso ao Tempo de Uso. O acesso aos calendários é opcional.

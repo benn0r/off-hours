@@ -16,14 +16,28 @@ width="${WIDTH:-}"
 prefix="${PREFIX:-}"
 bundle_id=ch.benn0r.off-hours
 
-udid=$(xcrun simctl list devices available -j | python3 -c "
+# A dedicated simulator, so other apps or sessions using the regular one can't get in the way.
+device_name="Off-hours Screenshots ($simulator)"
+find_device() {
+  xcrun simctl list devices available -j | python3 -c "
 import json, sys
 name = sys.argv[1]
 for runtime, devices in json.load(sys.stdin)['devices'].items():
     for d in devices:
         if d['name'] == name and 'iOS' in runtime:
-            print(d['udid']); sys.exit()
-sys.exit('No available simulator named ' + name)" "$simulator")
+            print(d['udid']); sys.exit()" "$1"
+}
+udid=$(find_device "$device_name")
+if [[ -z "$udid" ]]; then
+  template=$(find_device "$simulator")
+  [[ -n "$template" ]] || { echo "No available simulator named $simulator" >&2; exit 1; }
+  type=$(xcrun simctl list devices -j | python3 -c "
+import json, sys
+for devices in json.load(sys.stdin)['devices'].values():
+    for d in devices:
+        if d['udid'] == sys.argv[1]: print(d['deviceTypeIdentifier'])" "$template")
+  udid=$(xcrun simctl create "$device_name" "$type")
+fi
 
 xcrun simctl boot "$udid" 2>/dev/null || true
 xcrun simctl bootstatus "$udid" -b >/dev/null
@@ -34,7 +48,7 @@ xcodebuild build -project OffHours.xcodeproj -scheme OffHours -configuration Deb
 xcrun simctl install "$udid" .build/DerivedData/Build/Products/Debug-iphonesimulator/OffHours.app
 
 xcrun simctl ui "$udid" appearance light
-xcrun simctl status_bar "$udid" override --time "$(date +%H:%M)" --batteryState charged \
+xcrun simctl status_bar "$udid" override --time "21:30" --batteryState charged \
   --batteryLevel 100 --wifiBars 3 --cellularMode active --cellularBars 4
 trap 'xcrun simctl status_bar "$udid" clear' EXIT
 
@@ -43,7 +57,7 @@ shoot() { # file, extra launch arguments…
   local file=$1
   shift
   xcrun simctl launch --terminate-running-process "$udid" "$bundle_id" -demo ${language_args[@]+"${language_args[@]}"} "$@" >/dev/null
-  sleep 4
+  sleep 7
   xcrun simctl io "$udid" screenshot "$out/$prefix$file.png" >/dev/null 2>&1
   if [[ -n "$width" ]]; then sips --resampleWidth "$width" "$out/$prefix$file.png" >/dev/null; fi
   echo "$out/$prefix$file.png"

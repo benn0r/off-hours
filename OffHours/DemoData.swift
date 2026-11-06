@@ -9,6 +9,13 @@
 
     static var isRequested: Bool { ProcessInfo.processInfo.arguments.contains("-demo") }
 
+    /// In demo mode the app's "now" is today at 21:30, so screenshots always show the
+    /// evening state, whenever they are taken.
+    static var referenceDate: Date? {
+      guard isRequested else { return nil }
+      return Calendar.current.date(bySettingHour: 21, minute: 30, second: 0, of: .now)
+    }
+
     /// `-demo-screen work-hours|on-call|days-off|calendars` opens that screen at launch (for screenshots).
     static var initialScreen: Screen? {
       let arguments = ProcessInfo.processInfo.arguments
@@ -41,6 +48,14 @@
       }
 
       let platformOnCall = String(localized: "Platform on-call", comment: "Demo on-call shift")
+      // The evening meeting falls on the next workday, so "available tomorrow" reads 8:00
+      // in screenshots taken on any day.
+      let nextWorkday =
+        (1...7).first { offset in
+          let weekday = calendar.component(.weekday, from: at(offset))
+          return Config.default.workDay(for: at(offset), calendar: calendar).isWorkday
+            && weekday != 0
+        } ?? 1
       var config = Config.default
       config.onCall = [
         OnCallShift(start: at(-12, 17), end: at(-5, 8), note: platformOnCall),
@@ -64,7 +79,7 @@
       ]
       config.importedMeetings = [
         OnCallShift(
-          start: at(1, 19), end: at(1, 20),
+          start: at(nextWorkday, 19), end: at(nextWorkday, 20),
           note: String(localized: "Release sync with US team", comment: "Demo meeting")),
         OnCallShift(
           start: at(6, 7, 30), end: at(6, 8, 30),

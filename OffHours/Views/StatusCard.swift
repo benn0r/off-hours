@@ -6,8 +6,9 @@ struct StatusCard: View {
   var body: some View {
     TimelineView(.periodic(from: .now, by: 30)) { context in
       let policy = model.policy
-      let status = policy.status(at: context.date)
-      let next = policy.transitions(after: context.date, limit: 1).first
+      let now = Self.now(context.date)
+      let status = policy.status(at: now)
+      let next = policy.transitions(after: now, limit: 1).first
 
       HStack(spacing: 16) {
         Image(systemName: status.blocked ? "moon.zzz.fill" : "briefcase.fill")
@@ -22,7 +23,7 @@ struct StatusCard: View {
             .font(.subheadline)
             .foregroundStyle(.secondary)
           if let next {
-            Text(nextChange(blocked: status.blocked, at: next, from: context.date))
+            Text(nextChange(blocked: status.blocked, at: next, from: now))
               .font(.footnote)
               .foregroundStyle(.secondary)
           }
@@ -30,6 +31,13 @@ struct StatusCard: View {
       }
       .padding(.vertical, 8)
     }
+  }
+
+  private static func now(_ date: Date) -> Date {
+    #if DEBUG
+      if let demo = DemoData.referenceDate { return demo }
+    #endif
+    return date
   }
 
   private func describe(_ reason: Policy.Reason) -> String {
