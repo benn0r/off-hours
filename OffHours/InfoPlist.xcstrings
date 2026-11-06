@@ -2,121 +2,165 @@
   "sourceLanguage" : "en",
   "strings" : {
     "CFBundleDisplayName" : {
-      "comment" : "Bundle display name",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
-        "de" : {
+        "da" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
-        "en" : {
+        "de" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours"
           }
-        }
-      }
-    },
-    "CFBundleName" : {
-      "comment" : "Bundle name",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
+        },
+        "sv" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "OffHours"
+            "state" : "translated",
+            "value" : "Off-hours"
           }
         }
       }
     },
     "NSCalendarsFullAccessUsageDescription" : {
-      "comment" : "Privacy - Calendars Full Access Usage Description",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
-        "de" : {
+        "da" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Off-hours liest deinen Feiertags- und Arbeitskalender, um deine freien Tage und Bereitschaften zu kennen."
+            "state" : "translated",
+            "value" : "Off-hours læser din helligdags- og arbejdskalender for at kende dine fridage og vagter."
           }
         },
-        "en" : {
+        "de" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Off-hours reads your holiday and work calendars to know your days off and on-call shifts."
+            "state" : "translated",
+            "value" : "Off-hours liest deinen Feiertags- und Arbeitskalender, um deine freien Tage und Bereitschaften zu kennen."
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours lee tus calendarios de festivos y de trabajo para conocer tus días libres y guardias."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours lukee pyhäpäivä- ja työkalenteriasi tunnistaakseen vapaapäiväsi ja päivystyksesi."
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours lit vos calendriers des jours fériés et professionnel pour connaître vos congés et vos astreintes."
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours legge i tuoi calendari delle festività e di lavoro per conoscere i giorni liberi e i turni di reperibilità."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hoursは祝日カレンダーと仕事用カレンダーを読み取り、休日とオンコールを把握します。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours leser helligdags- og jobbkalenderen din for å kjenne fridagene og vaktene dine."
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Off-hours leest je feestdagen- en werkagenda om je vrije dagen en piketdiensten te kennen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours odczytuje Twój kalendarz świąt i kalendarz służbowy, aby znać Twoje dni wolne i dyżury."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "O Off-hours lê seus calendários de feriados e de trabalho para saber suas folgas e plantões."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "A Off-hours lê os seus calendários de feriados e de trabalho para conhecer as suas folgas e turnos de prevenção."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours läser din helgdags- och jobbkalender för att känna till dina lediga dagar och jourpass."
           }
         }
       }

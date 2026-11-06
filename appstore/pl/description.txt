@@ -1,0 +1,27 @@
+Off-hours trzyma pracę tam, gdzie jej miejsce. Za pomocą Czasu przed ekranem blokuje wybrane aplikacje służbowe, np. czat zespołu, służbową pocztę albo dowolną inną aplikację, kategorię czy stronę, poza Twoimi godzinami pracy: wieczorem, w weekendy, na urlopie i w święta. Gdy masz dyżur albo spotkanie wieczorem, same otwierają się ponownie. Za darmo, bez śledzenia, bez reklam i bez zakupów w aplikacji.
+
+TWOJE GODZINY PRACY
+Wybierz dni robocze i godziny dla każdego dnia tygodnia. Wieczorem, wcześnie rano i w dni, w które nie pracujesz, aplikacje służbowe są zablokowane.
+
+DYŻUR
+Dodawaj dyżury, od jednej nocy do całego tygodnia. Podczas dyżuru aplikacje służbowe pozostają dostępne, także w nocy, w weekendy i w dni wolne.
+
+DNI WOLNE I ŚWIĘTA
+Dodaj pojedyncze dni wolne albo cały urlop, a aplikacje służbowe będą zablokowane przez cały dzień. Wybierz kalendarz świąt, a każde święto automatycznie będzie dniem wolnym.
+
+TWÓJ KALENDARZ SŁUŻBOWY
+Wybierz kalendarz służbowy, a Off-hours znajdzie dyżury i urlopy po słowach kluczowych, takich jak „dyżur”, „on call”, „urlop” czy „OOO”. Słowa kluczowe możesz edytować. Opcjonalnie spotkania poza godzinami pracy otwierają aplikacje służbowe kilka minut przed rozpoczęciem, aż do ich końca.
+
+ZAWSZE JASNO
+Ekran główny pokazuje, czy aplikacje służbowe są teraz zablokowane, dlaczego i kiedy to się zmieni. Potrzebujesz na chwilę aplikacji służbowej? Jednym stuknięciem zezwól na nie na godzinę albo zablokuj je wcześniej.
+
+DZIAŁA W TLE
+Off-hours sam przełącza się we właściwym momencie, nawet gdy aplikacja jest zamknięta.
+
+ZA DARMO, BEZ HACZYKÓW
+Off-hours jest darmowy. Bez zakupów w aplikacji, bez subskrypcji, bez reklam, bez konta i bez rejestracji.
+
+ZERO ŚLEDZENIA
+Wszystko dzieje się na Twoim iPhonie. Off-hours nie zbiera żadnych danych: żadnej analityki, żadnego śledzenia, żadnego serwera, a aplikacja nie wysyła żadnych zapytań sieciowych. Dzięki frameworkowi Czasu przed ekranem Apple aplikacja nie widzi nawet, które aplikacje wybrałeś. Kalendarze są odczytywane tylko na urządzeniu.
+
+Wymaga dostępu do Czasu przed ekranem. Dostęp do kalendarzy jest opcjonalny.

@@ -2,9 +2,10 @@
 
 Backgrounds in source/ were generated with OpenAI gpt-image-2 (see README in this folder);
 text and the phone screenshot are drawn here so they stay crisp and show the real app.
-Run with a Python that has Pillow:  python compose.py
+Run with a Python that has Pillow:  python compose.py [languages…]
 """
 
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -65,12 +66,55 @@ TEXT = {
         "Werk-apps uit\nna werktijd.",
         "Weer aan als je piket hebt.\nGeblokkeerd op vrije dagen.",
     ),
+    "sv": (
+        "Gå hem.\nPå riktigt.",
+        "Jobbappar av efter arbetstid, på igen när du har jour.",
+        "Jobbappar av\nefter arbetstid.",
+        "På igen när du har jour.\nSpärrade på lediga dagar.",
+    ),
+    "da": (
+        "Fyraften.\nFor alvor.",
+        "Arbejdsapps slukket efter fyraften, tændt igen når du har vagt.",
+        "Arbejdsapps fra\nefter fyraften.",
+        "Tændt igen når du har vagt.\nSpærret på fridage.",
+    ),
+    "nb": (
+        "Fri.\nPå ordentlig.",
+        "Jobbapper av etter arbeidstid, på igjen når du har vakt.",
+        "Jobbapper av\netter arbeidstid.",
+        "På igjen når du har vakt.\nSperret på fridager.",
+    ),
+    "fi": (
+        "Työt loppu.\nOikeasti.",
+        "Työapit pois työajan jälkeen, takaisin päivystyksen ajaksi.",
+        "Työapit pois\ntyöajan jälkeen.",
+        "Takaisin päivystyksen ajaksi.\nEstetty vapaapäivinä.",
+    ),
+    "ja": (
+        "仕事は終わり。\n本当に。",
+        "勤務時間外は仕事用Appをオフに。オンコール中だけオンに。",
+        "勤務時間外は\n仕事用Appをオフに。",
+        "オンコール中は自動でオン。\n休日はブロック。",
+    ),
+    "pl": (
+        "Koniec pracy.\nNaprawdę.",
+        "Aplikacje służbowe wyłączone po pracy, włączone na dyżurze.",
+        "Aplikacje służbowe\nwyłączone po pracy.",
+        "Włączone na dyżurze.\nZablokowane w dni wolne.",
+    ),
 }
 WHITE = (255, 255, 255, 255)
 SOFT = (255, 255, 255, 215)
 
 
+# SF has no Japanese glyphs; Hiragino (W6 for bold, W3 for medium) ships with macOS.
+JAPANESE = {weight: next(Path("/System/Library/Fonts").glob(f"*W{w}.ttc")) for weight, w in (("Bold", 6), ("Medium", 3))}
+language = "en"
+
+
 def font(size: int, weight: str = "Bold") -> ImageFont.FreeTypeFont:
+    if language == "ja":
+        return ImageFont.truetype(str(JAPANESE[weight]), size)
     f = ImageFont.truetype(FONT, size)
     try:
         f.set_variation_by_name(weight)
@@ -156,7 +200,7 @@ def search_results(language: str, out: Path) -> None:
 
 
 if __name__ == "__main__":
-    for language in TEXT:
+    for language in sys.argv[1:] or TEXT:
         out = HERE if language == "en" else HERE / language
         out.mkdir(exist_ok=True)
         header(language, out)

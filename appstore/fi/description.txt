@@ -1,0 +1,27 @@
+Off-hours pitää työn siellä, minne se kuuluu. Se estää Ruutuajan avulla valitsemasi työapit, kuten tiimin chatin, työsähköpostin tai minkä tahansa muun apin, kategorian tai verkkosivuston, työaikasi ulkopuolella: iltaisin, viikonloppuisin, lomalla ja pyhäpäivinä. Kun olet päivystyksessä tai sinulla on iltakokous, ne avautuvat taas itsestään. Ilmainen, ei seurantaa, ei mainoksia eikä sovelluksen sisäisiä ostoja.
+
+TYÖAIKASI
+Valitse työpäiväsi ja kunkin viikonpäivän työaika. Iltaisin, aikaisin aamulla ja päivinä, joina et ole töissä, työappisi on estetty.
+
+PÄIVYSTYS
+Lisää päivystysvuoroja yhdestä yöstä kokonaiseen viikkoon. Päivystyksen aikana työapit pysyvät käytettävissä myös yöllä, viikonloppuisin ja vapaapäivinä.
+
+VAPAAPÄIVÄT JA PYHÄT
+Lisää yksittäisiä vapaapäiviä tai koko loma, niin työapit pysyvät estettyinä koko päivän. Valitse pyhäpäiväkalenteri, niin jokainen pyhäpäivä lasketaan automaattisesti vapaapäiväksi.
+
+TYÖKALENTERISI
+Valitse työkalenterisi, niin Off-hours löytää päivystykset ja lomat avainsanoilla kuten "päivystys", "varallaolo", "loma" tai "OOO". Voit muokata avainsanoja. Halutessasi työajan ulkopuoliset kokoukset avaavat työapit muutamaa minuuttia ennen alkua ja pitävät ne auki loppuun asti.
+
+AINA SELVÄÄ
+Aloitusnäyttö kertoo, ovatko työappisi juuri nyt estettyinä, miksi ja milloin tilanne muuttuu. Tarvitsetko työappia hetken? Salli työapit tunniksi tai estä ne aikaisemmin yhdellä napautuksella.
+
+TOIMII TAUSTALLA
+Off-hours vaihtaa tilaa itsestään oikealla hetkellä, myös silloin, kun appi on suljettu.
+
+ILMAINEN, EI KOUKKUJA
+Off-hours on ilmainen. Ei sovelluksen sisäisiä ostoja, ei tilausta, ei mainoksia, ei tiliä, ei rekisteröitymistä.
+
+EI LAINKAAN SEURANTAA
+Kaikki tapahtuu iPhonessasi. Off-hours ei kerää mitään tietoja: ei analytiikkaa, ei seurantaa, ei palvelinta, eikä appi tee verkkopyyntöjä. Applen Ruutuaika-kehyksen ansiosta appi ei edes näe, mitkä apit olet valinnut. Kalentereita luetaan vain laitteella.
+
+Vaatii Ruutuajan käyttöoikeuden. Kalentereiden käyttö on valinnaista.

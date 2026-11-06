@@ -1,0 +1,1 @@
+skjermtid,balanse,vakt,beredskap,bakvakt,appsperre,fokus,ferie,fridag,koble av,arbeidstid

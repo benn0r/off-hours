@@ -1,101 +1,14 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "–" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "–"
-          }
-        }
-      }
-    },
-    "%@ – %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ – %2$@"
-          }
-        }
-      }
-    },
     "%@ until %@" : {
-      "comment" : "Status line during a meeting: meeting title, end time",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ til %2$@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -106,6 +19,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ hasta las %2$@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ klo %2$@ asti"
           }
         },
         "fr" : {
@@ -120,10 +39,28 @@
             "value" : "%1$@ fino alle %2$@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@（%2$@まで）"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ til %2$@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ tot %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ do %2$@"
           }
         },
         "pt-BR" : {
@@ -137,11 +74,117 @@
             "state" : "translated",
             "value" : "%1$@ até às %2$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ till %2$@"
+          }
+        }
+      }
+    },
+    "%@ – %@" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ – %2$@"
+          }
         }
       }
     },
     "%lld days" : {
       "localizations" : {
+        "da" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dag"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dage"
+                }
+              }
+            }
+          }
+        },
         "de" : {
           "variations" : {
             "plural" : {
@@ -196,6 +239,24 @@
             }
           }
         },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld päivä"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld päivää"
+                }
+              }
+            }
+          }
+        },
         "fr" : {
           "variations" : {
             "plural" : {
@@ -232,6 +293,36 @@
             }
           }
         },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld日"
+                }
+              }
+            }
+          }
+        },
+        "nb" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dag"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dager"
+                }
+              }
+            }
+          }
+        },
         "nl" : {
           "variations" : {
             "plural" : {
@@ -250,6 +341,36 @@
             }
           }
         },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dzień"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dni"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dni"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dnia"
+                }
+              }
+            }
+          }
+        },
         "pt-BR" : {
           "variations" : {
             "plural" : {
@@ -285,11 +406,35 @@
               }
             }
           }
+        },
+        "sv" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dag"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld dagar"
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld days, %@–%@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld dage, %2$@–%3$@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -300,6 +445,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld días, %2$@–%3$@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld päivää, %2$@–%3$@"
           }
         },
         "fr" : {
@@ -314,10 +465,28 @@
             "value" : "%1$lld giorni, %2$@–%3$@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld日、%2$@〜%3$@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld dager, %2$@–%3$@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld dagen, %2$@–%3$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dni: %1$lld, %2$@–%3$@"
           }
         },
         "pt-BR" : {
@@ -331,11 +500,23 @@
             "state" : "translated",
             "value" : "%1$lld dias, %2$@–%3$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld dagar, %2$@–%3$@"
+          }
         }
       }
     },
     "%lld min" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -343,6 +524,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
@@ -360,7 +547,25 @@
             "value" : "%lld min"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld分"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld min"
@@ -377,11 +582,35 @@
             "state" : "translated",
             "value" : "%lld min"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
         }
       }
     },
     "%lld selected" : {
       "localizations" : {
+        "da" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valgt"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valgt"
+                }
+              }
+            }
+          }
+        },
         "de" : {
           "variations" : {
             "plural" : {
@@ -413,6 +642,24 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%lld seleccionados"
+                }
+              }
+            }
+          }
+        },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valittu"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valittu"
                 }
               }
             }
@@ -454,6 +701,36 @@
             }
           }
         },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld件選択"
+                }
+              }
+            }
+          }
+        },
+        "nb" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valgt"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valgt"
+                }
+              }
+            }
+          }
+        },
         "nl" : {
           "variations" : {
             "plural" : {
@@ -467,6 +744,36 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%lld geselecteerd"
+                }
+              }
+            }
+          }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wybrano %lld"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wybrano %lld"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wybrano %lld"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Wybrano %lld"
                 }
               }
             }
@@ -507,11 +814,47 @@
               }
             }
           }
+        },
+        "sv" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld vald"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld valda"
+                }
+              }
+            }
+          }
         }
       }
     },
     "%lld upcoming" : {
       "localizations" : {
+        "da" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld kommende"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld kommende"
+                }
+              }
+            }
+          }
+        },
         "de" : {
           "variations" : {
             "plural" : {
@@ -548,6 +891,24 @@
             }
           }
         },
+        "fi" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld tulossa"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld tulossa"
+                }
+              }
+            }
+          }
+        },
         "fr" : {
           "variations" : {
             "plural" : {
@@ -584,6 +945,36 @@
             }
           }
         },
+        "ja" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld件の予定"
+                }
+              }
+            }
+          }
+        },
+        "nb" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld kommende"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld kommende"
+                }
+              }
+            }
+          }
+        },
         "nl" : {
           "variations" : {
             "plural" : {
@@ -597,6 +988,36 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "%lld gepland"
+                }
+              }
+            }
+          }
+        },
+        "pl" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld nadchodzący"
+                }
+              },
+              "few" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld nadchodzące"
+                }
+              },
+              "many" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld nadchodzących"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld nadchodzącego"
                 }
               }
             }
@@ -637,11 +1058,35 @@
               }
             }
           }
+        },
+        "sv" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld kommande"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld kommande"
+                }
+              }
+            }
+          }
         }
       }
     },
     "1 day" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 dag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -652,6 +1097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 día"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 päivä"
           }
         },
         "fr" : {
@@ -666,10 +1117,28 @@
             "value" : "1 giorno"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 dag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 dag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 dzień"
           }
         },
         "pt-BR" : {
@@ -683,11 +1152,23 @@
             "state" : "translated",
             "value" : "1 dia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 dag"
+          }
         }
       }
     },
     "1 week" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 uge"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -698,6 +1179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 semana"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 viikko"
           }
         },
         "fr" : {
@@ -712,10 +1199,28 @@
             "value" : "1 settimana"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1週間"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 uke"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "1 week"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 tydzień"
           }
         },
         "pt-BR" : {
@@ -729,11 +1234,23 @@
             "state" : "translated",
             "value" : "1 semana"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 vecka"
+          }
         }
       }
     },
     "Add" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -744,6 +1261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añadir"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää"
           }
         },
         "fr" : {
@@ -758,12 +1281,30 @@
             "value" : "Aggiungi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voeg toe"
           }
         },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj"
+          }
+        },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
@@ -775,57 +1316,23 @@
             "state" : "translated",
             "value" : "Adicionar"
           }
-        }
-      }
-    },
-    "Allow calendar access" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zugriff auf Kalender erlauben"
-          }
         },
-        "es" : {
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Permitir acceso a los calendarios"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autoriser l'accès aux calendriers"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Consenti l'accesso ai calendari"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geef toegang tot agenda's"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Permitir acesso aos calendários"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Permitir acesso aos calendários"
+            "value" : "Lägg till"
           }
         }
       }
     },
     "Allow Screen Time access" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv adgang til Skærmtid"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -836,6 +1343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitir acceso a Tiempo de uso"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salli Ruutuajan käyttö"
           }
         },
         "fr" : {
@@ -850,10 +1363,28 @@
             "value" : "Consenti l'accesso a Tempo di utilizzo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクリーンタイムへのアクセスを許可"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi tilgang til Skjermtid"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geef toegang tot Schermtijd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zezwól na dostęp do Czasu przed ekranem"
           }
         },
         "pt-BR" : {
@@ -867,11 +1398,105 @@
             "state" : "translated",
             "value" : "Permitir acesso ao Tempo de ecrã"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillåt åtkomst till Skärmtid"
+          }
+        }
+      }
+    },
+    "Allow calendar access" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv adgang til kalendere"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zugriff auf Kalender erlauben"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permitir acceso a los calendarios"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salli kalentereiden käyttö"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autoriser l'accès aux calendriers"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consenti l'accesso ai calendari"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーへのアクセスを許可"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi tilgang til kalendere"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geef toegang tot agenda's"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zezwól na dostęp do kalendarzy"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permitir acesso aos calendários"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permitir acesso aos calendários"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillåt åtkomst till kalendrar"
+          }
         }
       }
     },
     "Allow work apps for 1 hour" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillad arbejdsapps i 1 time"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -882,6 +1507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Permitir apps de trabajo durante 1 hora"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salli työapit 1 tunniksi"
           }
         },
         "fr" : {
@@ -896,10 +1527,28 @@
             "value" : "Consenti le app di lavoro per 1 ora"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用Appを1時間許可"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillat jobbapper i 1 time"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps 1 uur toestaan"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zezwól na aplikacje służbowe przez 1 godzinę"
           }
         },
         "pt-BR" : {
@@ -913,11 +1562,23 @@
             "state" : "translated",
             "value" : "Permitir apps de trabalho durante 1 hora"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillåt jobbappar i 1 timme"
+          }
         }
       }
     },
     "Available at %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgængelige kl. %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -928,6 +1589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disponibles a las %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytettävissä klo %@"
           }
         },
         "fr" : {
@@ -942,10 +1609,28 @@
             "value" : "Disponibili alle %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@に利用可能"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgjengelige kl. %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beschikbaar om %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dostępne o %@"
           }
         },
         "pt-BR" : {
@@ -959,11 +1644,23 @@
             "state" : "translated",
             "value" : "Disponíveis às %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillgängliga kl. %@"
+          }
         }
       }
     },
     "Available on %@ at %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgængelige %1$@ kl. %2$@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -974,6 +1671,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disponibles el %1$@ a las %2$@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytettävissä %1$@ klo %2$@"
           }
         },
         "fr" : {
@@ -988,10 +1691,28 @@
             "value" : "Disponibili %1$@ alle %2$@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@に利用可能"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgjengelige %1$@ kl. %2$@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beschikbaar op %1$@ om %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dostępne %1$@ o %2$@"
           }
         },
         "pt-BR" : {
@@ -1005,11 +1726,23 @@
             "state" : "translated",
             "value" : "Disponíveis %1$@ às %2$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillgängliga %1$@ kl. %2$@"
+          }
         }
       }
     },
     "Available tomorrow at %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgængelige i morgen kl. %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1020,6 +1753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Disponibles mañana a las %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytettävissä huomenna klo %@"
           }
         },
         "fr" : {
@@ -1034,10 +1773,28 @@
             "value" : "Disponibili domani alle %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明日%@に利用可能"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgjengelige i morgen kl. %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Morgen om %@ beschikbaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dostępne jutro o %@"
           }
         },
         "pt-BR" : {
@@ -1051,12 +1808,23 @@
             "state" : "translated",
             "value" : "Disponíveis amanhã às %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillgängliga i morgon kl. %@"
+          }
         }
       }
     },
     "Berchtold's Day" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berchtoldsdag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1067,6 +1835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "San Bertoldo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berchtoldin päivä"
           }
         },
         "fr" : {
@@ -1081,10 +1855,28 @@
             "value" : "San Bertoldo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベルヒトルトの日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berchtoldsdagen"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Berchtoldsdag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzień św. Berchtolda"
           }
         },
         "pt-BR" : {
@@ -1098,11 +1890,24 @@
             "state" : "translated",
             "value" : "Dia de São Bertoldo"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berchtoldsdagen"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Block work apps for 1 hour" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spær arbejdsapps i 1 time"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1113,6 +1918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloquear apps de trabajo durante 1 hora"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estä työapit 1 tunniksi"
           }
         },
         "fr" : {
@@ -1127,10 +1938,28 @@
             "value" : "Blocca le app di lavoro per 1 ora"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用Appを1時間ブロック"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sperr jobbapper i 1 time"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps 1 uur blokkeren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zablokuj aplikacje służbowe na 1 godzinę"
           }
         },
         "pt-BR" : {
@@ -1144,11 +1973,23 @@
             "state" : "translated",
             "value" : "Bloquear apps de trabalho durante 1 hora"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spärra jobbappar i 1 timme"
+          }
         }
       }
     },
     "Blocked at %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spærret kl. %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1159,6 +2000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueadas a las %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estetty klo %@"
           }
         },
         "fr" : {
@@ -1173,10 +2020,28 @@
             "value" : "Bloccate alle %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@にブロック"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sperret kl. %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geblokkeerd om %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokada o %@"
           }
         },
         "pt-BR" : {
@@ -1190,11 +2055,23 @@
             "state" : "translated",
             "value" : "Bloqueadas às %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spärrade kl. %@"
+          }
         }
       }
     },
     "Blocked on %@ at %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spærret %1$@ kl. %2$@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1205,6 +2082,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueadas el %1$@ a las %2$@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estetty %1$@ klo %2$@"
           }
         },
         "fr" : {
@@ -1219,10 +2102,28 @@
             "value" : "Bloccate %1$@ alle %2$@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@にブロック"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sperret %1$@ kl. %2$@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geblokkeerd op %1$@ om %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokada %1$@ o %2$@"
           }
         },
         "pt-BR" : {
@@ -1236,11 +2137,23 @@
             "state" : "translated",
             "value" : "Bloqueadas %1$@ às %2$@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spärrade %1$@ kl. %2$@"
+          }
         }
       }
     },
     "Blocked tomorrow at %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spærret i morgen kl. %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1251,6 +2164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueadas mañana a las %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estetty huomenna klo %@"
           }
         },
         "fr" : {
@@ -1265,10 +2184,28 @@
             "value" : "Bloccate domani alle %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明日%@にブロック"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sperret i morgen kl. %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Morgen om %@ geblokkeerd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokada jutro o %@"
           }
         },
         "pt-BR" : {
@@ -1282,11 +2219,23 @@
             "state" : "translated",
             "value" : "Bloqueadas amanhã às %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spärrade i morgon kl. %@"
+          }
         }
       }
     },
     "Calendar access was denied. Enable it in Settings › Privacy & Security › Calendars." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adgang til kalendere blev afvist. Slå det til i Indstillinger › Anonymitet & sikkerhed › Kalendere."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1297,6 +2246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se denegó el acceso a los calendarios. Actívalo en Ajustes › Privacidad y seguridad › Calendarios."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalentereiden käyttö estettiin. Salli se kohdassa Asetukset › Tietosuoja ja suojaus › Kalenterit."
           }
         },
         "fr" : {
@@ -1311,10 +2266,28 @@
             "value" : "L'accesso ai calendari è stato negato. Attivalo in Impostazioni › Privacy e sicurezza › Calendari."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーへのアクセスが拒否されました。「設定」›「プライバシーとセキュリティ」›「カレンダー」で許可してください。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilgang til kalendere ble avvist. Slå det på i Innstillinger › Personvern og sikkerhet › Kalendere."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toegang tot agenda's is geweigerd. Schakel het in via Instellingen › Privacy en beveiliging › Agenda's."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odmówiono dostępu do kalendarzy. Włącz go w Ustawienia › Prywatność i ochrona › Kalendarze."
           }
         },
         "pt-BR" : {
@@ -1328,11 +2301,23 @@
             "state" : "translated",
             "value" : "O acesso aos calendários foi recusado. Ative-o em Definições › Privacidade e segurança › Calendários."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åtkomst till kalendrar nekades. Aktivera den i Inställningar › Integritet och säkerhet › Kalendrar."
+          }
         }
       }
     },
     "Calendars" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendere"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1343,6 +2328,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calendarios"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalenterit"
           }
         },
         "fr" : {
@@ -1357,10 +2348,28 @@
             "value" : "Calendari"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダー"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendere"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agenda's"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendarze"
           }
         },
         "pt-BR" : {
@@ -1374,11 +2383,23 @@
             "state" : "translated",
             "value" : "Calendários"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendrar"
+          }
         }
       }
     },
     "Calendars are read on this device only." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendere læses kun på denne enhed."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1389,6 +2410,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Los calendarios solo se leen en este dispositivo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalentereita luetaan vain tällä laitteella."
           }
         },
         "fr" : {
@@ -1403,10 +2430,28 @@
             "value" : "I calendari vengono letti solo su questo dispositivo."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーはこのデバイス上でのみ読み取られます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendere leses bare på denne enheten."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agenda's worden alleen op dit apparaat gelezen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendarze są odczytywane tylko na tym urządzeniu."
           }
         },
         "pt-BR" : {
@@ -1420,11 +2465,23 @@
             "state" : "translated",
             "value" : "Os calendários são lidos apenas neste dispositivo."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendrar läses bara på den här enheten."
+          }
         }
       }
     },
     "Cancel" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuller"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1435,6 +2492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kumoa"
           }
         },
         "fr" : {
@@ -1449,10 +2512,28 @@
             "value" : "Annulla"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuleer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anuluj"
           }
         },
         "pt-BR" : {
@@ -1466,12 +2547,23 @@
             "state" : "translated",
             "value" : "Cancelar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
+          }
         }
       }
     },
     "Christmas Day" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juledag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1482,6 +2574,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navidad"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Joulupäivä"
           }
         },
         "fr" : {
@@ -1496,10 +2594,28 @@
             "value" : "Natale"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クリスマス"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første juledag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eerste Kerstdag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boże Narodzenie"
           }
         },
         "pt-BR" : {
@@ -1513,11 +2629,24 @@
             "state" : "translated",
             "value" : "Natal"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Juldagen"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Clear past days off" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ryd tidligere fridage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1528,6 +2657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Borrar días libres pasados"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyhjennä menneet vapaapäivät"
           }
         },
         "fr" : {
@@ -1542,10 +2677,28 @@
             "value" : "Elimina i giorni liberi passati"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過去の休日を消去"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern tidligere fridager"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wis eerdere vrije dagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyczyść minione dni wolne"
           }
         },
         "pt-BR" : {
@@ -1559,11 +2712,23 @@
             "state" : "translated",
             "value" : "Limpar folgas passadas"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rensa tidigare lediga dagar"
+          }
         }
       }
     },
     "Clear past shifts" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ryd tidligere vagter"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1574,6 +2739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Borrar guardias pasadas"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyhjennä menneet päivystykset"
           }
         },
         "fr" : {
@@ -1588,10 +2759,28 @@
             "value" : "Elimina i turni passati"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過去のオンコールを消去"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern tidligere vakter"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wis eerdere piketdiensten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyczyść minione dyżury"
           }
         },
         "pt-BR" : {
@@ -1605,11 +2794,23 @@
             "state" : "translated",
             "value" : "Limpar turnos de prevenção passados"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rensa tidigare jourpass"
+          }
         }
       }
     },
     "Comma separated, not case sensitive. If a title matches both, it counts as on call." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommasepareret, uden forskel på store og små bogstaver. Matcher en titel begge, tæller den som vagt."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1620,6 +2821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Separadas por comas, sin distinguir mayúsculas. Si un título coincide con ambas, cuenta como guardia."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilkuin eroteltuina, kirjainkoolla ei ole väliä. Jos otsikko sopii molempiin, se lasketaan päivystykseksi."
           }
         },
         "fr" : {
@@ -1634,10 +2841,28 @@
             "value" : "Separate da virgole, senza distinzione tra maiuscole e minuscole. Se un titolo corrisponde a entrambe, conta come reperibilità."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カンマ区切り、大文字と小文字は区別しません。両方に一致するタイトルはオンコールとして扱われます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommaseparert, skiller ikke mellom store og små bokstaver. Passer en tittel til begge, teller den som vakt."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gescheiden door komma's, niet hoofdlettergevoelig. Past een titel bij beide, dan telt hij als piket."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rozdzielone przecinkami, bez rozróżniania wielkości liter. Jeśli tytuł pasuje do obu, liczy się jako dyżur."
           }
         },
         "pt-BR" : {
@@ -1651,11 +2876,23 @@
             "state" : "translated",
             "value" : "Separadas por vírgulas, sem distinguir maiúsculas. Se um título corresponder a ambas, conta como prevenção."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommaseparerade, skiftlägesokänsliga. Om en titel matchar båda räknas den som jour."
+          }
         }
       }
     },
     "Copy Monday's hours to all workdays" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiér mandagens tider til alle arbejdsdage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1666,6 +2903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copiar el horario del lunes a todos los días laborables"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopioi maanantain ajat kaikille työpäiville"
           }
         },
         "fr" : {
@@ -1680,10 +2923,28 @@
             "value" : "Copia l'orario del lunedì su tutti i giorni lavorativi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曜日の時間をすべての勤務日にコピー"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopier mandagens tider til alle arbeidsdager"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kopieer de uren van maandag naar alle werkdagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skopiuj godziny z poniedziałku na wszystkie dni robocze"
           }
         },
         "pt-BR" : {
@@ -1697,11 +2958,23 @@
             "state" : "translated",
             "value" : "Copiar o horário de segunda-feira para todos os dias úteis"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiera måndagens tider till alla arbetsdagar"
+          }
         }
       }
     },
     "Day off" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fridag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1712,6 +2985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Día libre"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vapaapäivä"
           }
         },
         "fr" : {
@@ -1726,10 +3005,28 @@
             "value" : "Giorno libero"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fridag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vrije dag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzień wolny"
           }
         },
         "pt-BR" : {
@@ -1743,11 +3040,23 @@
             "state" : "translated",
             "value" : "Folga"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ledig dag"
+          }
         }
       }
     },
     "Day off: %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fri: %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1758,6 +3067,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Día libre: %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vapaa: %@"
           }
         },
         "fr" : {
@@ -1772,10 +3087,28 @@
             "value" : "Giorno libero: %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休日：%@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fri: %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vrije dag: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wolne: %@"
           }
         },
         "pt-BR" : {
@@ -1789,11 +3122,23 @@
             "state" : "translated",
             "value" : "Folga: %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ledig: %@"
+          }
         }
       }
     },
     "Days off" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fridage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1804,6 +3149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Días libres"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vapaapäivät"
           }
         },
         "fr" : {
@@ -1818,10 +3169,28 @@
             "value" : "Giorni liberi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fridager"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vrije dagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dni wolne"
           }
         },
         "pt-BR" : {
@@ -1835,11 +3204,23 @@
             "state" : "translated",
             "value" : "Folgas"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lediga dagar"
+          }
         }
       }
     },
     "Days off & holidays" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fridage og helligdage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1850,6 +3231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Días libres y festivos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vapaapäivät ja pyhät"
           }
         },
         "fr" : {
@@ -1864,10 +3251,28 @@
             "value" : "Giorni liberi e festivi"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休日・祝日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fridager og helligdager"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vrije dagen en feestdagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dni wolne i święta"
           }
         },
         "pt-BR" : {
@@ -1881,12 +3286,23 @@
             "state" : "translated",
             "value" : "Folgas e feriados"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lediga dagar och helgdagar"
+          }
         }
       }
     },
     "Dentist" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tandlæge"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1897,6 +3313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dentista"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hammaslääkäri"
           }
         },
         "fr" : {
@@ -1911,10 +3333,28 @@
             "value" : "Dentista"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歯医者"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tannlege"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tandarts"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dentysta"
           }
         },
         "pt-BR" : {
@@ -1928,11 +3368,24 @@
             "state" : "translated",
             "value" : "Dentista"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tandläkare"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Edit these in your calendar." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redigér dem i din kalender."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1943,6 +3396,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Edítalos en tu calendario."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muokkaa niitä kalenterissasi."
           }
         },
         "fr" : {
@@ -1957,10 +3416,28 @@
             "value" : "Modificali nel tuo calendario."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これらはカレンダーで編集してください。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endre dem i kalenderen din."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wijzig deze in je agenda."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edytuj je w swoim kalendarzu."
           }
         },
         "pt-BR" : {
@@ -1974,11 +3451,23 @@
             "state" : "translated",
             "value" : "Edite-os no seu calendário."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ändra dem i din kalender."
+          }
         }
       }
     },
     "End must be after start. This day is treated as blocked." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slut skal være efter start. Dagen regnes som spærret."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1989,6 +3478,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "El final debe ser posterior al inicio. Este día se considera bloqueado."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lopun on oltava alun jälkeen. Päivää käsitellään estettynä."
           }
         },
         "fr" : {
@@ -2003,10 +3498,28 @@
             "value" : "La fine deve essere dopo l'inizio. Questo giorno è considerato bloccato."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了は開始より後にしてください。この日はブロック扱いになります。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutt må være etter start. Dagen regnes som sperret."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Het einde moet na het begin liggen. Deze dag geldt als geblokkeerd."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koniec musi być po początku. Ten dzień jest traktowany jako zablokowany."
           }
         },
         "pt-BR" : {
@@ -2020,11 +3533,23 @@
             "state" : "translated",
             "value" : "O fim tem de ser depois do início. Este dia é considerado bloqueado."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutet måste vara efter början. Dagen räknas som spärrad."
+          }
         }
       }
     },
     "End override" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afslut undtagelse"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2035,6 +3560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terminar la excepción"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lopeta poikkeus"
           }
         },
         "fr" : {
@@ -2049,10 +3580,28 @@
             "value" : "Termina l'eccezione"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例外を終了"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avslutt unntak"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beëindig uitzondering"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zakończ wyjątek"
           }
         },
         "pt-BR" : {
@@ -2066,11 +3615,23 @@
             "state" : "translated",
             "value" : "Terminar exceção"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avsluta undantag"
+          }
         }
       }
     },
     "Ends" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutter"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2081,6 +3642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fin"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päättyy"
           }
         },
         "fr" : {
@@ -2095,10 +3662,28 @@
             "value" : "Fine"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutter"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Einde"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koniec"
           }
         },
         "pt-BR" : {
@@ -2112,11 +3697,23 @@
             "state" : "translated",
             "value" : "Fim"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutar"
+          }
         }
       }
     },
     "First day" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første dag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2127,6 +3724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Primer día"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ensimmäinen päivä"
           }
         },
         "fr" : {
@@ -2141,10 +3744,28 @@
             "value" : "Primo giorno"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første dag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Eerste dag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pierwszy dzień"
           }
         },
         "pt-BR" : {
@@ -2158,11 +3779,23 @@
             "state" : "translated",
             "value" : "Primeiro dia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Första dag"
+          }
         }
       }
     },
     "Flip until next scheduled change" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vend til næste ændring"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2173,6 +3806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Invertir hasta el próximo cambio"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käännä seuraavaan muutokseen asti"
           }
         },
         "fr" : {
@@ -2187,10 +3826,28 @@
             "value" : "Inverti fino al prossimo cambio"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次の切り替えまで反転"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snu til neste endring"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Omdraaien tot de volgende wijziging"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odwróć do następnej zmiany"
           }
         },
         "pt-BR" : {
@@ -2204,11 +3861,23 @@
             "state" : "translated",
             "value" : "Inverter até à próxima mudança"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vänd till nästa ändring"
+          }
         }
       }
     },
     "From" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2219,6 +3888,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Desde"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alkaen"
           }
         },
         "fr" : {
@@ -2233,10 +3908,28 @@
             "value" : "Dalle"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Van"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Od"
           }
         },
         "pt-BR" : {
@@ -2250,11 +3943,23 @@
             "state" : "translated",
             "value" : "De"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Från"
+          }
         }
       }
     },
     "From calendars" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra kalendere"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2265,6 +3970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De los calendarios"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalentereista"
           }
         },
         "fr" : {
@@ -2279,10 +3990,28 @@
             "value" : "Dai calendari"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーから"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra kalendere"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uit agenda's"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z kalendarzy"
           }
         },
         "pt-BR" : {
@@ -2296,11 +4025,23 @@
             "state" : "translated",
             "value" : "Dos calendários"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Från kalendrar"
+          }
         }
       }
     },
     "From work calendar" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra arbejdskalenderen"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2311,6 +4052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Del calendario de trabajo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työkalenterista"
           }
         },
         "fr" : {
@@ -2325,10 +4072,28 @@
             "value" : "Dal calendario di lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用カレンダーから"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fra jobbkalenderen"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uit werkagenda"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z kalendarza służbowego"
           }
         },
         "pt-BR" : {
@@ -2342,11 +4107,23 @@
             "state" : "translated",
             "value" : "Do calendário de trabalho"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Från jobbkalendern"
+          }
         }
       }
     },
     "Holiday calendar" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helligdagskalender"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2357,6 +4134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calendario de festivos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pyhäpäiväkalenteri"
           }
         },
         "fr" : {
@@ -2371,10 +4154,28 @@
             "value" : "Calendario festività"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "祝日カレンダー"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helligdagskalender"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Feestdagenagenda"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendarz świąt"
           }
         },
         "pt-BR" : {
@@ -2388,12 +4189,23 @@
             "state" : "translated",
             "value" : "Calendário de feriados"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helgdagskalender"
+          }
         }
       }
     },
     "Holidays (CH)" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helligdage (CH)"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2404,6 +4216,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Festivos (CH)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pyhäpäivät (CH)"
           }
         },
         "fr" : {
@@ -2418,10 +4236,28 @@
             "value" : "Festività (CH)"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "祝日（スイス）"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helligdager (CH)"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Feestdagen (CH)"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Święta (CH)"
           }
         },
         "pt-BR" : {
@@ -2435,11 +4271,24 @@
             "state" : "translated",
             "value" : "Feriados (CH)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helgdagar (CH)"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Imported" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importeret"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2450,6 +4299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Importados"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuodut"
           }
         },
         "fr" : {
@@ -2464,10 +4319,28 @@
             "value" : "Importati"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "読み込み済み"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importert"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geïmporteerd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaimportowane"
           }
         },
         "pt-BR" : {
@@ -2481,12 +4354,23 @@
             "state" : "translated",
             "value" : "Importados"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importerade"
+          }
         }
       }
     },
     "Incident review" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gennemgang af hændelse"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2497,6 +4381,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Revisión de incidente"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Häiriökatselmus"
           }
         },
         "fr" : {
@@ -2511,10 +4401,28 @@
             "value" : "Revisione incidente"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インシデントレビュー"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hendelsesgjennomgang"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Incidentevaluatie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przegląd incydentu"
           }
         },
         "pt-BR" : {
@@ -2528,11 +4436,24 @@
             "state" : "translated",
             "value" : "Revisão de incidente"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incidentgenomgång"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Last day" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sidste dag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2543,6 +4464,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Último día"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viimeinen päivä"
           }
         },
         "fr" : {
@@ -2557,10 +4484,28 @@
             "value" : "Ultimo giorno"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siste dag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laatste dag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ostatni dzień"
           }
         },
         "pt-BR" : {
@@ -2574,11 +4519,23 @@
             "state" : "translated",
             "value" : "Último dia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sista dag"
+          }
         }
       }
     },
     "Meeting until %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Møde til %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2589,6 +4546,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reunión hasta las %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokous klo %@ asti"
           }
         },
         "fr" : {
@@ -2603,10 +4566,28 @@
             "value" : "Riunione fino alle %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@まで会議"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Møte til %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vergadering tot %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spotkanie do %@"
           }
         },
         "pt-BR" : {
@@ -2620,11 +4601,23 @@
             "state" : "translated",
             "value" : "Reunião até às %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möte till %@"
+          }
         }
       }
     },
     "Meetings" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Møder"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2635,6 +4628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reuniones"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokoukset"
           }
         },
         "fr" : {
@@ -2649,10 +4648,28 @@
             "value" : "Riunioni"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会議"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Møter"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vergaderingen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spotkania"
           }
         },
         "pt-BR" : {
@@ -2666,11 +4683,23 @@
             "state" : "translated",
             "value" : "Reuniões"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möten"
+          }
         }
       }
     },
     "Meetings extend work hours" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Møder forlænger arbejdstiden"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2681,6 +4710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las reuniones amplían el horario"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokoukset pidentävät työaikaa"
           }
         },
         "fr" : {
@@ -2695,10 +4730,28 @@
             "value" : "Le riunioni estendono l'orario"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会議で勤務時間を延長"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Møter forlenger arbeidstiden"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vergaderingen verlengen werktijd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spotkania wydłużają godziny pracy"
           }
         },
         "pt-BR" : {
@@ -2712,11 +4765,23 @@
             "state" : "translated",
             "value" : "As reuniões prolongam o horário"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möten förlänger arbetstiden"
+          }
         }
       }
     },
     "Name, e.g. Christmas, Vacation" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn, f.eks. Jul, Ferie"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2727,6 +4792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nombre, p. ej. Navidad, Vacaciones"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nimi, esim. Joulu, Loma"
           }
         },
         "fr" : {
@@ -2741,10 +4812,28 @@
             "value" : "Nome, ad es. Natale, Vacanze"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前（例：年末年始、休暇）"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn, f.eks. Jul, Ferie"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naam, bijv. Kerstmis, Vakantie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa, np. Boże Narodzenie, Urlop"
           }
         },
         "pt-BR" : {
@@ -2758,12 +4847,23 @@
             "state" : "translated",
             "value" : "Nome, p. ex. Natal, Férias"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namn, t.ex. Jul, Semester"
+          }
         }
       }
     },
     "New Year's Day" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nytårsdag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2774,6 +4874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Año Nuevo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uudenvuodenpäivä"
           }
         },
         "fr" : {
@@ -2788,10 +4894,28 @@
             "value" : "Capodanno"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "元日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første nyttårsdag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nieuwjaarsdag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nowy Rok"
           }
         },
         "pt-BR" : {
@@ -2805,11 +4929,24 @@
             "state" : "translated",
             "value" : "Ano Novo"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyårsdagen"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "No upcoming days off" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen kommende fridage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2820,6 +4957,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No hay días libres próximos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei tulevia vapaapäiviä"
           }
         },
         "fr" : {
@@ -2834,10 +4977,28 @@
             "value" : "Nessun giorno libero in programma"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定されている休日はありません"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen kommende fridager"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen geplande vrije dagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak nadchodzących dni wolnych"
           }
         },
         "pt-BR" : {
@@ -2851,11 +5012,23 @@
             "state" : "translated",
             "value" : "Sem folgas previstas"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga kommande lediga dagar"
+          }
         }
       }
     },
     "No upcoming shifts" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen kommende vagter"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2866,6 +5039,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No hay guardias próximas"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei tulevia päivystyksiä"
           }
         },
         "fr" : {
@@ -2880,10 +5059,28 @@
             "value" : "Nessun turno in programma"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定されているオンコールはありません"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen kommende vakter"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen geplande piketdiensten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak nadchodzących dyżurów"
           }
         },
         "pt-BR" : {
@@ -2897,11 +5094,23 @@
             "state" : "translated",
             "value" : "Sem turnos de prevenção previstos"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga kommande jourpass"
+          }
         }
       }
     },
     "No workdays" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen arbejdsdage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2912,6 +5121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sin días laborables"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei työpäiviä"
           }
         },
         "fr" : {
@@ -2926,10 +5141,28 @@
             "value" : "Nessun giorno lavorativo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務日なし"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen arbeidsdager"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen werkdagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak dni roboczych"
           }
         },
         "pt-BR" : {
@@ -2943,11 +5176,23 @@
             "state" : "translated",
             "value" : "Sem dias úteis"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga arbetsdagar"
+          }
         }
       }
     },
     "None" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2958,6 +5203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ninguno"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei mitään"
           }
         },
         "fr" : {
@@ -2972,10 +5223,28 @@
             "value" : "Nessuno"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "なし"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak"
           }
         },
         "pt-BR" : {
@@ -2989,11 +5258,23 @@
             "state" : "translated",
             "value" : "Nenhum"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen"
+          }
         }
       }
     },
     "None selected" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intet valgt"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3004,6 +5285,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sin seleccionar"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei valintoja"
           }
         },
         "fr" : {
@@ -3018,10 +5305,28 @@
             "value" : "Nessuna selezione"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未選択"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingenting valgt"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niets geselecteerd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nic nie wybrano"
           }
         },
         "pt-BR" : {
@@ -3035,11 +5340,23 @@
             "state" : "translated",
             "value" : "Nada selecionado"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inget valt"
+          }
         }
       }
     },
     "Not a workday" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke en arbejdsdag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3050,6 +5367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Día no laborable"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei työpäivä"
           }
         },
         "fr" : {
@@ -3064,10 +5387,28 @@
             "value" : "Giorno non lavorativo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務日ではありません"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke en arbeidsdag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen werkdag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzień wolny od pracy"
           }
         },
         "pt-BR" : {
@@ -3081,11 +5422,23 @@
             "state" : "translated",
             "value" : "Não é dia útil"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen arbetsdag"
+          }
         }
       }
     },
     "Note (optional)" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note (valgfri)"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3096,6 +5449,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nota (opcional)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muistiinpano (valinnainen)"
           }
         },
         "fr" : {
@@ -3110,10 +5469,28 @@
             "value" : "Nota (facoltativa)"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メモ（任意）"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notat (valgfritt)"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notitie (optioneel)"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notatka (opcjonalnie)"
           }
         },
         "pt-BR" : {
@@ -3127,11 +5504,23 @@
             "state" : "translated",
             "value" : "Nota (opcional)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anteckning (valfri)"
+          }
         }
       }
     },
     "Nothing in the next %lld days" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intet de næste %lld dage"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3142,6 +5531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nada en los próximos %lld días"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei mitään seuraavan %lld päivän aikana"
           }
         },
         "fr" : {
@@ -3156,10 +5551,28 @@
             "value" : "Niente nei prossimi %lld giorni"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後%lld日間は予定なし"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingenting de neste %lld dagene"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Niets in de komende %lld dagen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nic w ciągu najbliższych %lld dni"
           }
         },
         "pt-BR" : {
@@ -3173,11 +5586,23 @@
             "state" : "translated",
             "value" : "Nada nos próximos %lld dias"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inget de kommande %lld dagarna"
+          }
         }
       }
     },
     "Off-hours" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3185,6 +5610,12 @@
           }
         },
         "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Off-hours"
@@ -3202,7 +5633,25 @@
             "value" : "Off-hours"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Off-hours"
@@ -3219,11 +5668,23 @@
             "state" : "translated",
             "value" : "Off-hours"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours"
+          }
         }
       }
     },
     "Off-hours uses Screen Time to block your work apps. Nothing leaves your device." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours bruger Skærmtid til at spærre dine arbejdsapps. Intet forlader din enhed."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3234,6 +5695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Off-hours usa Tiempo de uso para bloquear tus apps de trabajo. Nada sale de tu dispositivo."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours estää työappisi Ruutuajan avulla. Mitään ei lähde laitteeltasi."
           }
         },
         "fr" : {
@@ -3248,10 +5715,28 @@
             "value" : "Off-hours usa Tempo di utilizzo per bloccare le tue app di lavoro. Nulla lascia il tuo dispositivo."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hoursはスクリーンタイムを使って仕事用Appをブロックします。データがデバイスの外に出ることはありません。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours bruker Skjermtid til å sperre jobbappene dine. Ingenting forlater enheten din."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Off-hours gebruikt Schermtijd om je werk-apps te blokkeren. Er verlaat niets je apparaat."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours blokuje aplikacje służbowe za pomocą Czasu przed ekranem. Nic nie opuszcza Twojego urządzenia."
           }
         },
         "pt-BR" : {
@@ -3265,11 +5750,23 @@
             "state" : "translated",
             "value" : "A Off-hours usa o Tempo de ecrã para bloquear as suas apps de trabalho. Nada sai do seu dispositivo."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Off-hours använder Skärmtid för att spärra dina jobbappar. Inget lämnar din enhet."
+          }
         }
       }
     },
     "On call" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vagt"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3280,6 +5777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardia"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivystys"
           }
         },
         "fr" : {
@@ -3294,10 +5797,28 @@
             "value" : "Reperibilità"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンコール"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vakt"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Piket"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dyżur"
           }
         },
         "pt-BR" : {
@@ -3311,58 +5832,23 @@
             "state" : "translated",
             "value" : "Prevenção"
           }
-        }
-      }
-    },
-    "On call – Payments" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pikett – Payments"
-          }
         },
-        "es" : {
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Guardia – Pagos"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Astreinte – Paiements"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reperibilità – Pagamenti"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Piket – Betalingen"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Plantão – Pagamentos"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Prevenção – Pagamentos"
+            "value" : "Jour"
           }
         }
       }
     },
     "On call until %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vagt til %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3373,6 +5859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De guardia hasta %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivystys %@ asti"
           }
         },
         "fr" : {
@@ -3387,10 +5879,28 @@
             "value" : "Reperibile fino a %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@までオンコール"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vakt til %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Piket tot %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dyżur do %@"
           }
         },
         "pt-BR" : {
@@ -3404,11 +5914,106 @@
             "state" : "translated",
             "value" : "De prevenção até %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jour till %@"
+          }
         }
       }
     },
+    "On call – Payments" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vagt – Betalinger"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pikett – Payments"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardia – Pagos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivystys – Maksut"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Astreinte – Paiements"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reperibilità – Pagamenti"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンコール – 決済"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vakt – Betalinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piket – Betalingen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dyżur – Płatności"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plantão – Pagamentos"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prevenção – Pagamentos"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jour – Betalningar"
+          }
+        }
+      },
+      "extractionState" : "manual"
+    },
     "On-call shift" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vagt"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3419,6 +6024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turno de guardia"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivystysvuoro"
           }
         },
         "fr" : {
@@ -3433,10 +6044,28 @@
             "value" : "Turno di reperibilità"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンコール"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vakt"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Piketdienst"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dyżur"
           }
         },
         "pt-BR" : {
@@ -3450,11 +6079,23 @@
             "state" : "translated",
             "value" : "Turno de prevenção"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jourpass"
+          }
         }
       }
     },
     "Open before meeting" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn før mødet"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3465,6 +6106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir antes de la reunión"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa ennen kokousta"
           }
         },
         "fr" : {
@@ -3479,10 +6126,28 @@
             "value" : "Apri prima della riunione"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会議前に開く"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne før møtet"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Openen vóór vergadering"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz przed spotkaniem"
           }
         },
         "pt-BR" : {
@@ -3496,11 +6161,23 @@
             "state" : "translated",
             "value" : "Abrir antes da reunião"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna före mötet"
+          }
         }
       }
     },
     "Optional. Events whose title contains one of the keywords below become on-call shifts or days off." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valgfrit. Begivenheder, hvis titel indeholder et af nøgleordene nedenfor, bliver til vagter eller fridage."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3511,6 +6188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opcional. Los eventos cuyo título contiene una de las palabras clave de abajo se convierten en guardias o días libres."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valinnainen. Tapahtumista, joiden otsikossa on jokin alla olevista avainsanoista, tulee päivystyksiä tai vapaapäiviä."
           }
         },
         "fr" : {
@@ -3525,10 +6208,28 @@
             "value" : "Facoltativo. Gli eventi il cui titolo contiene una delle parole chiave qui sotto diventano turni di reperibilità o giorni liberi."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任意。タイトルに下のキーワードを含む予定は、オンコールまたは休日になります。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valgfritt. Hendelser der tittelen inneholder et av nøkkelordene nedenfor, blir vakter eller fridager."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Optioneel. Afspraken met een van de onderstaande trefwoorden in de titel worden piketdiensten of vrije dagen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opcjonalnie. Wydarzenia, których tytuł zawiera jedno ze słów kluczowych poniżej, stają się dyżurami lub dniami wolnymi."
           }
         },
         "pt-BR" : {
@@ -3542,11 +6243,23 @@
             "state" : "translated",
             "value" : "Opcional. Os eventos cujo título contém uma das palavras-chave abaixo passam a turnos de prevenção ou folgas."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valfritt. Händelser vars titel innehåller något av nyckelorden nedan blir jourpass eller lediga dagar."
+          }
         }
       }
     },
     "Optional. Every day with an event in this calendar counts as a day off, e.g. a public holidays calendar." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valgfrit. Hver dag med en begivenhed i denne kalender tæller som fridag, f.eks. en helligdagskalender."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3557,6 +6270,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opcional. Cada día con un evento en este calendario cuenta como día libre, p. ej. un calendario de festivos."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valinnainen. Jokainen päivä, jolla tässä kalenterissa on tapahtuma, on vapaapäivä, esim. pyhäpäiväkalenteri."
           }
         },
         "fr" : {
@@ -3571,10 +6290,28 @@
             "value" : "Facoltativo. Ogni giorno con un evento in questo calendario conta come giorno libero, ad es. un calendario delle festività."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任意。このカレンダーに予定がある日はすべて休日になります（例：祝日カレンダー）。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valgfritt. Hver dag med en hendelse i denne kalenderen teller som fridag, f.eks. en helligdagskalender."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Optioneel. Elke dag met een afspraak in deze agenda telt als vrije dag, bijv. een feestdagenagenda."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opcjonalnie. Każdy dzień z wydarzeniem w tym kalendarzu liczy się jako dzień wolny, np. kalendarz świąt."
           }
         },
         "pt-BR" : {
@@ -3588,11 +6325,23 @@
             "state" : "translated",
             "value" : "Opcional. Cada dia com um evento neste calendário conta como folga, p. ex. um calendário de feriados."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valfritt. Varje dag med en händelse i den här kalendern räknas som ledig dag, t.ex. en helgdagskalender."
+          }
         }
       }
     },
     "Outside work hours" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uden for arbejdstid"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3603,6 +6352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fuera del horario laboral"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työajan ulkopuolella"
           }
         },
         "fr" : {
@@ -3617,10 +6372,28 @@
             "value" : "Fuori orario di lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務時間外"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utenfor arbeidstid"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buiten werktijd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poza godzinami pracy"
           }
         },
         "pt-BR" : {
@@ -3634,11 +6407,23 @@
             "state" : "translated",
             "value" : "Fora do horário de trabalho"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utanför arbetstid"
+          }
         }
       }
     },
     "Override" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undtagelse"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3649,6 +6434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Excepción"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poikkeus"
           }
         },
         "fr" : {
@@ -3663,10 +6454,28 @@
             "value" : "Eccezione"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例外"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unntak"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uitzondering"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyjątek"
           }
         },
         "pt-BR" : {
@@ -3680,11 +6489,23 @@
             "state" : "translated",
             "value" : "Exceção"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undantag"
+          }
         }
       }
     },
     "Override until %@" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undtagelse til %@"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3695,6 +6516,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Excepción hasta las %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poikkeus klo %@ asti"
           }
         },
         "fr" : {
@@ -3709,10 +6536,28 @@
             "value" : "Eccezione fino alle %@"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@まで例外"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unntak til %@"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uitzondering tot %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyjątek do %@"
           }
         },
         "pt-BR" : {
@@ -3726,11 +6571,23 @@
             "state" : "translated",
             "value" : "Exceção até às %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undantag till %@"
+          }
         }
       }
     },
     "Overrides beat every schedule, including on-call and days off." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undtagelser går forud for alle planer, også vagter og fridage."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3741,6 +6598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las excepciones prevalecen sobre cualquier horario, incluidas guardias y días libres."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poikkeukset ohittavat kaikki aikataulut, myös päivystykset ja vapaapäivät."
           }
         },
         "fr" : {
@@ -3755,10 +6618,28 @@
             "value" : "Le eccezioni hanno la precedenza su tutti gli orari, inclusi reperibilità e giorni liberi."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例外はオンコールや休日を含むすべてのスケジュールより優先されます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unntak går foran alle planer, også vakter og fridager."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uitzonderingen gaan voor elk schema, ook piketdiensten en vrije dagen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyjątki mają pierwszeństwo przed każdym harmonogramem, także dyżurami i dniami wolnymi."
           }
         },
         "pt-BR" : {
@@ -3772,11 +6653,23 @@
             "state" : "translated",
             "value" : "As exceções prevalecem sobre qualquer horário, incluindo prevenção e folgas."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undantag går före alla scheman, även jour och lediga dagar."
+          }
         }
       }
     },
     "Past" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidligere"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3787,6 +6680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pasados"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menneet"
           }
         },
         "fr" : {
@@ -3801,10 +6700,28 @@
             "value" : "Passati"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過去"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidligere"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verleden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minione"
           }
         },
         "pt-BR" : {
@@ -3818,11 +6735,23 @@
             "state" : "translated",
             "value" : "Passados"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidigare"
+          }
         }
       }
     },
     "Pick the apps, categories and websites to block outside work hours, e.g. Slack, Teams, Mail, Outlook." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg de apps, kategorier og websteder, der skal spærres uden for arbejdstid, f.eks. Slack, Teams, Mail, Outlook."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3833,6 +6762,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Elige las apps, categorías y sitios web que se bloquean fuera del horario laboral, p. ej. Slack, Teams, Mail, Outlook."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse apit, kategoriat ja verkkosivustot, jotka estetään työajan ulkopuolella, esim. Slack, Teams, Mail, Outlook."
           }
         },
         "fr" : {
@@ -3847,10 +6782,28 @@
             "value" : "Scegli le app, le categorie e i siti web da bloccare fuori orario di lavoro, ad es. Slack, Teams, Mail, Outlook."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務時間外にブロックするApp、カテゴリ、Webサイトを選びます（例：Slack、Teams、メール、Outlook）。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg appene, kategoriene og nettstedene som skal sperres utenfor arbeidstid, f.eks. Slack, Teams, Mail, Outlook."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kies de apps, categorieën en websites die buiten werktijd worden geblokkeerd, bijv. Slack, Teams, Mail, Outlook."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz aplikacje, kategorie i strony do blokowania poza godzinami pracy, np. Slack, Teams, Mail, Outlook."
           }
         },
         "pt-BR" : {
@@ -3864,12 +6817,23 @@
             "state" : "translated",
             "value" : "Escolha as apps, categorias e sites a bloquear fora do horário de trabalho, p. ex. Slack, Teams, Mail, Outlook."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj de appar, kategorier och webbplatser som ska spärras utanför arbetstid, t.ex. Slack, Teams, Mail, Outlook."
+          }
         }
       }
     },
     "Platform on-call" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vagt platform"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3880,6 +6844,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardia de plataforma"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivystys alusta"
           }
         },
         "fr" : {
@@ -3894,10 +6864,28 @@
             "value" : "Reperibilità piattaforma"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プラットフォームのオンコール"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vakt plattform"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Piket platform"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dyżur platforma"
           }
         },
         "pt-BR" : {
@@ -3911,11 +6899,24 @@
             "state" : "translated",
             "value" : "Prevenção plataforma"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jour plattform"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Quick length" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hurtig varighed"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3926,6 +6927,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Duración rápida"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pikavalinta"
           }
         },
         "fr" : {
@@ -3940,10 +6947,28 @@
             "value" : "Durata rapida"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "期間を選択"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rask varighet"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Snelle duur"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szybki wybór"
           }
         },
         "pt-BR" : {
@@ -3957,12 +6982,23 @@
             "state" : "translated",
             "value" : "Duração rápida"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Snabb längd"
+          }
         }
       }
     },
     "Release sync with US team" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Releasemøde med US-teamet"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3973,6 +7009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reunión de release con el equipo de EE. UU."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Julkaisupalaveri USA:n tiimin kanssa"
           }
         },
         "fr" : {
@@ -3987,10 +7029,28 @@
             "value" : "Allineamento release con il team USA"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "米国チームとのリリース会議"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Releasemøte med US-teamet"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Release-overleg met US-team"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spotkanie release z zespołem z USA"
           }
         },
         "pt-BR" : {
@@ -4004,11 +7064,24 @@
             "state" : "translated",
             "value" : "Reunião de release com a equipa dos EUA"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Releasemöte med USA-teamet"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Reset keywords" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nulstil nøgleord"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4019,6 +7092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restablecer palabras clave"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauta avainsanat"
           }
         },
         "fr" : {
@@ -4033,10 +7112,28 @@
             "value" : "Ripristina le parole chiave"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キーワードをリセット"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbakestill nøkkelord"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Herstel trefwoorden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywróć słowa kluczowe"
           }
         },
         "pt-BR" : {
@@ -4050,11 +7147,23 @@
             "state" : "translated",
             "value" : "Repor palavras-chave"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ nyckelord"
+          }
         }
       }
     },
     "Save" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4065,6 +7174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guardar"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna"
           }
         },
         "fr" : {
@@ -4079,10 +7194,28 @@
             "value" : "Salva"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagre"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bewaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz"
           }
         },
         "pt-BR" : {
@@ -4096,11 +7229,23 @@
             "state" : "translated",
             "value" : "Guardar"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
+          }
         }
       }
     },
     "Schedule" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4111,6 +7256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Horario"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aikataulu"
           }
         },
         "fr" : {
@@ -4125,10 +7276,28 @@
             "value" : "Programma"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュール"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schema"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harmonogram"
           }
         },
         "pt-BR" : {
@@ -4142,11 +7311,23 @@
             "state" : "translated",
             "value" : "Horário"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schema"
+          }
         }
       }
     },
     "Scheduling is turned off" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planen er slået fra"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4157,6 +7338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La programación está desactivada"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aikataulu on pois päältä"
           }
         },
         "fr" : {
@@ -4171,10 +7358,28 @@
             "value" : "La pianificazione è disattivata"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールはオフです"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planen er slått av"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Planning staat uit"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harmonogram jest wyłączony"
           }
         },
         "pt-BR" : {
@@ -4188,11 +7393,23 @@
             "state" : "translated",
             "value" : "O horário está desativado"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schemat är avstängt"
+          }
         }
       }
     },
     "Scheduling on" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan til"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4203,6 +7420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Programación activada"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aikataulu päällä"
           }
         },
         "fr" : {
@@ -4217,10 +7440,28 @@
             "value" : "Pianificazione attiva"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スケジュールオン"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plan på"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Planning aan"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harmonogram włączony"
           }
         },
         "pt-BR" : {
@@ -4234,12 +7475,23 @@
             "state" : "translated",
             "value" : "Horário ativo"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schema på"
+          }
         }
       }
     },
     "Ski week" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skiferie"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4250,6 +7502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Semana de esquí"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiihtoloma"
           }
         },
         "fr" : {
@@ -4264,10 +7522,28 @@
             "value" : "Settimana bianca"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキー旅行"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vinterferie"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skivakantie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ferie zimowe"
           }
         },
         "pt-BR" : {
@@ -4281,12 +7557,24 @@
             "state" : "translated",
             "value" : "Semana de esqui"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sportlov"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "St. Stephen's Day" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anden juledag"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4297,6 +7585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "San Esteban"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tapaninpäivä"
           }
         },
         "fr" : {
@@ -4311,10 +7605,28 @@
             "value" : "Santo Stefano"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聖ステファノの日"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andre juledag"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tweede Kerstdag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drugi dzień świąt"
           }
         },
         "pt-BR" : {
@@ -4328,11 +7640,24 @@
             "state" : "translated",
             "value" : "Santo Estêvão"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annandag jul"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Starts" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starter"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4343,6 +7668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inicio"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alkaa"
           }
         },
         "fr" : {
@@ -4357,10 +7688,28 @@
             "value" : "Inizio"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starter"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Begin"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Początek"
           }
         },
         "pt-BR" : {
@@ -4374,11 +7723,23 @@
             "state" : "translated",
             "value" : "Início"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Börjar"
+          }
         }
       }
     },
     "To" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Til"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4389,6 +7750,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hasta"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asti"
           }
         },
         "fr" : {
@@ -4403,10 +7770,28 @@
             "value" : "Alle"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Til"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tot"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do"
           }
         },
         "pt-BR" : {
@@ -4420,11 +7805,23 @@
             "state" : "translated",
             "value" : "Até"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Till"
+          }
         }
       }
     },
     "Tonight" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I nat"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4435,6 +7832,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esta noche"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tänä yönä"
           }
         },
         "fr" : {
@@ -4449,10 +7852,28 @@
             "value" : "Stasera"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今夜"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I natt"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vannacht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziś w nocy"
           }
         },
         "pt-BR" : {
@@ -4466,11 +7887,23 @@
             "state" : "translated",
             "value" : "Esta noite"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I natt"
+          }
         }
       }
     },
     "Unavailable calendar" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalender ikke tilgængelig"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4481,6 +7914,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calendario no disponible"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalenteri ei käytettävissä"
           }
         },
         "fr" : {
@@ -4495,10 +7934,28 @@
             "value" : "Calendario non disponibile"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用できないカレンダー"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalender ikke tilgjengelig"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agenda niet beschikbaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendarz niedostępny"
           }
         },
         "pt-BR" : {
@@ -4512,11 +7969,23 @@
             "state" : "translated",
             "value" : "Calendário indisponível"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendern är inte tillgänglig"
+          }
         }
       }
     },
     "Untitled" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uden titel"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4527,6 +7996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sin título"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nimetön"
           }
         },
         "fr" : {
@@ -4541,10 +8016,28 @@
             "value" : "Senza titolo"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名称未設定"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uten tittel"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naamloos"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bez tytułu"
           }
         },
         "pt-BR" : {
@@ -4558,11 +8051,23 @@
             "state" : "translated",
             "value" : "Sem título"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namnlös"
+          }
         }
       }
     },
     "Upcoming" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommende"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4573,6 +8078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Próximos"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tulevat"
           }
         },
         "fr" : {
@@ -4587,10 +8098,28 @@
             "value" : "In programma"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後の予定"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommende"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gepland"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nadchodzące"
           }
         },
         "pt-BR" : {
@@ -4604,11 +8133,23 @@
             "state" : "translated",
             "value" : "Próximos"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommande"
+          }
         }
       }
     },
     "Weekend" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weekend"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4619,6 +8160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fin de semana"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viikonloppu"
           }
         },
         "fr" : {
@@ -4633,7 +8180,25 @@
             "value" : "Weekend"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週末"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helg"
+          }
+        },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weekend"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Weekend"
@@ -4650,11 +8215,23 @@
             "state" : "translated",
             "value" : "Fim de semana"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helg"
+          }
         }
       }
     },
     "While on call, work apps stay available, even in the evening, on weekends and on days off." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Under vagt er arbejdsapps tilgængelige, også om aftenen, i weekenden og på fridage."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4665,6 +8242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Durante una guardia, las apps de trabajo siguen disponibles, incluso por la noche, los fines de semana y los días libres."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivystyksen aikana työapit pysyvät käytettävissä myös iltaisin, viikonloppuisin ja vapaapäivinä."
           }
         },
         "fr" : {
@@ -4679,10 +8262,28 @@
             "value" : "Durante la reperibilità, le app di lavoro restano disponibili, anche la sera, nel weekend e nei giorni liberi."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンコール中は、夜や週末、休日でも仕事用Appを使えます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Under vakt er jobbappene tilgjengelige, også om kvelden, i helgen og på fridager."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tijdens piket blijven werk-apps beschikbaar, ook 's avonds, in het weekend en op vrije dagen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podczas dyżuru aplikacje służbowe pozostają dostępne, także wieczorem, w weekendy i w dni wolne."
           }
         },
         "pt-BR" : {
@@ -4696,12 +8297,23 @@
             "state" : "translated",
             "value" : "Durante a prevenção, as apps de trabalho continuam disponíveis, mesmo à noite, ao fim de semana e nas folgas."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Under jour är jobbapparna tillgängliga, även på kvällar, helger och lediga dagar."
+          }
         }
       }
     },
     "Work" : {
-      "extractionState" : "manual",
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejde"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4712,6 +8324,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trabajo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työ"
           }
         },
         "fr" : {
@@ -4726,10 +8344,28 @@
             "value" : "Lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobb"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Praca"
           }
         },
         "pt-BR" : {
@@ -4743,11 +8379,24 @@
             "state" : "translated",
             "value" : "Trabalho"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobb"
+          }
         }
-      }
+      },
+      "extractionState" : "manual"
     },
     "Work apps" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdsapps"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4758,6 +8407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apps de trabajo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työapit"
           }
         },
         "fr" : {
@@ -4772,10 +8427,28 @@
             "value" : "App di lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用App"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbapper"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacje służbowe"
           }
         },
         "pt-BR" : {
@@ -4789,11 +8462,23 @@
             "state" : "translated",
             "value" : "Apps de trabalho"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbappar"
+          }
         }
       }
     },
     "Work apps are available during these hours and blocked in the evening, early morning and on days that aren't workdays." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdsapps er tilgængelige i disse tidsrum og spærret om aftenen, tidligt om morgenen og på dage, der ikke er arbejdsdage."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4804,6 +8489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las apps de trabajo están disponibles en este horario y bloqueadas por la noche, a primera hora de la mañana y los días no laborables."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työapit ovat käytettävissä näinä aikoina ja estettyinä iltaisin, aikaisin aamulla ja päivinä, jotka eivät ole työpäiviä."
           }
         },
         "fr" : {
@@ -4818,10 +8509,28 @@
             "value" : "Le app di lavoro sono disponibili in questi orari e bloccate la sera, la mattina presto e nei giorni non lavorativi."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この時間帯は仕事用Appを使えます。夜、早朝、勤務日以外はブロックされます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbappene er tilgjengelige i disse tidene og sperret om kvelden, tidlig om morgenen og på dager som ikke er arbeidsdager."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps zijn tijdens deze uren beschikbaar en geblokkeerd in de avond, vroeg in de ochtend en op dagen die geen werkdag zijn."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacje służbowe są dostępne w tych godzinach i zablokowane wieczorem, wcześnie rano oraz w dni, które nie są dniami roboczymi."
           }
         },
         "pt-BR" : {
@@ -4835,11 +8544,23 @@
             "state" : "translated",
             "value" : "As apps de trabalho estão disponíveis neste horário e bloqueadas à noite, de manhã cedo e nos dias que não são úteis."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbapparna är tillgängliga under de här tiderna och spärrade på kvällen, tidigt på morgonen och på dagar som inte är arbetsdagar."
+          }
         }
       }
     },
     "Work apps are blocked all day on vacation days and holidays, unless you're on call." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdsapps er spærret hele dagen på ferie- og helligdage, medmindre du har vagt."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4850,6 +8571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las apps de trabajo se bloquean todo el día en vacaciones y festivos, salvo si estás de guardia."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työapit ovat estettyinä koko päivän loma- ja pyhäpäivinä, ellet ole päivystyksessä."
           }
         },
         "fr" : {
@@ -4864,10 +8591,28 @@
             "value" : "Le app di lavoro sono bloccate tutto il giorno nei giorni di vacanza e festivi, salvo reperibilità."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休暇や祝日は、オンコール中を除き一日中仕事用Appがブロックされます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbappene er sperret hele dagen på ferie- og helligdager, med mindre du har vakt."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps zijn de hele dag geblokkeerd op vakantie- en feestdagen, behalve als je piket hebt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W dni urlopu i święta aplikacje służbowe są zablokowane przez cały dzień, chyba że masz dyżur."
           }
         },
         "pt-BR" : {
@@ -4881,11 +8626,23 @@
             "state" : "translated",
             "value" : "As apps de trabalho ficam bloqueadas o dia todo nas férias e feriados, exceto se estiver de prevenção."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbapparna är spärrade hela dagen på semester och helgdagar, utom när du har jour."
+          }
         }
       }
     },
     "Work apps available" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdsapps tilgængelige"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4896,6 +8653,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apps de trabajo disponibles"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työapit käytettävissä"
           }
         },
         "fr" : {
@@ -4910,10 +8673,28 @@
             "value" : "App di lavoro disponibili"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用Appを利用可能"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbapper tilgjengelige"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps beschikbaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacje służbowe dostępne"
           }
         },
         "pt-BR" : {
@@ -4927,11 +8708,23 @@
             "state" : "translated",
             "value" : "Apps de trabalho disponíveis"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbappar tillgängliga"
+          }
         }
       }
     },
     "Work apps blocked" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdsapps spærret"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4942,6 +8735,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apps de trabajo bloqueadas"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työapit estetty"
           }
         },
         "fr" : {
@@ -4956,10 +8755,28 @@
             "value" : "App di lavoro bloccate"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用Appをブロック中"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbapper sperret"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps geblokkeerd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacje służbowe zablokowane"
           }
         },
         "pt-BR" : {
@@ -4973,11 +8790,23 @@
             "state" : "translated",
             "value" : "Apps de trabalho bloqueadas"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbappar spärrade"
+          }
         }
       }
     },
     "Work apps open for meetings outside work hours, including weekends, but not on days off or holidays. All-day, free and declined events are ignored." : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdsapps åbner for møder uden for arbejdstid, også i weekenden, men ikke på fridage eller helligdage. Heldags-, ledige og afviste begivenheder ignoreres."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4988,6 +8817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Las apps de trabajo se abren para reuniones fuera del horario, también los fines de semana, pero no en días libres ni festivos. Se ignoran los eventos de todo el día, libres o rechazados."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työapit avautuvat työajan ulkopuolisia kokouksia varten myös viikonloppuisin, mutta eivät vapaa- tai pyhäpäivinä. Koko päivän, vapaiksi merkityt ja hylätyt tapahtumat ohitetaan."
           }
         },
         "fr" : {
@@ -5002,10 +8837,28 @@
             "value" : "Le app di lavoro si aprono per le riunioni fuori orario, anche nel weekend, ma non nei giorni liberi o festivi. Gli eventi di tutto il giorno, liberi o rifiutati vengono ignorati."
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務時間外の会議では、週末も含めて仕事用Appが開きます（休日・祝日を除く）。終日、空き時間、辞退した予定は無視されます。"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbappene åpnes for møter utenfor arbeidstid, også i helgen, men ikke på fridager eller helligdager. Heldags-, ledige og avslåtte hendelser ignoreres."
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werk-apps gaan open voor vergaderingen buiten werktijd, ook in het weekend, maar niet op vrije dagen of feestdagen. Hele-dag-, vrije en afgewezen afspraken worden genegeerd."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikacje służbowe otwierają się na spotkania poza godzinami pracy, także w weekendy, ale nie w dni wolne ani święta. Wydarzenia całodniowe, wolne i odrzucone są pomijane."
           }
         },
         "pt-BR" : {
@@ -5019,11 +8872,23 @@
             "state" : "translated",
             "value" : "As apps de trabalho abrem para reuniões fora do horário, também ao fim de semana, mas não nas folgas nem feriados. Eventos de dia inteiro, livres ou recusados são ignorados."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbapparna öppnas för möten utanför arbetstid, även på helger, men inte på lediga dagar eller helgdagar. Heldags-, lediga och avböjda händelser ignoreras."
+          }
         }
       }
     },
     "Work calendar" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdskalender"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5034,6 +8899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calendario de trabajo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työkalenteri"
           }
         },
         "fr" : {
@@ -5048,10 +8919,28 @@
             "value" : "Calendario di lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用カレンダー"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbkalender"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werkagenda"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalendarz służbowy"
           }
         },
         "pt-BR" : {
@@ -5065,11 +8954,23 @@
             "state" : "translated",
             "value" : "Calendário de trabalho"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jobbkalender"
+          }
         }
       }
     },
     "Work calendar keywords" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nøgleord for arbejdskalenderen"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5080,6 +8981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Palabras clave del calendario de trabajo"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työkalenterin avainsanat"
           }
         },
         "fr" : {
@@ -5094,10 +9001,28 @@
             "value" : "Parole chiave del calendario di lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仕事用カレンダーのキーワード"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nøkkelord for jobbkalenderen"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trefwoorden werkagenda"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Słowa kluczowe kalendarza służbowego"
           }
         },
         "pt-BR" : {
@@ -5111,11 +9036,23 @@
             "state" : "translated",
             "value" : "Palavras-chave do calendário de trabalho"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyckelord för jobbkalendern"
+          }
         }
       }
     },
     "Work hours" : {
       "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbejdstider"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5126,6 +9063,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Horario laboral"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Työajat"
           }
         },
         "fr" : {
@@ -5140,10 +9083,28 @@
             "value" : "Orario di lavoro"
           }
         },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勤務時間"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbeidstider"
+          }
+        },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Werktijden"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Godziny pracy"
           }
         },
         "pt-BR" : {
@@ -5156,6 +9117,94 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Horário de trabalho"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arbetstider"
+          }
+        }
+      }
+    },
+    "–" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "–"
           }
         }
       }

@@ -28,17 +28,22 @@ enum CalendarImport {
     var meetings: [OnCallShift] = []
   }
 
-  /// English, German, French, Italian, Spanish, Dutch and Portuguese; matched as whole words, case-insensitive.
+  /// English, German, French, Italian, Spanish, Dutch, Portuguese, Swedish, Danish, Norwegian, Finnish, Japanese
+  /// and Polish; matched as whole words (Japanese anywhere in the title), case-insensitive.
   static let defaultOnCallKeywords = [
     "on call", "on-call", "oncall", "pikett", "bereitschaft", "astreinte", "de garde",
     "reperibilità",
     "reperibile", "picchetto", "de guardia", "guardia", "piket", "piketdienst", "consignatie",
-    "plantão", "sobreaviso", "de prevenção",
+    "plantão", "sobreaviso", "de prevenção", "beredskap", "jourpass", "jourvecka", "jourhavande",
+    "vagt", "tilkaldevagt", "rådighedsvagt", "vakt", "bakvakt", "päivystys", "päivystysvuoro",
+    "varallaolo", "オンコール", "当番", "待機", "dyżur", "dyżur domowy",
   ]
   static let defaultDayOffKeywords = [
     "vacation", "holiday", "out of office", "ooo", "pto", "ferien", "urlaub", "frei", "vacances",
     "congé", "férié", "ferie", "vacanza", "festivo", "vacaciones", "vakantie", "verlof",
-    "feestdag", "férias", "folga", "feriado", "abwesend",
+    "feestdag", "férias", "folga", "feriado", "abwesend", "semester", "ledig", "helgdag", "fridag",
+    "helligdag", "afspadsering", "avspasering", "loma", "lomapäivä", "vapaa", "pyhäpäivä", "休暇",
+    "有給", "有休", "休日", "祝日", "不在", "urlop", "wolne", "dzień wolny", "święto",
   ]
 
   static func classify(_ entries: [CalendarEntry], config: Config, calendar: Calendar) -> Result {
@@ -107,8 +112,14 @@ enum CalendarImport {
     return start >= workStart && entry.end <= workEnd
   }
 
-  /// Whole-word match, so "pto" doesn't match "Laptop" and "frei" doesn't match "Freitag".
+  /// Whole-word match, so "pto" doesn't match "Laptop" and "frei" doesn't match "Freitag". Japanese has no
+  /// spaces between words, so a keyword in kana or kanji matches anywhere in the title.
   static func matches(_ title: String, _ keyword: String) -> Bool {
+    if keyword.unicodeScalars.contains(where: {
+      $0.properties.isIdeographic || (0x3040...0x30FF).contains($0.value)
+    }) {
+      return title.range(of: keyword, options: .caseInsensitive) != nil
+    }
     let pattern =
       "(?<![\\p{L}\\p{N}])" + NSRegularExpression.escapedPattern(for: keyword)
       + "(?![\\p{L}\\p{N}])"

@@ -1,0 +1,1 @@
+skærmtid,balance,vagt,tilkaldevagt,app spærring,fokus,ferie,fridag,koble af,arbejdstid,aften

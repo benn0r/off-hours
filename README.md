@@ -39,9 +39,10 @@ through Screen Time, so "Work apps" is empty there.
 - **Overrides**: allow or block work apps for an hour, or flip the current state until the next scheduled
   change. An override beats every rule.
 - **Status** on the main screen: blocked or available, why, and when that changes next.
-- **Languages**: English, German, French, Italian, Spanish, Dutch and Portuguese (Portugal and Brazil),
-  following the iPhone's language. Translations live in `scripts/translations.py` and
-  `scripts/translations_extra.py`, which generate the string catalogs.
+- **Languages**: English, German, French, Italian, Spanish, Dutch, Portuguese (Portugal and Brazil), Swedish,
+  Danish, Norwegian, Finnish, Japanese and Polish, following the iPhone's language. Translations live in
+  `scripts/translations.py`, `scripts/translations_extra.py` and `scripts/translations_more.py`, which generate
+  the string catalogs.
 - **Works with the app closed**: a DeviceActivity monitor extension is woken by the system at every change
   and applies the block, and re-reads the calendars once a day.
 

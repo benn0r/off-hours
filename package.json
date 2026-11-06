@@ -14,7 +14,7 @@
     "format:check": "xcrun swift-format lint --recursive --strict OffHours OffHoursMonitor Shared OffHoursTests",
     "format": "xcrun swift-format format --recursive --in-place OffHours OffHoursMonitor Shared OffHoursTests",
     "screenshots": "bash scripts/screenshots.sh && SIMULATOR='iPhone 17 Pro' OUT=screenshots WIDTH=603 PREFIX=ios- bash scripts/screenshots.sh",
-    "appstore:upload-folder": "rm -rf appstore/upload && for l in en de fr it es nl pt-PT pt-BR; do if [ $l = en ]; then s=screenshots/appstore; m=appstore/marketing; else s=screenshots/appstore/$l; m=appstore/marketing/$l; fi; mkdir -p appstore/upload/$l && n=1 && for f in home work-hours on-call days-off calendars; do cp $s/$f.png appstore/upload/$l/$n-$f.png; n=$((n+1)); done && cp $m/*-*x*.png appstore/upload/$l/; done && open appstore/upload",
+    "appstore:upload-folder": "rm -rf appstore/upload && for l in en de fr it es nl pt-PT pt-BR sv da nb fi ja pl; do if [ $l = en ]; then s=screenshots/appstore; m=appstore/marketing; else s=screenshots/appstore/$l; m=appstore/marketing/$l; fi; mkdir -p appstore/upload/$l && n=1 && for f in home work-hours on-call days-off calendars; do cp $s/$f.png appstore/upload/$l/$n-$f.png; n=$((n+1)); done && cp $m/*-*x*.png appstore/upload/$l/; done && open appstore/upload",
     "upload": "bash scripts/upload.sh",
     "appstore": "set -a && . ./.env && set +a && python3 scripts/appstore.py"
   }

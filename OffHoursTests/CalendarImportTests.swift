@@ -178,6 +178,9 @@ final class CalendarImportTests: XCTestCase {
     XCTAssertFalse(CalendarImport.matches("New laptop setup", "pto"))
     XCTAssertFalse(CalendarImport.matches("Freitagsbier", "frei"))
     XCTAssertFalse(CalendarImport.matches("Holidays planning", "holiday"))
+    XCTAssertTrue(CalendarImport.matches("今週のオンコール当番", "当番"))
+    XCTAssertTrue(CalendarImport.matches("夏季休暇", "休暇"))
+    XCTAssertFalse(CalendarImport.matches("Dyżurka – remont", "dyżur"))
   }
 
   func testTranslatedDefaultKeywords() {
@@ -198,10 +201,25 @@ final class CalendarImportTests: XCTestCase {
         isAllDay: false),
       CalendarEntry(
         calendarID: "work", title: "Férias", start: date(26, 0), end: date(27, 0), isAllDay: true),
+      CalendarEntry(
+        calendarID: "work", title: "Beredskap drift", start: date(14, 17), end: date(15, 8),
+        isAllDay: false),
+      CalendarEntry(
+        calendarID: "work", title: "Dyżur – płatności", start: date(15, 17), end: date(16, 8),
+        isAllDay: false),
+      CalendarEntry(
+        calendarID: "work", title: "障害対応の待機", start: date(16, 17), end: date(17, 8),
+        isAllDay: false),
+      CalendarEntry(
+        calendarID: "work", title: "Loma", start: date(28, 0), end: date(29, 0), isAllDay: true),
+      CalendarEntry(
+        calendarID: "work", title: "有給休暇", start: date(29, 0), end: date(30, 0), isAllDay: true),
+      CalendarEntry(
+        calendarID: "work", title: "Urlop", start: date(30, 0), end: date(31, 0), isAllDay: true),
     ]
     let result = CalendarImport.classify(entries, config: config(work: "work"), calendar: calendar)
-    XCTAssertEqual(result.onCall.count, 3)
-    XCTAssertEqual(result.daysOff.count, 3)
+    XCTAssertEqual(result.onCall.count, 6)
+    XCTAssertEqual(result.daysOff.count, 6)
   }
 
   func testOldSavedConfigStillDecodes() throws {

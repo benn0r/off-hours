@@ -9,6 +9,7 @@ The key is only read to sign requests; it is never printed.
     python3 scripts/appstore.py screenshots de pt-PT pt-BR          # upload into empty sets
     python3 scripts/appstore.py screenshots de --replace             # replace existing ones
     python3 scripts/appstore.py assets de pt-PT pt-BR               # header + search results images
+    python3 scripts/appstore.py listing sv da                        # name, subtitle, description, keywords, …
 """
 
 from __future__ import annotations
@@ -40,6 +41,12 @@ LOCALES = {
     "nl": "nl-NL",
     "pt-PT": "pt-PT",
     "pt-BR": "pt-BR",
+    "sv": "sv",
+    "da": "da",
+    "nb": "no",
+    "fi": "fi",
+    "ja": "ja",
+    "pl": "pl",
 }
 
 
@@ -271,6 +278,67 @@ def assets(folders: list[str], replace: bool) -> None:
             print(f"{folder} ({locale}): {placement_type} set from {file_name}")
 
 
+def listing(folders: list[str]) -> None:
+    """Creates or updates the localized listing from appstore/<folder>/*.txt."""
+    app_info = call("GET", f"/apps/{APP_ID}/appInfos")["data"][0]["id"]
+    info_locs = {
+        item["attributes"]["locale"]: item["id"]
+        for item in call("GET", f"/appInfos/{app_info}/appInfoLocalizations?limit=50")["data"]
+    }
+    version = editable_version()
+    for folder in folders:
+        locale = LOCALES[folder]
+        source = ROOT / "appstore" / ("" if folder == "en" else folder)
+        read = lambda name: (source / f"{name}.txt").read_text().strip()  # noqa: E731
+        shared = lambda name: (ROOT / "appstore" / f"{name}.txt").read_text().strip()  # noqa: E731
+        info = {"name": "Off-hours", "subtitle": read("subtitle"), "privacyPolicyUrl": shared("privacy-policy-url")}
+        if locale in info_locs:
+            call(
+                "PATCH",
+                f"/appInfoLocalizations/{info_locs[locale]}",
+                {"data": {"type": "appInfoLocalizations", "id": info_locs[locale], "attributes": info}},
+            )
+        else:
+            call(
+                "POST",
+                "/appInfoLocalizations",
+                {
+                    "data": {
+                        "type": "appInfoLocalizations",
+                        "attributes": {"locale": locale, **info},
+                        "relationships": {"appInfo": {"data": {"type": "appInfos", "id": app_info}}},
+                    }
+                },
+            )
+        attributes = {
+            "description": read("description"),
+            "keywords": read("keywords"),
+            "promotionalText": read("promotional-text"),
+            "supportUrl": shared("support-url"),
+        }
+        # Creating the app info localization usually creates the version localization too.
+        locs = localizations(version["id"])
+        if locale in locs:
+            call(
+                "PATCH",
+                f"/appStoreVersionLocalizations/{locs[locale]}",
+                {"data": {"type": "appStoreVersionLocalizations", "id": locs[locale], "attributes": attributes}},
+            )
+        else:
+            call(
+                "POST",
+                "/appStoreVersionLocalizations",
+                {
+                    "data": {
+                        "type": "appStoreVersionLocalizations",
+                        "attributes": {"locale": locale, **attributes},
+                        "relationships": {"appStoreVersion": {"data": {"type": "appStoreVersions", "id": version["id"]}}},
+                    }
+                },
+            )
+        print(f"{folder} ({locale}): listing saved")
+
+
 def status() -> None:
     version = editable_version()
     print(f"Version {version['attributes']['versionString']}: {version['attributes']['appStoreState']}")
@@ -293,6 +361,8 @@ if __name__ == "__main__":
         status()
     elif command == "assets":
         assets([a for a in args if not a.startswith("--")], replace="--replace" in args)
+    elif command == "listing":
+        listing(args)
     elif command == "screenshots":
         screenshots([a for a in args if not a.startswith("--")], replace="--replace" in args)
     else:

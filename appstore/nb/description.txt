@@ -1,0 +1,27 @@
+Off-hours holder jobben der den hører hjemme. Appen bruker Skjermtid til å sperre jobbappene du velger, for eksempel teamchatten, jobb-e-posten eller en hvilken som helst annen app, kategori eller nettside, utenfor arbeidstiden din: om kvelden, i helgen, i ferien og på helligdager. Når du har vakt eller et møte om kvelden, åpnes de igjen av seg selv. Gratis, helt uten sporing, uten reklame og uten kjøp i appen.
+
+DINE ARBEIDSTIDER
+Velg arbeidsdagene dine og tidene for hver ukedag. Om kvelden, tidlig om morgenen og på dager du ikke jobber, er jobbappene sperret.
+
+VAKT
+Legg til vakter, fra én natt til en hel uke. Mens du har vakt, er jobbappene tilgjengelige, også om natten, i helgen og på fridager.
+
+FRIDAGER OG HELLIGDAGER
+Legg til enkelte fridager eller en hel ferie, så er jobbappene sperret hele dagen. Velg en helligdagskalender, så teller hver helligdag automatisk som fridag.
+
+JOBBKALENDEREN DIN
+Velg jobbkalenderen din, så finner Off-hours vakter og ferie ut fra nøkkelord som "vakt", "beredskap", "ferie" eller "OOO". Du kan endre nøkkelordene. Om du vil, åpner møter utenfor arbeidstiden jobbappene noen minutter før de starter, til de er ferdige.
+
+ALLTID OVERSIKTLIG
+Startskjermen viser om jobbappene er sperret akkurat nå, hvorfor, og når det endrer seg. Trenger du en jobbapp et øyeblikk? Tillat jobbappene i en time, eller sperr dem tidligere, med ett trykk.
+
+FUNGERER I BAKGRUNNEN
+Off-hours bytter av seg selv til riktig tid, også når appen er lukket.
+
+GRATIS, UTEN BAKTANKER
+Off-hours er gratis. Ingen kjøp i appen, ingen abonnement, ingen reklame, ingen konto, ingen registrering.
+
+NULL SPORING
+Alt skjer på iPhonen din. Off-hours samler ikke inn noen data i det hele tatt: ingen analyse, ingen sporing, ingen server, og appen gjør ingen nettverksforespørsler. Takket være Apples Skjermtid-rammeverk kan appen ikke engang se hvilke apper du har valgt. Kalendere leses bare på enheten.
+
+Krever tilgang til Skjermtid. Tilgang til kalendere er valgfritt.

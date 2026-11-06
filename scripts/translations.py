@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 
 from translations_extra import X, X_DEMO, X_INFO, X_LANGS, X_PLURALS
+from translations_more import Y, Y_DEMO, Y_INFO, Y_LANGS, Y_PLURALS
 
 ROOT = Path(__file__).resolve().parent.parent
 LANGS = ["fr", "it", "es", "nl"]
@@ -383,30 +384,33 @@ def unit(value: str) -> dict:
     return {"stringUnit": {"state": "translated", "value": value}}
 
 
-def plural(one: str, other: str) -> dict:
-    return {"variations": {"plural": {"one": unit(one), "other": unit(other)}}}
+def plural(forms: tuple | dict) -> dict:
+    """(one, other) or a dict of CLDR plural categories, e.g. Polish one/few/many/other, Japanese other."""
+    if isinstance(forms, tuple):
+        forms = dict(zip(("one", "other"), forms))
+    return {"variations": {"plural": {category: unit(value) for category, value in forms.items()}}}
 
 
-def catalog(
-    table: dict,
-    extra: dict,
-    manual: set[str] = frozenset(),
-    plurals: dict | None = None,
-    extra_plurals: dict | None = None,
-) -> dict:
-    missing = sorted(set(table) ^ set(extra))
-    assert not missing, f"keys missing in one of the tables: {missing}"
+def catalog(tables: list[tuple[list[str], dict]], manual: set[str] = frozenset(), plurals: list[dict] = ()) -> dict:
+    """tables: (languages, key -> one value per language); every table must have the same keys."""
+    keys = set(tables[0][1])
+    for _, table in tables:
+        missing = sorted(keys ^ set(table))
+        assert not missing, f"keys missing in one of the tables: {missing}"
     strings = {}
-    for key, values in sorted(table.items()):
-        localizations = {lang: unit(v) for lang, v in zip(LANGS, values)}
-        localizations.update({lang: unit(v) for lang, v in zip(X_LANGS, extra[key])})
+    for key in sorted(keys):
+        localizations = {}
+        for langs, table in tables:
+            localizations.update({lang: unit(v) for lang, v in zip(langs, table[key])})
         entry: dict = {"localizations": dict(sorted(localizations.items()))}
         if key in manual:
             entry["extractionState"] = "manual"
         strings[key] = entry
-    for key, forms in (plurals or {}).items():
-        merged = {**forms, **(extra_plurals or {}).get(key, {})}
-        strings[key] = {"localizations": {lang: plural(*f) for lang, f in sorted(merged.items())}}
+    for key in plurals[0] if plurals else ():
+        merged: dict = {}
+        for table in plurals:
+            merged.update(table[key])
+        strings[key] = {"localizations": {lang: plural(f) for lang, f in sorted(merged.items())}}
     return {"sourceLanguage": "en", "strings": dict(sorted(strings.items())), "version": "1.0"}
 
 
@@ -415,13 +419,21 @@ def write(path: Path, data: dict) -> None:
 
 
 if __name__ == "__main__":
-    for table, width in ((T, LANGS), (DEMO, LANGS), (INFO, LANGS), (X, X_LANGS), (X_DEMO, X_LANGS), (X_INFO, X_LANGS)):
-        bad = [k for k, v in table.items() if len(v) != len(width)]
-        assert not bad, bad
+    groups = [(LANGS, T, DEMO, INFO), (X_LANGS, X, X_DEMO, X_INFO), (Y_LANGS, Y, Y_DEMO, Y_INFO)]
+    for langs, *tables in groups:
+        for table in tables:
+            bad = [k for k, v in table.items() if len(v) != len(langs)]
+            assert not bad, bad
+    for table in (X_PLURALS, Y_PLURALS):
+        assert set(table) == set(PLURALS), sorted(set(table) ^ set(PLURALS))
     write(
         ROOT / "OffHours/Localizable.xcstrings",
-        catalog({**T, **DEMO}, {**X, **X_DEMO}, manual=set(DEMO), plurals=PLURALS, extra_plurals=X_PLURALS),
+        catalog(
+            [(langs, {**ui, **demo}) for langs, ui, demo, _ in groups],
+            manual=set(DEMO),
+            plurals=[PLURALS, X_PLURALS, Y_PLURALS],
+        ),
     )
-    write(ROOT / "OffHours/InfoPlist.xcstrings", catalog(INFO, X_INFO))
-    languages = len(LANGS) + len(X_LANGS)
+    write(ROOT / "OffHours/InfoPlist.xcstrings", catalog([(langs, info) for langs, _, _, info in groups]))
+    languages = sum(len(langs) for langs, *_ in groups)
     print(f"{len(T) + len(DEMO) + len(PLURALS)} strings, {len(INFO)} Info.plist keys, {languages} languages")

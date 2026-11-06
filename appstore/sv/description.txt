@@ -1,0 +1,27 @@
+Off-hours håller jobbet där det hör hemma. Appen använder Skärmtid för att spärra de jobbappar du väljer, till exempel teamchatten, jobbmejlen eller någon annan app, kategori eller webbplats, utanför din arbetstid: på kvällen, på helger, under semestern och på helgdagar. När du har jour eller ett möte på kvällen öppnas de igen av sig själva. Gratis, helt utan spårning, utan reklam och utan köp i appen.
+
+DINA ARBETSTIDER
+Välj dina arbetsdagar och tiderna för varje veckodag. På kvällen, tidigt på morgonen och på dagar du inte jobbar är dina jobbappar spärrade.
+
+JOUR
+Lägg till jourpass, från en enda natt till en hel vecka. Under jouren är jobbapparna tillgängliga, även på natten, på helger och på lediga dagar.
+
+LEDIGA DAGAR OCH HELGDAGAR
+Lägg till enstaka lediga dagar eller en hel semester, så är jobbapparna spärrade hela dagen. Välj en helgdagskalender så räknas varje helgdag automatiskt som ledig dag.
+
+DIN JOBBKALENDER
+Välj din jobbkalender så hittar Off-hours jourpass och semester med nyckelord som "beredskap", "jourpass", "semester" eller "OOO". Du kan ändra nyckelorden. Om du vill öppnar möten utanför arbetstid jobbapparna några minuter innan de börjar, tills de är slut.
+
+ALLTID TYDLIGT
+Startskärmen visar om dina jobbappar är spärrade just nu, varför och när det ändras. Behöver du en jobbapp en stund? Tillåt jobbapparna i en timme, eller spärra dem tidigare, med ett tryck.
+
+FUNGERAR I BAKGRUNDEN
+Off-hours växlar av sig själv vid rätt tidpunkt, även när appen är stängd.
+
+GRATIS, UTAN BAKTANKAR
+Off-hours är gratis. Inga köp i appen, inga prenumerationer, ingen reklam, inget konto, ingen registrering.
+
+NOLL SPÅRNING
+Allt sker på din iPhone. Off-hours samlar inte in någon data alls: ingen analys, ingen spårning, ingen server, och appen gör inga nätverksanrop. Tack vare Apples Skärmtid-ramverk kan appen inte ens se vilka appar du har valt. Kalendrar läses bara på enheten.
+
+Kräver åtkomst till Skärmtid. Åtkomst till kalendrar är valfri.

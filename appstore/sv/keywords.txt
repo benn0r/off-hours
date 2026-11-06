@@ -1,0 +1,1 @@
+skärmtid,balans,jour,beredskap,appspärr,fokus,semester,ledig,koppla av,arbetstid,kväll
