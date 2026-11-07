@@ -10,7 +10,10 @@ The key is only read to sign requests; it is never printed.
     python3 scripts/appstore.py screenshots de --replace             # replace existing ones
     python3 scripts/appstore.py assets de pt-PT pt-BR               # header + search results images
     python3 scripts/appstore.py listing sv da                        # name, subtitle, description, keywords, …
-    python3 scripts/appstore.py submit                               # submit the editable version for review
+    python3 scripts/appstore.py submit                               # attach the newest build, submit for review
+    python3 scripts/appstore.py next-build                           # highest uploaded build number + 1
+    python3 scripts/appstore.py wait-build 5                         # wait until build 5 has processed
+Set ASC_KEY_PATH to read the key from another path (CI).
 """
 
 from __future__ import annotations
@@ -60,7 +63,8 @@ def site_url(folder: str, page: str) -> str:
 def token() -> str:
     key_id = os.environ["ASC_KEY_ID"]
     issuer = os.environ["ASC_ISSUER_ID"]
-    key = (Path.home() / ".appstoreconnect/private_keys" / f"AuthKey_{key_id}.p8").read_text()
+    default = Path.home() / ".appstoreconnect/private_keys" / f"AuthKey_{key_id}.p8"
+    key = Path(os.environ.get("ASC_KEY_PATH") or default).read_text()
     now = int(time.time())
     return jwt.encode(
         {"iss": issuer, "iat": now, "exp": now + 15 * 60, "aud": "appstoreconnect-v1"},
@@ -346,18 +350,40 @@ def listing(folders: list[str]) -> None:
         print(f"{folder} ({locale}): listing saved")
 
 
+def latest_build(version: dict) -> dict:
+    """Attaches the newest processed build of this version to it, and returns it."""
+    attached = call("GET", f"/appStoreVersions/{version['id']}/build").get("data")
+    builds = call(
+        "GET",
+        f"/builds?filter[app]={APP_ID}&filter[preReleaseVersion.version]={version['attributes']['versionString']}"
+        "&filter[processingState]=VALID&filter[expired]=false&sort=-uploadedDate&limit=1",
+    )["data"]
+    if not builds:
+        if attached:
+            return attached
+        raise SystemExit("No processed build for this version yet.")
+    newest = builds[0]
+    if not attached or attached["id"] != newest["id"]:
+        call(
+            "PATCH",
+            f"/appStoreVersions/{version['id']}/relationships/build",
+            {"data": {"type": "builds", "id": newest["id"]}},
+        )
+        print(f"Attached build {newest['attributes']['version']} to version {version['attributes']['versionString']}")
+    return newest
+
+
 def submit() -> None:
     version = editable_version()
-    build = call("GET", f"/appStoreVersions/{version['id']}/build").get("data")
-    if not build:
-        raise SystemExit("No build attached to the version.")
+    build = latest_build(version)
     open_states = {"READY_FOR_REVIEW", "WAITING_FOR_REVIEW", "IN_REVIEW", "UNRESOLVED_ISSUES"}
     existing = [
         s
         for s in call("GET", f"/reviewSubmissions?filter[app]={APP_ID}&filter[platform]=IOS&limit=20")["data"]
         if s["attributes"]["state"] in open_states
     ]
-    if existing and existing[0]["attributes"]["state"] != "READY_FOR_REVIEW":
+    # A rejected submission (UNRESOLVED_ISSUES) is resubmitted as it is, like "Resubmit to App Review".
+    if existing and existing[0]["attributes"]["state"] not in {"READY_FOR_REVIEW", "UNRESOLVED_ISSUES"}:
         raise SystemExit(f"A submission is already {existing[0]['attributes']['state']}.")
     if existing:
         submission = existing[0]["id"]
@@ -413,6 +439,25 @@ def status() -> None:
         print(f"  {locale:6} {counts or 'no screenshots'}  {', '.join(creative) or 'no header/search images'}")
 
 
+def next_build() -> None:
+    builds = call("GET", f"/builds?filter[app]={APP_ID}&limit=200&fields[builds]=version")["data"]
+    print(max((int(b["attributes"]["version"]) for b in builds if b["attributes"]["version"].isdigit()), default=0) + 1)
+
+
+def wait_build(number: str, minutes: int = 45) -> None:
+    deadline = time.time() + minutes * 60
+    while time.time() < deadline:
+        builds = call("GET", f"/builds?filter[app]={APP_ID}&filter[version]={number}&limit=1")["data"]
+        state = builds[0]["attributes"]["processingState"] if builds else "NOT_YET_VISIBLE"
+        print(f"Build {number}: {state}", flush=True)
+        if state == "VALID":
+            return
+        if state in {"FAILED", "INVALID"}:
+            raise SystemExit(f"Build {number} is {state}.")
+        time.sleep(60)
+    raise SystemExit(f"Build {number} did not finish processing within {minutes} minutes.")
+
+
 if __name__ == "__main__":
     command, *args = sys.argv[1:] or ["status"]
     if command == "status":
@@ -421,6 +466,10 @@ if __name__ == "__main__":
         assets([a for a in args if not a.startswith("--")], replace="--replace" in args)
     elif command == "submit":
         submit()
+    elif command == "next-build":
+        next_build()
+    elif command == "wait-build":
+        wait_build(args[0])
     elif command == "listing":
         listing(args)
     elif command == "screenshots":
