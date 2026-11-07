@@ -1,0 +1,52 @@
+name: App Store release
+# Pushing a tag like v1.0-4 (or running this workflow by hand) archives a Release build,
+# uploads it to App Store Connect with the next free build number and, if asked, submits
+# the editable App Store version for review. Runs on the self-hosted macOS runner, which
+# needs Xcode, XcodeGen, uv and the Apple Distribution certificate in its keychain.
+#
+# Repository secrets: ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8 (contents of the .p8 key,
+# App Manager role) and IOS_DEVELOPMENT_TEAM.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      submit:
+        description: Submit for App Review after the upload
+        type: boolean
+        default: false
+
+concurrency:
+  group: app-store-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: macos
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      IOS_DEVELOPMENT_TEAM: ${{ secrets.IOS_DEVELOPMENT_TEAM }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: command -v xcodegen || brew install xcodegen
+      - run: npm run test:unit
+      - name: Write the App Store Connect key
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          umask 077
+          printf '%s\n' "$ASC_KEY_P8" > "$RUNNER_TEMP/AuthKey.p8"
+          echo "ASC_KEY_PATH=$RUNNER_TEMP/AuthKey.p8" >> "$GITHUB_ENV"
+      - name: Pick the next build number
+        run: echo "BUILD_NUMBER=$(npm run -s appstore next-build)" >> "$GITHUB_ENV"
+      - name: Archive and upload build ${{ env.BUILD_NUMBER }}
+        run: npm run upload
+      - name: Wait for App Store Connect processing
+        run: npm run -s appstore wait-build "$BUILD_NUMBER"
+      - name: Submit for review
+        if: ${{ gitea.event_name == 'workflow_dispatch' && inputs.submit }}
+        run: npm run -s appstore submit
+      - name: Remove the key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/AuthKey.p8"

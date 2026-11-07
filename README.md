@@ -102,14 +102,16 @@ npm run appstore -- status                  # App Store Connect: screenshots and
 npm run appstore -- screenshots de pt-PT    # upload screenshots (add --replace to overwrite)
 npm run appstore -- assets de pt-PT         # upload header and search-result images
 npm run appstore -- listing sv da           # create or update the localized listing text
-npm run appstore -- submit                  # submit the editable version for review
+npm run appstore -- submit                  # attach the newest processed build and submit for review
+npm run appstore -- next-build              # next free build number (BUILD_NUMBER=… npm run upload)
+npm run appstore -- wait-build 5            # wait until build 5 has processed
 npm run lint && npm run format:check
 npm run format        # swift-format in place
 ```
 
 `npm run appstore` uses an App Store Connect API key (App Manager role) saved as
-`~/.appstoreconnect/private_keys/AuthKey_<ASC_KEY_ID>.p8`, the IDs in `.env`, and
-`pip install pyjwt cryptography`.
+`~/.appstoreconnect/private_keys/AuthKey_<ASC_KEY_ID>.p8` (or `ASC_KEY_PATH`), the IDs in `.env`, and
+[uv](https://docs.astral.sh/uv/) for its Python dependencies.
 
 `OffHours.xcodeproj` is generated from the tracked `project.yml`; change settings there and regenerate instead
 of editing the project.
@@ -126,6 +128,13 @@ events, meetings inside work hours, deterministic IDs) and loading settings save
 
 CI runs on Gitea Actions (`.gitea/workflows/ci.yml`) on a macOS runner: format check, lint and an unsigned
 Release build, then the unit tests; builds on `main` are kept as an artifact for 30 days.
+
+Releases run in `.gitea/workflows/release.yml`. Pushing a `v*` tag runs the unit tests, archives a Release
+build with the next free build number from App Store Connect, uploads it and waits for processing (TestFlight).
+Running the workflow by hand with "Submit for App Review" ticked also attaches that build to the editable
+version and submits it. The version number itself still comes from `MARKETING_VERSION` in `project.yml`.
+It needs the repository secrets `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8` (contents of the `.p8` key) and
+`IOS_DEVELOPMENT_TEAM`, and the Apple Distribution certificate in the runner's keychain.
 
 ## Architecture
 
