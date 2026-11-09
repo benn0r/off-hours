@@ -31,14 +31,14 @@ struct ContentView: View {
 
         if !model.isAuthorized {
           Section {
-            Button("Allow Screen Time access") {
+            Text("Off-hours uses Screen Time to block your work apps. Nothing leaves your device.")
+            // App Review 5.1.1(iv): the button before a permission prompt must be neutral ("Continue").
+            Button("Continue") {
               Task { await model.requestAuthorization() }
             }
             if let error = model.authorizationError {
               Text(error).font(.footnote).foregroundStyle(.red)
             }
-          } footer: {
-            Text("Off-hours uses Screen Time to block your work apps. Nothing leaves your device.")
           }
         }
 

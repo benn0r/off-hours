@@ -3,6 +3,7 @@ import SwiftUI
 
 struct CalendarsView: View {
   @Environment(AppModel.self) private var model
+  @Environment(\.openURL) private var openURL
 
   var body: some View {
     @Bindable var model = model
@@ -10,18 +11,22 @@ struct CalendarsView: View {
     List {
       if !model.hasCalendarAccess {
         Section {
-          Button("Allow calendar access") {
-            Task { await model.requestCalendarAccess() }
-          }
+          Text("Calendars are read on this device only.")
           if model.calendarAccess == .denied || model.calendarAccess == .restricted {
             Text(
               "Calendar access was denied. Enable it in Settings › Privacy & Security › Calendars."
             )
             .font(.footnote)
             .foregroundStyle(.red)
+            Button("Open Settings") {
+              openURL(URL(string: UIApplication.openSettingsURLString)!)
+            }
+          } else {
+            // App Review 5.1.1(iv): the button before a permission prompt must be neutral ("Continue").
+            Button("Continue") {
+              Task { await model.requestCalendarAccess() }
+            }
           }
-        } footer: {
-          Text("Calendars are read on this device only.")
         }
       }
 
