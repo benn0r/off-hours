@@ -29,17 +29,17 @@ T = {
     "1 day": ("1 jour", "1 giorno", "1 día", "1 dag"),
     "1 week": ("1 semaine", "1 settimana", "1 semana", "1 week"),
     "Add": ("Ajouter", "Aggiungi", "Añadir", "Voeg toe"),
-    "Allow Screen Time access": (
-        "Autoriser l'accès à Temps d'écran",
-        "Consenti l'accesso a Tempo di utilizzo",
-        "Permitir acceso a Tiempo de uso",
-        "Geef toegang tot Schermtijd",
+    "Continue": (
+        "Continuer",
+        "Continua",
+        "Continuar",
+        "Doorgaan",
     ),
-    "Allow calendar access": (
-        "Autoriser l'accès aux calendriers",
-        "Consenti l'accesso ai calendari",
-        "Permitir acceso a los calendarios",
-        "Geef toegang tot agenda's",
+    "Open Settings": (
+        "Ouvrir Réglages",
+        "Apri Impostazioni",
+        "Abrir Ajustes",
+        "Open Instellingen",
     ),
     "Allow work apps for 1 hour": (
         "Autoriser les apps pro pendant 1 heure",

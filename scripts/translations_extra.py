@@ -17,15 +17,15 @@ X = {
     "1 day": ("1 Tag", "1 dia", "1 dia"),
     "1 week": ("1 Woche", "1 semana", "1 semana"),
     "Add": ("Hinzufügen", "Adicionar", "Adicionar"),
-    "Allow Screen Time access": (
-        "Zugriff auf Bildschirmzeit erlauben",
-        "Permitir acesso ao Tempo de ecrã",
-        "Permitir acesso ao Tempo de Uso",
+    "Continue": (
+        "Weiter",
+        "Continuar",
+        "Continuar",
     ),
-    "Allow calendar access": (
-        "Zugriff auf Kalender erlauben",
-        "Permitir acesso aos calendários",
-        "Permitir acesso aos calendários",
+    "Open Settings": (
+        "Einstellungen öffnen",
+        "Abrir Definições",
+        "Abrir Ajustes",
     ),
     "Allow work apps for 1 hour": (
         "Arbeits-Apps 1 Stunde erlauben",
