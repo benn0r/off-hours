@@ -387,6 +387,14 @@ def submit() -> None:
         raise SystemExit(f"A submission is already {existing[0]['attributes']['state']}.")
     if existing:
         submission = existing[0]["id"]
+        # After a rejection the item must be marked resolved before the submission can be resubmitted.
+        for item in call("GET", f"/reviewSubmissions/{submission}/items")["data"]:
+            if item["attributes"]["state"] == "REJECTED":
+                call(
+                    "PATCH",
+                    f"/reviewSubmissionItems/{item['id']}",
+                    {"data": {"type": "reviewSubmissionItems", "id": item["id"], "attributes": {"resolved": True}}},
+                )
     else:
         submission = call(
             "POST",
